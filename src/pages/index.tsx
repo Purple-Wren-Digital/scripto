@@ -25,21 +25,21 @@ const LandingPage: PageWithLayout = () => {
             marginLeft: "10%",
           }}
         >
-          <Text size={48} mb="md" mt={50}>
+          <Text size={48} mb="md" mt={50} fw={700}>
             Write.
           </Text>
-          <Text size={48} mb="md">
+          <Text size={48} mb="md" fw={700}>
             Plan.
           </Text>
-          <Text size={48} mb="md">
+          <Text size={48} mb="md" fw={700}>
             Produce.
           </Text>
-          <Text size={48} mb="md">
+          <Text size={48} mb="md" fw={700}>
             Together.
           </Text>
           <Text mb="md" ta={"left"}>
-            Whether you're taping a show in a studio, collaborating on
-            screenplays, or making a video game, Scripto helps you do your best
+            Whether you're taping a show in a <Text td="underline" component="span">studio</Text>, collaborating on
+            <Text td="underline" component="span">screenplays</Text>, or making a <Text td="underline" component="span">video game</Text>, Scripto helps you do your best
             work and save time while you do it.
           </Text>
           <Button
@@ -61,6 +61,7 @@ const LandingPage: PageWithLayout = () => {
             alignItems: "center",
             justifyContent: "center",
             backgroundImage: "url(/images/landing-page.png)",
+            backgroundRepeat: "no-repeat",
             width: "70%",
             position: "relative",
           }}
@@ -72,31 +73,40 @@ const LandingPage: PageWithLayout = () => {
           />
         </Box>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Box ta="center">
-          <Text>Key Features</Text>
-          <Text>
+          <Text mt={70} size={40} fw={700}>Streamlining Your Project is Easy</Text>
+          <Text mb="50px" >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam,
           </Text>
         </Box>
-        <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+        <Box 
+          sx={{ 
+            display: "flex", 
+            justifyContent: "space-around", 
+            width: "90%",
+            background: "#FBFBFD",
+            borderRadius: "50px",
+            padding: "50px"
+          }}
+        >
           <Card
-            imgSrc="/images/landing-page.png"
-            title="new title"
+            imgSrc="/images/collaboration.png"
+            title="True Collaboration."
             text="text 1"
             link="#"
           />
           <Card
-            imgSrc="/images/landing-page.png"
-            title="new title"
+            imgSrc="/images/rundowns.png"
+            title="Smart Rundowns."
             text="text 2"
             link="#"
           />
           <Card
-            imgSrc="/images/landing-page.png"
-            title="new title"
+            imgSrc="/images/format.png"
+            title="Any Format."
             text="text 1"
             link="#"
           />
