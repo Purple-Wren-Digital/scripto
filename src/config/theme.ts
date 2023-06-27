@@ -20,15 +20,15 @@ export const theme: MantineThemeOverride = {
       "#A19621",
       "#8E841D"
     ],
-    navy: [
-      "#F8FCFE",
-      "#86C2EE",
-      "#3197E3",
-      "#1971B4",
-      "#125485",
-      "#0D3E63",
-      "#0A2E49",
-      "#061E2F",
+    purple: [
+      "#876AC2",
+      "#9978af",
+      "#8363c5",
+      "#8568c1",
+      "#946cba",
+      "#776cbb",
+      "#965bb5",
+      "#876AC2", //hover color
       "#04131F",
       "#030D14"
     ],
@@ -82,7 +82,7 @@ export const theme: MantineThemeOverride = {
   },
   black: "#0A2E49",
 
-  primaryColor: "navy",
+  primaryColor: "purple",
   headings: {
     fontWeight: 500
   },
@@ -118,7 +118,6 @@ export const theme: MantineThemeOverride = {
       styles: (theme, params) => ({
         root: {
           fontWeight: 500,
-          textTransform: "lowercase",
           fontStretch: "100%",
           ":disabled": {
             backgroundColor: "#E4E6E7",
@@ -137,7 +136,6 @@ export const theme: MantineThemeOverride = {
     Text: {
       styles: theme => ({
         root: {
-          textTransform: "lowercase",
           fontWeight: 340,
           fontStretch: "100%"
         }
