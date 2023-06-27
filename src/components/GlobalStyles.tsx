@@ -45,7 +45,6 @@ export function GlobalStyles() {
         },
         ".mantine-List-itemWrapper span": {
           fontStretch: "100%",
-          textTransform: "lowercase",
           fontWeight: 340,
         },
         // Hide the default mapbox logo when in list view
