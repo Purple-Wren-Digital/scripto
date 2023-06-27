@@ -1,29 +1,51 @@
-import { AppShell, Text, Header, Box } from "@mantine/core";
+import { AppShell, Text, Header, Box, Button } from "@mantine/core";
 import { PageWithLayout } from "next";
 import { ReactNode } from "react";
+import Footer from "./Footer";
 
 export const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
     <AppShell
-      padding="md"
+      padding={0}
       header={
         <Header
           height={60}
           p="xs"
           display="flex"
-          sx={{ alignItems: "center", justifyContent: "space-between" }}
+          sx={{
+            alignItems: "center",
+            justifyContent: "space-between",
+            backgroundColor: "#252634",
+          }}
         >
-          <Box>
-            <Text size="lg">Scripto</Text>
+          <Box sx={{ display: "flex", justifyContent: "space-around" }}>
+            <Text size="lg" mr={15} color={"#FBFBFD"}>
+              Our Team
+            </Text>
+            <Text size="lg" mr={15} color={"#FBFBFD"}>
+              Careers
+            </Text>
+            <Text size="lg" mr={15} color={"#FBFBFD"}>
+              Features
+            </Text>
+            <Text size="lg" color={"#FBFBFD"}>
+              Plans
+            </Text>
           </Box>
-          <Box sx={{ display: "flex" }}>
-            <Text size="md" mr={15}>
+          <Box sx={{ position: "absolute", right: "50%" }}>
+            <Text color={"#FBFBFD"}>scripto</Text>
+          </Box>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Text size="md" mr={15} color={"#FBFBFD"}>
               Sign In
             </Text>
-            <Text size="md">Sign Up</Text>
+            <Button size="md" color={"#FBFBFD"}>
+              Get Started
+            </Button>
           </Box>
         </Header>
       }
+      footer={<Footer />}
       styles={(theme) => ({
         main: {
           backgroundColor:
