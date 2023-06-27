@@ -38,8 +38,7 @@ const LandingPage: PageWithLayout = () => {
             Together.
           </Text>
           <Text mb="md" ta={"left"}>
-            Whether you're taping a show in a <Text td="underline" component="span">studio</Text>, collaborating on
-            <Text td="underline" component="span">screenplays</Text>, or making a <Text td="underline" component="span">video game</Text>, Scripto helps you do your best
+            Whether you&apos;re taping a show in a <Text td="underline" component="span">studio</Text>, collaborating on <Text td="underline" component="span">screenplays</Text>, or making a <Text td="underline" component="span">video game</Text>, Scripto helps you do your best
             work and save time while you do it.
           </Text>
           <Button
@@ -70,6 +69,7 @@ const LandingPage: PageWithLayout = () => {
             src="/images/script-editor.png"
             width={"85%"}
             sx={{ position: "absolute", zIndex: 1, marginLeft: 110 }}
+            alt="script editor"
           />
         </Box>
       </Box>
@@ -376,24 +376,35 @@ const LandingPage: PageWithLayout = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ display: "flex" }}>
+      <Box mt={100} sx={{ display: "flex", background: "#FBFBFD", }}>
         <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: "300px",
+              height: "500px",
+              backgroundImage: "url(/images/studio.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
             }}
           >
-            <Text>Center Box 1</Text>
+            <Box 
+              sx={{
+                width: "100%",
+                height: "100%",
+                background: "#B89ADE",
+                opacity: "0.35",
+              }}
+            ></Box>
           </Box>
           <Box
             sx={{
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: "300px",
+              height: "500px",
             }}
           >
             <Box
@@ -401,11 +412,13 @@ const LandingPage: PageWithLayout = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
+                width: "80%",
+                padding: "40px"
               }}
             >
-              <Text>Feature that is amazing</Text>
-              <Text>Lorem Ipsum here</Text>
-              <Button variant="outline">Learn more</Button>
+              <Text size={24} fw={700} mb={40} >True Collaboration.</Text>
+              <Text mb={40} sx={{ maxWidth: "420px" }}>Write with others in the same script at the same time, with automatic and flexible industry-standard formatting for variety shows, screenplays, video games, and more. You deserve better than Google Docs!</Text>
+              <Button variant="outline" sx={{ borderRadius: "10px" }}>Learn more</Button>
             </Box>
           </Box>
         </Box>
@@ -415,7 +428,7 @@ const LandingPage: PageWithLayout = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: "300px",
+              height: "500px",
             }}
           >
             <Box
@@ -423,11 +436,13 @@ const LandingPage: PageWithLayout = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
+                width: "80%",
+                padding: "40px"
               }}
             >
-              <Text>Feature that is amazing</Text>
-              <Text>Lorem Ipsum here</Text>
-              <Button variant="outline">Learn more</Button>
+              <Text size={24} fw={700} mb={40}>Feature that is amazing</Text>
+              <Text mb={40} sx={{ maxWidth: "420px" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+              <Button variant="outline" sx={{ borderRadius: "10px" }}>Learn more</Button>
             </Box>
           </Box>
           <Box
@@ -435,16 +450,29 @@ const LandingPage: PageWithLayout = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: "300px",
+              height: "500px",
+              backgroundImage: "url(/images/workspace.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
             }}
           >
-            <Text>Center Box 4</Text>
+            <Box 
+              sx={{
+                width: "100%",
+                height: "100%",
+                background: "#B89ADE",
+                opacity: "0.35",
+              }}
+            ></Box>
           </Box>
         </Box>
       </Box>
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
-        <Text>Here is a testimonial</Text>
-        <Text>Here is a testimonial</Text>
+      <Box mt={120} sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Text mb={20} size={24}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.”</Text>
+        <Box mb={20} sx={{ width: "40px", aspectRatio: "1/1", background: "#000", borderRadius: "50%"}}></Box>
+        <Text size={14} >Maria Lopez, VP of Design at Meshery</Text>
+        <Box></Box>
       </Box>
       <Footer />
     </AppLayout>
