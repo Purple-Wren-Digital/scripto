@@ -85,7 +85,7 @@ const LandingPage: PageWithLayout = () => {
         <Box 
           sx={{ 
             display: "flex", 
-            justifyContent: "space-around", 
+            justifyContent: "center", 
             width: "90%",
             background: "#FBFBFD",
             borderRadius: "50px",
@@ -95,19 +95,19 @@ const LandingPage: PageWithLayout = () => {
           <Card
             imgSrc="/images/collaboration.png"
             title="True Collaboration."
-            text="text 1"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             link="#"
           />
           <Card
             imgSrc="/images/rundowns.png"
             title="Smart Rundowns."
-            text="text 2"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             link="#"
           />
           <Card
             imgSrc="/images/format.png"
             title="Any Format."
-            text="text 1"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
             link="#"
           />
         </Box>
