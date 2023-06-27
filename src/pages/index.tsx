@@ -1,7 +1,7 @@
 import { AppLayout } from "@/components/AppLayout";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
-import { Text, Box, Button, Space, Image } from "@mantine/core";
+import { Text, Box, Button, Space, Image, Flex } from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const LandingPage: PageWithLayout = () => {
@@ -111,16 +111,268 @@ const LandingPage: PageWithLayout = () => {
             link="#"
           />
         </Box>
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <Text>Trusted by the World's Best Companies</Text>
-          <Box sx={{ display: "flex" }}>
-            <Image src="#" />
-            <Image src="#" />
-            <Image src="#" />
-            <Image src="#" />
-            <Image src="#" />
-            <Image src="#" />
-            <Image src="#" />
+        <Box mt={125} sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <Text size={40} fw={700} >Powering the Creative Force: Teams That Choose Us.</Text>
+          <Text>Trusted by top teams in the industry</Text>
+          <Box mt={50} sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap", width: "90%" }}>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px", 
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="full frontal" src="/images/show-logos/full-frontal-with-samantha-bee.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="problem with jon" src="/images/show-logos/problem-with-jon-stewart.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="the daily show" src="/images/show-logos/daily-show.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="game theory" src="/images/show-logos/game-theory-with-bomani-jones.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="patriot act" src="/images/show-logos/patriot-act.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="the opposition" src="/images/show-logos/the-opposition-with-jordan-klepper.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="the rundown" src="/images/show-logos/rundown-with-robin-thede.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="desus and mero" src="/images/show-logos/desus-and-mero.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="a little late" src="/images/show-logos/a-little-late-with-lilly-singh.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="jim jefferies show" src="/images/show-logos/jim-jefferies-show.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="problem areas" src="/images/show-logos/wyatt-cenacs-problem-areas.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "185px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="tooning out the news" src="/images/show-logos/tooning-out-the-news.png" width={"100%"} />
+            </Box>
+            {/* smaller boxes */}
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "125px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="late show" src="/images/show-logos/late-show.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "125px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="finji" src="/images/show-logos/finji.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "125px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="last week tonight" src="/images/show-logos/last-week-tonight.png" width={"100%"} />
+            </Box>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                alignItems: "center", 
+                justifyContent: "center", 
+                padding: "20px",
+                margin: "12.5px 25px",
+                width: "125px", 
+                height: "125px", 
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Image alt="nerial" src="/images/show-logos/nerial.png" width={"100%"} />
+            </Box>
+            
           </Box>
         </Box>
       </Box>
