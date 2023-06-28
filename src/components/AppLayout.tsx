@@ -48,7 +48,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
             <Text size="md" mr={20} color={"#FBFBFD"}>
               Sign In
             </Text>
-            <Button size="md" radius={10} color={"#FBFBFD"}>
+            <Button size="md" radius={10} color={"#FBFBFD"} sx={{ background: "#8252C6"}}>
               Get Started
             </Button>
           </Box>

@@ -47,7 +47,7 @@ export default function Footer() {
           </Box>
         </Box>
         <Divider size="sm" color="#FBFBFD" />
-        <Button mt={50} h={60} w={200} radius={10} sx={{ alignSelf: "center" }}>Get in Touch</Button>
+        <Button mt={50} h={60} w={200} radius={10} sx={{ alignSelf: "center", background: "#8252C6", fontSize: 18, }}>Get in Touch</Button>
         <Box mt={50} sx={{ display: "flex", alignSelf: "center", gap: "20px" }}>
           <Text>©️ 2010-{year}</Text>
           <Text>Privacy-Terms</Text>
