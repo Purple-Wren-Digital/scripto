@@ -23,6 +23,26 @@ const TeamPage: PageWithLayout = () => {
           </Text>
         </Box>
       </Box>
+      <Box 
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
+          <Box 
+            sx={{ 
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)"
+            }}
+          >
+
+          </Box>
+      </Box>
+      <CTA 
+        background="#252634"
+        buttonColor="#8252C6"
+        text="#FBFBFD"
+      />
     </AppLayout>
   );
 };
