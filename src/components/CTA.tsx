@@ -1,13 +1,15 @@
 import { Box, Button, Text } from "@mantine/core";
 
-const CTA: React.FC = () => {
+const CTA: React.FC<{ background: string, buttonColor: string, text: string }> = ({ background, buttonColor, text }) => {
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        background: "#FBFBFD",
+        // background: "#FBFBFD",
+        background: background,
+        color: text,
       }}
     >
       <Text size={24} fw={700} mt={120} mb={40}>
@@ -24,7 +26,8 @@ const CTA: React.FC = () => {
         sx={{
           borderRadius: 10,
           fontSize: 18,
-          background: "#301F55",
+          // background: "#301F55",
+          background: buttonColor,
           padding: 20,
         }}
       >

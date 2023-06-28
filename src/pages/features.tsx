@@ -240,7 +240,11 @@ const FeaturesPage: PageWithLayout = () => {
             </Box>
           </Box>
         </Box>
-        <CTA />
+        <CTA
+          background="#301F55"
+          buttonColor="#8252C6"
+          text="#FFF"
+        />
       </Box>
     </AppLayout>
   );

@@ -650,7 +650,11 @@ const LandingPage: PageWithLayout = () => {
           ></Box>
         </Box>
       </Box>
-      <CTA />
+      <CTA 
+        background="#FBFBFD"
+        buttonColor="#301F55"
+        text="#000"
+      />
       {/* <Footer /> */}
     </AppLayout>
   );
