@@ -8,7 +8,7 @@ import { PageWithLayout } from "next";
 const FeaturesPage: PageWithLayout = () => {
   return (
     <AppLayout>
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <Box sx={{ display: "flex", flexDirection: "column", background: "#301F55", color: "#FFF" }}>
         <Box
           sx={{
             display: "flex",
@@ -18,8 +18,8 @@ const FeaturesPage: PageWithLayout = () => {
             minHeight: "400px",
           }}
         >
-          <Text>Key Features</Text>
-          <Text>
+          <Text size={48} fw={700}>Key Features</Text>
+          <Text size={20}>
             Standing ovation, please. These features are guaranteed
             show-stoppers.
           </Text>
