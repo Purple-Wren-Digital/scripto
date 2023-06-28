@@ -423,7 +423,7 @@ const LandingPage: PageWithLayout = () => {
             >
               <Text size={24} fw={700} mb={40} >True Collaboration.</Text>
               <Text mb={40} sx={{ maxWidth: "420px" }}>Write with others in the same script at the same time, with automatic and flexible industry-standard formatting for variety shows, screenplays, video games, and more. You deserve better than Google Docs!</Text>
-              <Button variant="outline" sx={{ borderRadius: "10px" }}>Learn more</Button>
+              <Button variant="outline" h={60} w={200} sx={{ borderRadius: "10px" }}>Learn more</Button>
             </Box>
           </Box>
         </Box>
@@ -447,7 +447,7 @@ const LandingPage: PageWithLayout = () => {
             >
               <Text size={24} fw={700} mb={40}>Feature that is amazing</Text>
               <Text mb={40} sx={{ maxWidth: "420px" }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
-              <Button variant="outline" sx={{ borderRadius: "10px" }}>Learn more</Button>
+              <Button variant="outline" h={60} w={200} sx={{ borderRadius: "10px" }}>Learn more</Button>
             </Box>
           </Box>
           <Box
@@ -474,14 +474,15 @@ const LandingPage: PageWithLayout = () => {
         </Box>
       </Box>
       <Box mt={120} sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <Text mb={20} size={24}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.”</Text>
-        {/* <Box mb={20} sx={{ width: "40px", aspectRatio: "1/1", background: "#000", borderRadius: "50%"}}></Box> */}
-        <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark"/>
-        <Text size={14} mb={50} >Maria Lopez, VP of Design at Meshery</Text>
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <Text mb={20} size={24}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.”</Text>
+          <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark"/>
+          <Text size={14} mb={50} >Maria Lopez, VP of Design at Meshery</Text>
+        </Box>
         <Box mb={80} sx={{ display: "flex" }}>
-          <Box sx={{ width: "10px", aspectRatio: "1/1", background: "#000", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
-          <Box sx={{ width: "10px", aspectRatio: "1/1", background: "none", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
-          <Box sx={{ width: "10px", aspectRatio: "1/1", background: "none", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
+          <Box sx={{ cursor: "pointer", width: "10px", aspectRatio: "1/1", background: "#000", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
+          <Box sx={{ cursor: "pointer", width: "10px", aspectRatio: "1/1", background: "none", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
+          <Box sx={{ cursor: "pointer", width: "10px", aspectRatio: "1/1", background: "none", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
         </Box>
       </Box>
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", background: "#FBFBFD" }}>
