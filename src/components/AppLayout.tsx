@@ -26,11 +26,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
               Careers
             </Text>
             <Link href="/features" style={{ textDecoration: "none" }}>
-              <Text size="lg" mr={15} color={"#FBFBFD"}>
+              <Text size={15} mr={20} color={"#FBFBFD"}>
                 Features
               </Text>
             </Link>
-            <Text size="lg" color={"#FBFBFD"}>
+            <Text size={15} color={"#FBFBFD"}>
               Plans
             </Text>
           </Box>
