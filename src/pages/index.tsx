@@ -1,7 +1,7 @@
 import { AppLayout } from "@/components/AppLayout";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
-import { Text, Box, Button, Space, Image, Flex } from "@mantine/core";
+import { Text, Box, Button, Space, Image, Flex, Avatar } from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const LandingPage: PageWithLayout = () => {
@@ -475,7 +475,8 @@ const LandingPage: PageWithLayout = () => {
       </Box>
       <Box mt={120} sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Text mb={20} size={24}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.”</Text>
-        <Box mb={20} sx={{ width: "40px", aspectRatio: "1/1", background: "#000", borderRadius: "50%"}}></Box>
+        {/* <Box mb={20} sx={{ width: "40px", aspectRatio: "1/1", background: "#000", borderRadius: "50%"}}></Box> */}
+        <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark"/>
         <Text size={14} mb={50} >Maria Lopez, VP of Design at Meshery</Text>
         <Box mb={80} sx={{ display: "flex" }}>
           <Box sx={{ width: "10px", aspectRatio: "1/1", background: "#000", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
