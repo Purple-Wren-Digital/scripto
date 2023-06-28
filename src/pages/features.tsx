@@ -108,15 +108,34 @@ const FeaturesPage: PageWithLayout = () => {
           </Box>
         </Box>
         <Box sx={{ display: "flex", minHeight: "682px" }}>
-          <Box
+        <Box
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               width: "50%",
+              backgroundImage: "url(/images/features-page/prompter-bg.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "90%",
             }}
           >
-            <Text>IMAGE HERE</Text>
+            <Box ml="auto" sx={{ position: "relative", width: "85%"}}>
+              <Image
+                src="/images/features-page/push-to-prompter.png"
+                width={"100%"}
+                radius={10}
+                ml="auto"
+                alt="script editor"
+              />
+              <Image
+                src="/images/features-page/prompter-view-1.png"
+                width={"75%"}
+                radius={10}
+                sx={{ position: "absolute", bottom: "-10%", right: "-25%",  }}
+                alt="script editor"
+              />
+            </Box>
           </Box>
           <Box
             sx={{
@@ -127,13 +146,15 @@ const FeaturesPage: PageWithLayout = () => {
               width: "50%",
             }}
           >
-            <Text>Push to Prompter.</Text>
-            <Text>
-              Scripted shows using the industry-standard screenplay format can
-              now have true collaboration in the writers room. It's also great
-              for pre-taped sketches at variety shows. Before you buy the new
-              Final Draft, try Scripto for free!
-            </Text>
+            <Box ta="left" sx={{ maxWidth: "420px" }}>
+              <Text size={24} fw={700} mb={24}>Push to Prompter.</Text>
+              <Text size={20}>
+                Scripted shows using the industry-standard screenplay format can
+                now have true collaboration in the writers room. It's also great
+                for pre-taped sketches at variety shows. Before you buy the new
+                Final Draft, try Scripto for free!
+              </Text>
+            </Box>
           </Box>
         </Box>
         <Box sx={{ display: "flex", minHeight: "682px" }}>
