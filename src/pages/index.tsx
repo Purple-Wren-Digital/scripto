@@ -25,13 +25,13 @@ const LandingPage: PageWithLayout = () => {
             marginLeft: "10%",
           }}
         >
-          <Text size={48} mb="md" mt={50} fw={700}>
+          <Text size={48} mt={50} fw={700}>
             Write.
           </Text>
-          <Text size={48} mb="md" fw={700}>
+          <Text size={48} fw={700}>
             Plan.
           </Text>
-          <Text size={48} mb="md" fw={700}>
+          <Text size={48} fw={700}>
             Produce.
           </Text>
           <Text size={48} mb="md" fw={700}>
@@ -61,14 +61,18 @@ const LandingPage: PageWithLayout = () => {
             justifyContent: "center",
             backgroundImage: "url(/images/landing-page.png)",
             backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "90%",
             width: "70%",
             position: "relative",
           }}
         >
           <Image
             src="/images/script-editor.png"
-            width={"85%"}
-            sx={{ position: "absolute", zIndex: 1, marginLeft: 110 }}
+            width={"80%"}
+            radius={10}
+            ml="auto"
+            // sx={{ position: "absolute", zIndex: 1, marginLeft: 110, overflow: "hidden" }}
             alt="script editor"
           />
         </Box>
@@ -471,10 +475,33 @@ const LandingPage: PageWithLayout = () => {
       <Box mt={120} sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Text mb={20} size={24}>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.”</Text>
         <Box mb={20} sx={{ width: "40px", aspectRatio: "1/1", background: "#000", borderRadius: "50%"}}></Box>
-        <Text size={14} >Maria Lopez, VP of Design at Meshery</Text>
-        <Box></Box>
+        <Text size={14} mb={50} >Maria Lopez, VP of Design at Meshery</Text>
+        <Box mb={80} sx={{ display: "flex" }}>
+          <Box sx={{ width: "10px", aspectRatio: "1/1", background: "#000", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
+          <Box sx={{ width: "10px", aspectRatio: "1/1", background: "none", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
+          <Box sx={{ width: "10px", aspectRatio: "1/1", background: "none", border: "1px solid #000", borderRadius: "50%", margin: "15px"}}></Box>
+        </Box>
       </Box>
-      <Footer />
+      <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", background: "#FBFBFD" }}>
+        <Text size={24} fw={700} mt={120} mb={40}>Ready to get started?</Text>
+        <Text mb={25} ta="center" sx={{ maxWidth: "420px" }} >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </Text>
+        <Button
+            mb={120}
+            h={60}
+            w={200}
+            sx={{
+              borderRadius: 10,
+              fontSize: 18,
+              background: "#301F55",
+              padding: 20,
+            }}
+          >
+            Start free trial
+          </Button>
+      </Box>
+      {/* <Footer /> */}
     </AppLayout>
   );
 };
