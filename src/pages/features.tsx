@@ -150,7 +150,7 @@ const FeaturesPage: PageWithLayout = () => {
               <Text size={24} fw={700} mb={24}>Push to Prompter.</Text>
               <Text size={20}>
                 Scripted shows using the industry-standard screenplay format can
-                now have true collaboration in the writers room. It's also great
+                now have true collaboration in the writers room. It&apos;s also great
                 for pre-taped sketches at variety shows. Before you buy the new
                 Final Draft, try Scripto for free!
               </Text>
@@ -161,39 +161,83 @@ const FeaturesPage: PageWithLayout = () => {
           <Box
             sx={{
               display: "flex",
-              alignItems: "center",
+              alignItems: "flex-start",
               justifyContent: "center",
-              flexDirection: "column",
               width: "50%",
             }}
           >
-            <Text>IMAGE HERE</Text>
-            <Text>True Collaboration.</Text>
-            <Text>
-              Write with others in the same script at the same time, with
-              automatic and flexible industry-standard formatting for variety
-              shows, screenplays, video games, and more. You deserve better than
-              Google Docs!
-            </Text>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                maxWidth: "480px",
+              }}
+            >
+              <Box
+                sx={{
+                  background: "#FBFBFD",
+                  padding: "50px 20px",
+                  width: "100%",
+                  height: "320px",
+                  borderRadius: "10px",
+                }}
+              >
+                <Image 
+                  src="/images/features-page/collaboration-sc.png"
+                  width={"100%"}
+                  alt="collaboration"
+                />
+              </Box>
+              <Text mt={50} size={24} fw={700}>True Collaboration.</Text>
+              <Text mt={20} mb={20} size={20}>
+                Write with others in the same script at the same time, with
+                automatic and flexible industry-standard formatting for variety
+                shows, screenplays, video games, and more. You deserve better than
+                Google Docs!
+              </Text>
+            </Box>
           </Box>
           <Box
             sx={{
               display: "flex",
-              alignItems: "center",
+              alignItems: "flex-start",
               justifyContent: "center",
-              flexDirection: "column",
               width: "50%",
             }}
           >
-            <Text>IMAGE HERE</Text>
-            <Text>Change Tracking.</Text>
-            <Text>
-              No matter what you’re writing, planning, or producing, the only
-              constant is change. Scripto tracks changes and saves backups as
-              you work, and generates shareable change reports you can share
-              with your whole team. Never again will you buy a prop that got cut
-              two drafts ago.
-            </Text>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                maxWidth: "480px",
+              }}
+            >
+              <Box
+                sx={{
+                  background: "#FBFBFD",
+                  padding: "50px 20px",
+                  width: "100%",
+                  height: "320px",
+                  borderRadius: "10px",
+                }}
+              >
+                <Image 
+                  src="/images/features-page/change-tracking-1sc.png"
+                  width={"100%"}
+                  alt="collaboration"
+                />
+              </Box>
+              <Text mt={50} size={24} fw={700}>Change Tracking.</Text>
+              <Text mt={20} mb={20} size={20}>
+                No matter what you&apos;re writing, planning, or producing, the only
+                constant is change. Scripto tracks changes and saves backups as
+                you work, and generates shareable change reports you can share
+                with your whole team. Never again will you buy a prop that got cut
+                two drafts ago.
+              </Text>
+            </Box>
           </Box>
         </Box>
         <CTA />
