@@ -39,7 +39,7 @@ const FeaturesPage: PageWithLayout = () => {
           >
             <Image
               src="/images/features-page/standard-screenplay.png"
-              width={"80%"}
+              width={"85%"}
               radius={10}
               ml="auto"
               alt="script editor"
@@ -76,24 +76,35 @@ const FeaturesPage: PageWithLayout = () => {
               width: "50%",
             }}
           >
-            <Text>Smart Rundowns.</Text>
-            <Text>
-              It’s a law of modern work: Everything becomes a spreadsheet
-              eventually. Scripto’s Rundowns let you do it with the click of a
-              button. Drag and drop any script into our customizable grids and
-              see the magic for yourself.
-            </Text>
+            <Box ta="left" sx={{ maxWidth: "420px" }}>
+              <Text size={24} fw={700} mb={24}>Smart Rundowns.</Text>
+              <Text size={20}>
+                It’s a law of modern work: Everything becomes a spreadsheet
+                eventually. Scripto’s Rundowns let you do it with the click of a
+                button. Drag and drop any script into our customizable grids and
+                see the magic for yourself.
+              </Text>
+            </Box>
           </Box>
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              flexDirection: "column",
               width: "50%",
+              backgroundImage: "url(/images/features-page/rundown-bg.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "90%",
             }}
           >
-            <Text>IMAGE HERE</Text>
+            <Image
+              src="/images/features-page/rundowns.png"
+              width={"85%"}
+              radius={10}
+              ml="auto"
+              alt="script editor"
+            />
           </Box>
         </Box>
         <Box sx={{ display: "flex", minHeight: "682px" }}>
