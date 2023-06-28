@@ -1,7 +1,7 @@
 import { AppShell, Text, Header, Box, Button } from "@mantine/core";
-import { PageWithLayout } from "next";
 import { ReactNode } from "react";
 import Footer from "./Footer";
+import Link from "next/link";
 
 export const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
@@ -25,15 +25,19 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
             <Text size="lg" mr={15} color={"#FBFBFD"}>
               Careers
             </Text>
-            <Text size="lg" mr={15} color={"#FBFBFD"}>
-              Features
-            </Text>
+            <Link href="/features" style={{ textDecoration: "none" }}>
+              <Text size="lg" mr={15} color={"#FBFBFD"}>
+                Features
+              </Text>
+            </Link>
             <Text size="lg" color={"#FBFBFD"}>
               Plans
             </Text>
           </Box>
           <Box sx={{ position: "absolute", right: "50%" }}>
-            <Text color={"#FBFBFD"}>scripto</Text>
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Text color={"#FBFBFD"}>scripto</Text>
+            </Link>
           </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Text size="md" mr={15} color={"#FBFBFD"}>
