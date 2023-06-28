@@ -14,8 +14,7 @@ export default function Footer() {
         alignItems: "center",
         justifyContent: "center",
         background: "#252634",
-
-        color: "#fff"
+        color: "#FBFBFD"
       }}
     >
       <Box sx={{ display: "flex", flexDirection: "column", width: "70%" }}>
