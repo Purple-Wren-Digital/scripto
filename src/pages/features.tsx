@@ -31,9 +31,19 @@ const FeaturesPage: PageWithLayout = () => {
               alignItems: "center",
               justifyContent: "center",
               width: "50%",
+              backgroundImage: "url(/images/features-page/video-games-bg.png)",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              backgroundSize: "90%",
             }}
           >
-            <Text>IMAGE HERE</Text>
+            <Image
+              src="/images/features-page/standard-screenplay.png"
+              width={"80%"}
+              radius={10}
+              ml="auto"
+              alt="script editor"
+            />
           </Box>
           <Box
             sx={{
@@ -44,14 +54,16 @@ const FeaturesPage: PageWithLayout = () => {
               width: "50%",
             }}
           >
-            <Text>A Missing Piece for Video Games.</Text>
-            <Text>
-              If your game prioritizes narrative design or features multiple
-              content contributors, Scripto lets you run a professional writing
-              process in a cozy editorial environment. We support the Ink
-              interactive scripting language and our API makes it easy to
-              integrate with your build pipeline.
-            </Text>
+            <Box ta="left" sx={{ maxWidth: "420px" }}>
+              <Text size={24} fw={700} mb={24}>A Missing Piece for Video Games.</Text>
+              <Text size={20} >
+                If your game prioritizes narrative design or features multiple
+                content contributors, Scripto lets you run a professional writing
+                process in a cozy editorial environment. We support the Ink
+                interactive scripting language and our API makes it easy to
+                integrate with your build pipeline.
+              </Text>
+            </Box>
           </Box>
         </Box>
         <Box sx={{ display: "flex", minHeight: "682px" }}>
