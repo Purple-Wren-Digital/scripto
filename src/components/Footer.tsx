@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Text } from "@mantine/core";
+import { Box, Button, Divider, Text, Image } from "@mantine/core";
 import Link from "next/link";
 
 export default function Footer() {
@@ -14,32 +14,43 @@ export default function Footer() {
         alignItems: "center",
         justifyContent: "center",
         background: "#252634",
+
+        color: "#fff"
       }}
     >
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
-        <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-          <Link href="#">
-            <Text>Our Team</Text>
-          </Link>
-          <Link href="#">
-            <Text>Features</Text>
-          </Link>
-          <Link href="#">
-            <Text>Scripto</Text>
-          </Link>
-          <Link href="#">
-            <Text>Plans</Text>
-          </Link>
-          <Link href="#">
-            <Text>Home</Text>
-          </Link>
+      <Box sx={{ display: "flex", flexDirection: "column", width: "70%" }}>
+        <Box mb={40} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", position: "relative" }}>
+          <Box sx={{ display: "flex" }}>
+            <Link href="#" style={{ textDecoration: "none", marginLeft: "50px" }}>
+              <Text size={14} fw={700} color={"#FBFBFD"}>Our Team</Text>
+            </Link>
+            <Link href="#" style={{ textDecoration: "none", marginLeft: "50px" }}>
+              <Text size={14} fw={700} color={"#FBFBFD"}>Features</Text>
+            </Link>
+          </Box>
+          <Box sx={{ position: "absolute", right: "50%", transform: "translateX(50%)" }}>
+            <Link href="#" >
+              <Image
+                src="/images/logo-light-400w.png"
+                width={100}
+                alt="scripto logo"
+              />
+            </Link>
+          </Box>
+          <Box sx={{ display: "flex" }}>
+            <Link href="#" style={{ textDecoration: "none", marginRight: "50px" }}>
+              <Text size={14} fw={700} color={"#FBFBFD"}>Plans</Text>
+            </Link>
+            <Link href="#" style={{ textDecoration: "none", marginRight: "50px" }}>
+              <Text size={14} fw={700} color={"#FBFBFD"}>Home</Text>
+            </Link>
+          </Box>
         </Box>
-        <Divider />
-        <Button>Get in Touch</Button>
-        <Box sx={{ display: "flex" }}>
-          <Text>©️ {year}</Text>
-          <Text>Privacy</Text>
-          <Text>Terms</Text>
+        <Divider size="sm" color="#FBFBFD" />
+        <Button mt={50} h={60} w={200} radius={10} sx={{ alignSelf: "center" }}>Get in Touch</Button>
+        <Box mt={50} sx={{ display: "flex", alignSelf: "center", gap: "20px" }}>
+          <Text>©️ 2010-{year}</Text>
+          <Text>Privacy-Terms</Text>
         </Box>
       </Box>
     </Box>

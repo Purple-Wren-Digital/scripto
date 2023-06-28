@@ -157,7 +157,7 @@ const FeaturesPage: PageWithLayout = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ display: "flex", minHeight: "682px" }}>
+        <Box mt={50} sx={{ display: "flex", minHeight: "682px" }}>
           <Box
             sx={{
               display: "flex",
