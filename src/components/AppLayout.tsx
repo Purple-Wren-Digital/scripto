@@ -19,9 +19,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
           }}
         >
           <Box ml={50} sx={{ display: "flex", justifyContent: "space-around" }}>
-            <Text size={15} mr={20} color={"#FBFBFD"}>
-              Our Team
-            </Text>
+            <Link href="/team" style={{ textDecoration: "none" }}>
+              <Text size={15} mr={20} color={"#FBFBFD"}>
+                Our Team
+              </Text>
+            </Link>
             <Text size={15} mr={20} color={"#FBFBFD"}>
               Careers
             </Text>

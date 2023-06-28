@@ -28,14 +28,126 @@ const TeamPage: PageWithLayout = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          background: "#252634"
         }}>
           <Box 
+            mt={180}
             sx={{ 
               display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)"
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              width: "80%",
+              maxWidth: "850px"
+              // gap: "120px"
             }}
           >
-
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5",
+              }}
+            ></Box>
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5"
+              }}
+            ></Box>
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5"
+              }}
+            ></Box>
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5"
+              }}
+            ></Box>
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5"
+              }}
+            ></Box>
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5"
+              }}
+            ></Box>
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5"
+              }}
+            ></Box>
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5"
+              }}
+            ></Box>
+            <Box
+              mx="auto"
+              mb={120}
+              sx={{
+                width: "180px",
+                height: "180px",
+                borderRadius: "50%",
+                background: "#B89ADE",
+                border: "10px solid #EAD8AD",
+                opacity: "0.5"
+              }}
+            ></Box>
           </Box>
       </Box>
       <CTA 
