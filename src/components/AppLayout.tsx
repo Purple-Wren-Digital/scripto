@@ -1,4 +1,4 @@
-import { AppShell, Text, Header, Box, Button } from "@mantine/core";
+import { AppShell, Text, Header, Box, Button, Image } from "@mantine/core";
 import { ReactNode } from "react";
 import Footer from "./Footer";
 import Link from "next/link";
@@ -34,9 +34,14 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
               Plans
             </Text>
           </Box>
-          <Box sx={{ position: "absolute", right: "50%" }}>
+          <Box sx={{ position: "absolute", right: "50%", transform: "translateX(50%)" }}>
             <Link href="/" style={{ textDecoration: "none" }}>
-              <Text color={"#FBFBFD"}>scripto</Text>
+              {/* <Text color={"#FBFBFD"}>scripto</Text> */}
+              <Image
+                src="/images/logo-light-400w.png"
+                width={100}
+                alt="scripto logo"
+              />
             </Link>
           </Box>
           <Box mr={50} sx={{ display: "flex", alignItems: "center" }}>
