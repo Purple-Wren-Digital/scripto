@@ -18,11 +18,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
             backgroundColor: "#252634",
           }}
         >
-          <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-            <Text size="lg" mr={15} color={"#FBFBFD"}>
+          <Box ml={50} sx={{ display: "flex", justifyContent: "space-around" }}>
+            <Text size={15} mr={20} color={"#FBFBFD"}>
               Our Team
             </Text>
-            <Text size="lg" mr={15} color={"#FBFBFD"}>
+            <Text size={15} mr={20} color={"#FBFBFD"}>
               Careers
             </Text>
             <Link href="/features" style={{ textDecoration: "none" }}>
@@ -39,11 +39,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
               <Text color={"#FBFBFD"}>scripto</Text>
             </Link>
           </Box>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Text size="md" mr={15} color={"#FBFBFD"}>
+          <Box mr={50} sx={{ display: "flex", alignItems: "center" }}>
+            <Text size="md" mr={20} color={"#FBFBFD"}>
               Sign In
             </Text>
-            <Button size="md" color={"#FBFBFD"}>
+            <Button size="md" radius={10} color={"#FBFBFD"}>
               Get Started
             </Button>
           </Box>
