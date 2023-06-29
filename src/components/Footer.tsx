@@ -70,7 +70,7 @@ export default function Footer() {
             </Link>
           </Box>
           <Box sx={{ display: "flex" }}>
-            <Link href="#" style={{ textDecoration: "none", marginRight: "50px" }}>
+            <Link href="/plans" style={{ textDecoration: "none", marginRight: "50px" }}>
               <Text size={14} fw={700} color={colors.text}>Plans</Text>
             </Link>
             <Link href="/" style={{ textDecoration: "none", marginRight: "50px" }}>

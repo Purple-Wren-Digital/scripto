@@ -3,7 +3,7 @@ import CTA from "@/components/CTA";
 import { Text, Box, Button, Space, Image} from "@mantine/core";
 import { PageWithLayout } from "next";
 
-const CareersPage: PageWithLayout = () => {
+const PlansPage: PageWithLayout = () => {
   return (
     <AppLayout>
       <Box 
@@ -15,7 +15,7 @@ const CareersPage: PageWithLayout = () => {
           minHeight: "682px",
         }}
       >
-        <Text>Careers Page</Text>
+        <Text>Plans Page</Text>
       </Box>
       <CTA 
         background="#252634"
@@ -26,4 +26,4 @@ const CareersPage: PageWithLayout = () => {
   );
 };
 
-export default CareersPage;
+export default PlansPage;

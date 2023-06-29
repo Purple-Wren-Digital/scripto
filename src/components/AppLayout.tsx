@@ -34,9 +34,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                 Features
               </Text>
             </Link>
-            <Text size={15} color={"#FBFBFD"}>
-              Plans
-            </Text>
+            <Link href="/plans" style={{ textDecoration: "none" }}>
+              <Text size={15} color={"#FBFBFD"}>
+                Plans
+              </Text>
+            </Link>
           </Box>
           <Box sx={{ position: "absolute", right: "50%", transform: "translateX(50%)" }}>
             <Link href="/" style={{ textDecoration: "none" }}>
