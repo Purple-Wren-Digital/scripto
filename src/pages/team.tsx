@@ -17,21 +17,60 @@ const TeamPage: PageWithLayout = () => {
             background: "#EAD8AD",
           }}
         >
-          <Text size={48} fw={700} mb={25}>Meet Our Team</Text>
+          <Text size={48} fw={700} mb={25}>About Us</Text>
           <Text ta="center" size={20} sx={{ maxWidth: 645}}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Text>
         </Box>
       </Box>
+      <Box sx={{ display: "flex", flexDirection: "column", color: "#000" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "stretch",
+            justifyContent: "space-between",
+            minHeight: "800px",
+            position: "relative",
+          }}
+        >
+          <Box
+            sx={{
+              width: "30%",
+              background: "#000"
+            }}
+          ></Box>
+          <Box
+            sx={{
+              width: "70%",
+            }}
+          ></Box>
+        </Box>
+      </Box>
       <Box 
         sx={{
           display: "flex",
+          flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
           background: "#252634"
         }}>
+          <Box
+            mt={80}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#FBFBFD",
+            }}
+          >
+            <Text size={24} fw={700} mb={25}>Meet The Crew</Text>
+            <Text ta="center" size={20} sx={{ maxWidth: 645}}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Text>
+          </Box>
           <Box 
-            mt={180}
+            mt={60}
             sx={{ 
               display: "grid",
               gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
