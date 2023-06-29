@@ -373,8 +373,8 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Image
-                    alt="daily show"
-                    src="/images/show-logos/daily-show.png"
+                    alt="a little late"
+                    src="/images/show-logos/a-little-late-with-lilly-singh.png"
                     width={"100%"}
                   />
                 </Box>
@@ -393,8 +393,8 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Image
-                    alt="the opposition"
-                    src="/images/show-logos/the-opposition-with-jordan-klepper.png"
+                    alt="jim jefferies show"
+                    src="/images/show-logos/jim-jefferies-show.png"
                     width={"100%"}
                   />
                 </Box>
@@ -413,8 +413,8 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Image
-                    alt="patriot act"
-                    src="/images/show-logos/patriot-act.png"
+                    alt="problem areas"
+                    src="/images/show-logos/problem-with-jon-stewart.png"
                     width={"100%"}
                   />
                 </Box>
@@ -433,8 +433,8 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Image
-                    alt="game theory"
-                    src="/images/show-logos/game-theory-with-bomani-jones.png"
+                    alt="tooning out the news"
+                    src="/images/show-logos/tooning-out-the-news.png"
                     width={"100%"}
                   />
                 </Box>
@@ -465,9 +465,10 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Image
-                    alt="full frontal"
-                    src="/images/show-logos/full-frontal-with-samantha-bee.png"
-                    width={"100%"}
+                    alt="late show"
+                    src="/images/show-logos/late-show.png"
+                    height={"150px"}
+                    fit="contain"
                   />
                 </Box>
                 <Box
@@ -485,9 +486,10 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Image
-                    alt="the problem"
-                    src="/images/show-logos/problem-with-jon-stewart.png"
-                    width={"100%"}
+                    alt="finji"
+                    src="/images/show-logos/finji.png"
+                    height={"150px"}
+                    fit="contain"
                   />
                 </Box>
                 <Box
@@ -505,9 +507,10 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Image
-                    alt="daily show"
-                    src="/images/show-logos/daily-show.png"
-                    width={"100%"}
+                    alt="last week tonight"
+                    src="/images/show-logos/last-week-tonight.png"
+                    height={"150px"}
+                    fit="contain"
                   />
                 </Box>
                 <Box
@@ -525,12 +528,13 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Image
-                    alt="the opposition"
-                    src="/images/show-logos/the-opposition-with-jordan-klepper.png"
-                    width={"100%"}
+                    alt="nerial"
+                    src="/images/show-logos/nerial.png"
+                    height={"150px"}
+                    fit="contain"
                   />
                 </Box>
-                <Box
+                {/* <Box
                   sx={{
                     display: "flex",
                     alignItems: "center",
@@ -569,7 +573,7 @@ const LandingPage: PageWithLayout = () => {
                     src="/images/show-logos/game-theory-with-bomani-jones.png"
                     width={"100%"}
                   />
-                </Box>
+                </Box> */}
               </Box>
             </Carousel.Slide>
 
