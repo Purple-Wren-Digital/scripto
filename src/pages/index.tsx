@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 import { Text, Box, Button, Space, Image, Flex, Avatar } from "@mantine/core";
 import { Carousel } from "@mantine/carousel"
 import { PageWithLayout } from "next";
+import Link from "next/link";
 
 const LandingPage: PageWithLayout = () => {
   return (
@@ -117,19 +118,19 @@ const LandingPage: PageWithLayout = () => {
             imgSrc="/images/collaboration.png"
             title="True Collaboration."
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-            link="#"
+            link="/features"
           />
           <Card
             imgSrc="/images/rundowns.png"
             title="Smart Rundowns."
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-            link="#"
+            link="/features"
           />
           <Card
             imgSrc="/images/format.png"
             title="Any Format."
             text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-            link="#"
+            link="/features"
           />
         </Box>
       </Box>
@@ -628,14 +629,16 @@ const LandingPage: PageWithLayout = () => {
                 shows, screenplays, video games, and more. You deserve better
                 than Google Docs!
               </Text>
-              <Button
-                variant="outline"
-                h={60}
-                w={200}
-                sx={{ borderRadius: "10px" }}
-              >
-                Learn more
-              </Button>
+              <Link href="/features" >
+                <Button
+                  variant="outline"
+                  h={60}
+                  w={200}
+                  sx={{ borderRadius: "10px" }}
+                >
+                  Learn more
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Box>
@@ -665,14 +668,16 @@ const LandingPage: PageWithLayout = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </Text>
-              <Button
-                variant="outline"
-                h={60}
-                w={200}
-                sx={{ borderRadius: "10px" }}
-              >
-                Learn more
-              </Button>
+              <Link href="/features" >
+                <Button
+                  variant="outline"
+                  h={60}
+                  w={200}
+                  sx={{ borderRadius: "10px" }}
+                >
+                  Learn more
+                </Button>
+              </Link>
             </Box>
           </Box>
           <Box
