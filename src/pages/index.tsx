@@ -2,6 +2,7 @@ import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
 import Card from "@/components/Card";
 import { Text, Box, Button, Space, Image, Flex, Avatar } from "@mantine/core";
+import { Carousel } from "@mantine/carousel"
 import { PageWithLayout } from "next";
 
 const LandingPage: PageWithLayout = () => {
@@ -145,169 +146,434 @@ const LandingPage: PageWithLayout = () => {
         </Text>
         <Text ta="center">Trusted by top teams in the industry</Text>
         <Box
-          mt={50}
           sx={{
             display: "flex",
             justifyContent: "center",
-            flexWrap: "wrap",
             width: "80%",
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "20px",
-              margin: "12.5px 25px",
-              width: "285px",
-              height: "190px",
-              background: "#FBFBFD",
-              borderRadius: "10px",
-              boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+          <Carousel 
+            slideSize="100%" 
+            withIndicators 
+            withControls={false}
+            sx={{ 
+              width: "100%",
+            }} 
+            styles={{
+              indicator: {
+                width: "10px",
+                height: "10px",
+                background: "none",
+                border: "1px solid #000",
+                marginLeft: "20px",
+                marginRight: "20px",
+                transition: "background 250ms ease",
+
+                '&[data-active]': {
+                  background: "#000"
+                },
+              }
             }}
           >
-            <Image
-              alt="full frontal"
-              src="/images/show-logos/full-frontal-with-samantha-bee.png"
-              width={"100%"}
-            />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "20px",
-              margin: "12.5px 25px",
-              width: "285px",
-              height: "190px",
-              background: "#FBFBFD",
-              borderRadius: "10px",
-              boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Image
-              alt="the problem"
-              src="/images/show-logos/problem-with-jon-stewart.png"
-              width={"100%"}
-            />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "20px",
-              margin: "12.5px 25px",
-              width: "285px",
-              height: "190px",
-              background: "#FBFBFD",
-              borderRadius: "10px",
-              boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Image
-              alt="daily show"
-              src="/images/show-logos/daily-show.png"
-              width={"100%"}
-            />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "20px",
-              margin: "12.5px 25px",
-              width: "285px",
-              height: "190px",
-              background: "#FBFBFD",
-              borderRadius: "10px",
-              boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Image
-              alt="the opposition"
-              src="/images/show-logos/the-opposition-with-jordan-klepper.png"
-              width={"100%"}
-            />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "20px",
-              margin: "12.5px 25px",
-              width: "285px",
-              height: "190px",
-              background: "#FBFBFD",
-              borderRadius: "10px",
-              boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Image
-              alt="patriot act"
-              src="/images/show-logos/patriot-act.png"
-              width={"100%"}
-            />
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "20px",
-              margin: "12.5px 25px",
-              width: "285px",
-              height: "190px",
-              background: "#FBFBFD",
-              borderRadius: "10px",
-              boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Image
-              alt="game theory"
-              src="/images/show-logos/game-theory-with-bomani-jones.png"
-              width={"100%"}
-            />
-          </Box>
-        </Box>
-        <Box mt={80} sx={{ display: "flex" }}>
-          <Box
-            sx={{
-              cursor: "pointer",
-              width: "10px",
-              aspectRatio: "1/1",
-              background: "#000",
-              border: "1px solid #000",
-              borderRadius: "50%",
-              margin: "15px",
-            }}
-          ></Box>
-          <Box
-            sx={{
-              cursor: "pointer",
-              width: "10px",
-              aspectRatio: "1/1",
-              background: "none",
-              border: "1px solid #000",
-              borderRadius: "50%",
-              margin: "15px",
-            }}
-          ></Box>
-          <Box
-            sx={{
-              cursor: "pointer",
-              width: "10px",
-              aspectRatio: "1/1",
-              background: "none",
-              border: "1px solid #000",
-              borderRadius: "50%",
-              margin: "15px",
-            }}
-          ></Box>
+
+            <Carousel.Slide mb={80}>
+              <Box
+                mt={50}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  width: "100%",
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="full frontal"
+                    src="/images/show-logos/full-frontal-with-samantha-bee.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="the problem"
+                    src="/images/show-logos/problem-with-jon-stewart.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="daily show"
+                    src="/images/show-logos/daily-show.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="the opposition"
+                    src="/images/show-logos/the-opposition-with-jordan-klepper.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="patriot act"
+                    src="/images/show-logos/patriot-act.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="game theory"
+                    src="/images/show-logos/game-theory-with-bomani-jones.png"
+                    width={"100%"}
+                  />
+                </Box>
+              </Box>
+            </Carousel.Slide>
+            <Carousel.Slide mb={80}>
+              <Box
+                mt={50}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  width: "100%",
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="the rundown"
+                    src="/images/show-logos/rundown-with-robin-thede.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="desus and mero"
+                    src="/images/show-logos/desus-and-mero.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="daily show"
+                    src="/images/show-logos/daily-show.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="the opposition"
+                    src="/images/show-logos/the-opposition-with-jordan-klepper.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="patriot act"
+                    src="/images/show-logos/patriot-act.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="game theory"
+                    src="/images/show-logos/game-theory-with-bomani-jones.png"
+                    width={"100%"}
+                  />
+                </Box>
+              </Box>
+            </Carousel.Slide>
+            <Carousel.Slide mb={80}>
+              <Box
+                mt={50}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  width: "100%",
+                }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="full frontal"
+                    src="/images/show-logos/full-frontal-with-samantha-bee.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="the problem"
+                    src="/images/show-logos/problem-with-jon-stewart.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="daily show"
+                    src="/images/show-logos/daily-show.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="the opposition"
+                    src="/images/show-logos/the-opposition-with-jordan-klepper.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="patriot act"
+                    src="/images/show-logos/patriot-act.png"
+                    width={"100%"}
+                  />
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "20px",
+                    margin: "12.5px 25px",
+                    width: "285px",
+                    height: "190px",
+                    background: "#FBFBFD",
+                    borderRadius: "10px",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    alt="game theory"
+                    src="/images/show-logos/game-theory-with-bomani-jones.png"
+                    width={"100%"}
+                  />
+                </Box>
+              </Box>
+            </Carousel.Slide>
+
+          </Carousel>
         </Box>
       </Box>
       <Box mt={100} sx={{ display: "flex", background: "#FBFBFD" }}>
