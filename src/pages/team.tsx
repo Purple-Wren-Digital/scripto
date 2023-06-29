@@ -126,8 +126,11 @@ const TeamPage: PageWithLayout = () => {
           <Box 
             mt={60}
             sx={{ 
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              // display: "grid",
+              // gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              display: "flex",
+              flexWrap: "wrap",
+              gap: 50,
               width: "80%",
               maxWidth: "850px"
               // gap: "120px"
