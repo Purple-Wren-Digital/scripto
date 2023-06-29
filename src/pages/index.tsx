@@ -140,10 +140,10 @@ const LandingPage: PageWithLayout = () => {
           alignItems: "center",
         }}
       >
-        <Text size={40} fw={700}>
+        <Text size={40} fw={700} ta="center">
           Powering the Creative Force: Teams That Choose Us.
         </Text>
-        <Text>Trusted by top teams in the industry</Text>
+        <Text ta="center">Trusted by top teams in the industry</Text>
         <Box
           mt={50}
           sx={{
@@ -342,6 +342,7 @@ const LandingPage: PageWithLayout = () => {
             }}
           >
             <Box
+              m={20}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -380,6 +381,7 @@ const LandingPage: PageWithLayout = () => {
             }}
           >
             <Box
+              m={20}
               sx={{
                 display: "flex",
                 flexDirection: "column",
