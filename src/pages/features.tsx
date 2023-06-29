@@ -12,6 +12,7 @@ const AlternatingFeature = ({
   title,
   copy,
   isImgAlignLeft,
+  orderIndex,
 }: {
   bgImgPath: string;
   imgPath: string;
@@ -19,9 +20,20 @@ const AlternatingFeature = ({
   title: string;
   copy: string;
   isImgAlignLeft: boolean;
+  orderIndex: number;
 }) => {
   return (
-    <Box sx={{ display: "flex", minHeight: "682px" }}>
+    <Box 
+      // sx={{ display: "flex", minHeight: "682px" }}
+      sx={orderIndex == 0 ? (
+          { display: "flex", minHeight: "682px", background: "#301F55"}
+        ) : orderIndex == 1 ? (
+          { display: "flex", minHeight: "682px", background: "#8252C6"}
+        ) : (
+          { display: "flex", minHeight: "682px", background: "#B89ADE"}
+        )
+      }
+    >
       {isImgAlignLeft ? (
         <Box
           sx={{
@@ -117,6 +129,7 @@ const AlternatingLayout = ({ features }: any) => {
             title={feature.title}
             copy={feature.copy}
             isImgAlignLeft={index % 2 === 0}
+            orderIndex={index}
           />
         ))
       ) : (
@@ -145,6 +158,8 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
             alignItems: "center",
             justifyContent: "center",
             minHeight: "400px",
+            background: "#FBFBFD",
+            color: "#000",
           }}
         >
           <Text size={48} fw={700}>
@@ -157,7 +172,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
         </Box>
         <AlternatingLayout features={features && features} />
 
-        <Box mt={50} sx={{ display: "flex", minHeight: "682px" }}>
+        <Box mt={120} sx={{ display: "flex", minHeight: "682px" }}>
           <Box
             sx={{
               display: "flex",
