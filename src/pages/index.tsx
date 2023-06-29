@@ -596,130 +596,145 @@ const LandingPage: PageWithLayout = () => {
           </Carousel>
         </Box>
       </Box>
-      <Box mt={100} sx={{ display: "flex", background: "#FBFBFD" }}>
-        <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "500px",
-              backgroundImage: "url(/images/studio.png)",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ flexDirection: "column" }}
+      >
+        <Box mt={100} sx={{ display: "flex", background: "#FBFBFD" }}>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ width: "100%" }}
           >
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                background: "#B89ADE",
-                opacity: "0.35",
-              }}
-            ></Box>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "500px",
-            }}
-          >
-            <Box
-              m={20}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                width: "80%",
-                padding: "40px",
-              }}
-            >
-              <Text size={24} fw={700} mb={40}>
-                True Collaboration.
-              </Text>
-              <Text mb={40} sx={{ maxWidth: "420px" }}>
-                Write with others in the same script at the same time, with
-                automatic and flexible industry-standard formatting for variety
-                shows, screenplays, video games, and more. You deserve better
-                than Google Docs!
-              </Text>
-              <Link href="/features" >
-                <Button
-                  variant="outline"
-                  h={60}
-                  w={200}
-                  sx={{ borderRadius: "10px" }}
+            <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "500px",
+                  backgroundImage: "url(/images/studio.png)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    background: "#B89ADE",
+                    opacity: "0.35",
+                  }}
+                ></Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "500px",
+                }}
+              >
+                <Box
+                  m={20}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    width: "80%",
+                    padding: "40px",
+                  }}
                 >
-                  Learn more
-                </Button>
-              </Link>
+                  <Text size={24} fw={700} mb={40}>
+                    True Collaboration.
+                  </Text>
+                  <Text mb={40} sx={{ maxWidth: "420px" }}>
+                    Write with others in the same script at the same time, with
+                    automatic and flexible industry-standard formatting for variety
+                    shows, screenplays, video games, and more. You deserve better
+                    than Google Docs!
+                  </Text>
+                  <Link href="/features" >
+                    <Button
+                      variant="outline"
+                      h={60}
+                      w={200}
+                      sx={{ borderRadius: "10px" }}
+                    >
+                      Learn more
+                    </Button>
+                  </Link>
+                </Box>
+              </Box>
             </Box>
-          </Box>
-        </Box>
-        <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "500px",
-            }}
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ width: "100%", flexDirection: "column-reverse" }}
           >
-            <Box
-              m={20}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                width: "80%",
-                padding: "40px",
-              }}
-            >
-              <Text size={24} fw={700} mb={40}>
-                Feature that is amazing
-              </Text>
-              <Text mb={40} sx={{ maxWidth: "420px" }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </Text>
-              <Link href="/features" >
-                <Button
-                  variant="outline"
-                  h={60}
-                  w={200}
-                  sx={{ borderRadius: "10px" }}
+            <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "500px",
+                }}
+              >
+                <Box
+                  m={20}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    width: "80%",
+                    padding: "40px",
+                  }}
                 >
-                  Learn more
-                </Button>
-              </Link>
+                  <Text size={24} fw={700} mb={40}>
+                    Feature that is amazing
+                  </Text>
+                  <Text mb={40} sx={{ maxWidth: "420px" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </Text>
+                  <Link href="/features" >
+                    <Button
+                      variant="outline"
+                      h={60}
+                      w={200}
+                      sx={{ borderRadius: "10px" }}
+                    >
+                      Learn more
+                    </Button>
+                  </Link>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "500px",
+                  backgroundImage: "url(/images/workspace.png)",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  backgroundSize: "cover",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    background: "#B89ADE",
+                    opacity: "0.35",
+                  }}
+                ></Box>
+              </Box>
             </Box>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              height: "500px",
-              backgroundImage: "url(/images/workspace.png)",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-            }}
-          >
-            <Box
-              sx={{
-                width: "100%",
-                height: "100%",
-                background: "#B89ADE",
-                opacity: "0.35",
-              }}
-            ></Box>
-          </Box>
+          </MediaQuery>
         </Box>
-      </Box>
+      </MediaQuery>
       <Box
         mt={120}
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
