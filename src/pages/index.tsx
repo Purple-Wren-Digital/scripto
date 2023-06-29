@@ -175,7 +175,6 @@ const LandingPage: PageWithLayout = () => {
               }
             }}
           >
-
             <Carousel.Slide mb={80}>
               <Box
                 mt={50}
@@ -576,7 +575,6 @@ const LandingPage: PageWithLayout = () => {
                 </Box> */}
               </Box>
             </Carousel.Slide>
-
           </Carousel>
         </Box>
       </Box>
@@ -709,51 +707,98 @@ const LandingPage: PageWithLayout = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            justifyContent: "center",
+            width: "80%"
           }}
         >
-          <Text mb={20} size={24}>
-            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.”
-          </Text>
-          <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark" />
-          <Text size={14} mb={50}>
-            Maria Lopez, VP of Design at Meshery
-          </Text>
-        </Box>
-        <Box mb={80} sx={{ display: "flex" }}>
-          <Box
-            sx={{
-              cursor: "pointer",
-              width: "10px",
-              aspectRatio: "1/1",
-              background: "#000",
-              border: "1px solid #000",
-              borderRadius: "50%",
-              margin: "15px",
+          <Carousel 
+            mb={80}
+            slideSize="100%" 
+            withIndicators 
+            withControls={false}
+            slideGap={"50px"}
+            sx={{ 
+              width: "100%",
+              maxWidth: "900px",
+            }} 
+            styles={{
+              indicator: {
+                width: "10px",
+                height: "10px",
+                background: "none",
+                border: "1px solid #000",
+                marginLeft: "20px",
+                marginRight: "20px",
+                transition: "background 250ms ease",
+
+                '&[data-active]': {
+                  background: "#000"
+                },
+              }
             }}
-          ></Box>
-          <Box
-            sx={{
-              cursor: "pointer",
-              width: "10px",
-              aspectRatio: "1/1",
-              background: "none",
-              border: "1px solid #000",
-              borderRadius: "50%",
-              margin: "15px",
-            }}
-          ></Box>
-          <Box
-            sx={{
-              cursor: "pointer",
-              width: "10px",
-              aspectRatio: "1/1",
-              background: "none",
-              border: "1px solid #000",
-              borderRadius: "50%",
-              margin: "15px",
-            }}
-          ></Box>
+          >
+            <Carousel.Slide mb={50}>
+              <Box
+                ta="center"
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <Text mb={20} size={24}>
+                  “Testimonial one. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt.”
+                </Text>
+                <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark" />
+                <Text size={14} mb={50}>
+                  Maria Lopez, VP of Design at Meshery
+                </Text>
+              </Box>
+            </Carousel.Slide>
+            <Carousel.Slide mb={50}>
+              <Box
+                ta="center"
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+              >
+                <Text mb={20} size={24}>
+                  “Testimonial two. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt.”
+                </Text>
+                <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark" />
+                <Text size={14} mb={50}>
+                  Maria Lopez, VP of Design at Meshery
+                </Text>
+              </Box>
+            </Carousel.Slide>
+            <Carousel.Slide mb={50}>
+              <Box
+                ta="center"
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}
+              >
+                <Text mb={20} size={24}>
+                  “Testimonial three. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt.”
+                </Text>
+                <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark" />
+                <Text size={14} mb={50}>
+                  Maria Lopez, VP of Design at Meshery
+                </Text>
+              </Box>
+            </Carousel.Slide>
+            
+          </Carousel>
         </Box>
       </Box>
       <CTA 
