@@ -44,11 +44,11 @@ const TeamPage: PageWithLayout = () => {
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
                 background: "#B89ADE",
-                border: "10px solid #EAD8AD",
+                border: "25px solid #EAD8AD",
                 opacity: "0.5",
               }}
             ></Box>
@@ -56,98 +56,99 @@ const TeamPage: PageWithLayout = () => {
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
                 background: "#B89ADE",
-                border: "10px solid #EAD8AD",
-                opacity: "0.5"
+                border: "25px solid #EAD8AD",
+                opacity: "0.5",
               }}
             ></Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
-                background: "#B89ADE",
-                border: "10px solid #EAD8AD",
-                opacity: "0.5"
+                background: "#EAD8AD",
+                border: "25px solid #C9796F",
+                opacity: "0.5",
               }}
             ></Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
-                background: "#B89ADE",
-                border: "10px solid #EAD8AD",
-                opacity: "0.5"
+                background: "#C9796F",
+                border: "25px solid #B89ADE",
+                opacity: "0.5",
               }}
             ></Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
-                background: "#B89ADE",
-                border: "10px solid #EAD8AD",
-                opacity: "0.5"
+                background: "#EAD8AD",
+                border: "25px solid #C9796F",
+                opacity: "0.5",
               }}
             ></Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
                 background: "#B89ADE",
-                border: "10px solid #EAD8AD",
-                opacity: "0.5"
+                border: "25px solid #EAD8AD",
+                opacity: "0.5",
               }}
             ></Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
-                background: "#B89ADE",
-                border: "10px solid #EAD8AD",
-                opacity: "0.5"
+                background: "#C9796F",
+                border: "25px solid #B89ADE",
+                opacity: "0.5",
               }}
             ></Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
-                background: "#B89ADE",
-                border: "10px solid #EAD8AD",
-                opacity: "0.5"
+                background: "#EAD8AD",
+                border: "25px solid #C9796F",
+                opacity: "0.5",
               }}
             ></Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "180px",
-                height: "180px",
+                width: "200px",
+                height: "200px",
                 borderRadius: "50%",
-                background: "#B89ADE",
-                border: "10px solid #EAD8AD",
-                opacity: "0.5"
+                background: "#C9796F",
+                border: "25px solid #B89ADE",
+                opacity: "0.5",
               }}
             ></Box>
+            
           </Box>
       </Box>
       <CTA 
