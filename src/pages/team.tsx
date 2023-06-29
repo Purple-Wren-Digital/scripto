@@ -31,19 +31,63 @@ const TeamPage: PageWithLayout = () => {
             justifyContent: "space-between",
             minHeight: "800px",
             position: "relative",
+            background: "#F0EFF1",
           }}
         >
           <Box
             sx={{
               width: "30%",
-              background: "#000"
+              // backgroundImage: "url(/images/team-page/goat-graphic.png)",
+              // backgroundRepeat: "no-repeat",
+              // backgroundPosition: "center",
+              // backgroundSize: "cover",
+              position: "relative",
+              overflow: "hidden",
             }}
-          ></Box>
+          >
+            <Image
+              src="/images/team-page/goat-graphic.png"
+              width={"100%"}
+              sx={{
+                position: "absolute",
+                bottom: 0,
+                left: 0
+              }}
+              alt="goat"
+            />
+          </Box>
           <Box
             sx={{
               width: "70%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "relative"
             }}
-          ></Box>
+          >
+            <Box
+              my={50}
+              sx={{
+                width: "80%",
+                padding: "60px",
+                background: "#FBFBFD",
+                borderRadius: "10px",
+                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                zIndex: 10
+              }}
+            >
+              <Text size={24} fw={700} mb={24} >It All Started With a Goat...</Text>
+              <Text size={20} mb={24} >
+                Long ago, before Scripto existed, there was a show called The Colbert Report, where some writers optimistically wrote in a surprise appearance by a live goat. To everyone’s surprise, the idea moved forward — which meant booking a showbiz-grade goat from an ethical and TV-ready animal handler, at significant expense to the production.
+              </Text>
+              <Text size={20} mb={24}>
+                Only problem was: TV being TV, the goat’s appearance was cut from the script in revisions. And because they weren’t using Scripto, the show didn’t find out about the script change until the Tom Cruise of goats was already en route to the studio.
+              </Text>
+              <Text size={20} mb={24}>
+                We all learned an important lesson that day: It’s good to make changes to a script, but only if everyone else can see them too. That was the first spark of an idea that led to the creation of Scripto.
+              </Text>
+            </Box>
+          </Box>
         </Box>
       </Box>
       <Box 
