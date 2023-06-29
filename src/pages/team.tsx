@@ -65,6 +65,16 @@ const TeamPage: PageWithLayout = () => {
               position: "relative"
             }}
           >
+            <Image
+              src="/images/team-page/bg-ellipse-1.png"
+              width={600}
+              sx={{
+                position: "absolute",
+                bottom: 30,
+                right: 20,
+              }}
+              alt="goat"
+            />
             <Box
               my={50}
               sx={{
