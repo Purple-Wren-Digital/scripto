@@ -1,7 +1,7 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
 import Card from "@/components/Card";
-import { Text, Box, Button, Space, Image, Flex, Avatar } from "@mantine/core";
+import { Text, Box, Button, Space, Image, Flex, Avatar, MediaQuery } from "@mantine/core";
 import { Carousel } from "@mantine/carousel"
 import { PageWithLayout } from "next";
 import Link from "next/link";
@@ -9,87 +9,104 @@ import Link from "next/link";
 const LandingPage: PageWithLayout = () => {
   return (
     <AppLayout>
-      <Box
-        sx={{
-          height: "600px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "space-between",
-          background: "#FBFBFD",
-          overflow: "hidden",
-        }}
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ flexDirection: "column-reverse" }}
       >
         <Box
           sx={{
+            minHeight: "620px",
+            width: "100%",
             display: "flex",
-            flexDirection: "column",
-            width: "50%",
-            marginLeft: "10%",
+            justifyContent: "space-between",
+            background: "#FBFBFD",
+            overflow: "hidden",
           }}
         >
-          <Text size={48} mt={50} fw={700}>
-            Write.
-          </Text>
-          <Text size={48} fw={700}>
-            Plan.
-          </Text>
-          <Text size={48} fw={700}>
-            Produce.
-          </Text>
-          <Text size={48} mb="md" fw={700}>
-            Together.
-          </Text>
-          <Text mb="md" ta={"left"}>
-            Whether you&apos;re taping a show in a{" "}
-            <Text td="underline" component="span">
-              studio
-            </Text>
-            , collaborating on{" "}
-            <Text td="underline" component="span">
-              screenplays
-            </Text>
-            , or making a{" "}
-            <Text td="underline" component="span">
-              video game
-            </Text>
-            , Scripto helps you do your best work and save time while you do it.
-          </Text>
-          <Button
-            h={60}
-            w={240}
-            sx={{
-              borderRadius: 10,
-              fontSize: 18,
-              background: "#876AC2",
-              padding: 20,
-            }}
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ width: "100%", paddingRight: "10%" }}
           >
-            Book a Demo
-          </Button>
+            <Box
+              my={50}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                width: "50%",
+                paddingLeft: "10%",
+                // marginLeft: "10%",
+              }}
+            >
+              <Text size={48} fw={700} sx={{ maxWidth: "100%"}}>
+                Write.
+              </Text>
+              <Text size={48} fw={700}>
+                Plan.
+              </Text>
+              <Text size={48} fw={700}>
+                Produce.
+              </Text>
+              <Text size={48} mb="md" fw={700}>
+                Together.
+              </Text>
+              <Text mb="md" ta={"left"}>
+                Whether you&apos;re taping a show in a{" "}
+                <Text td="underline" component="span">
+                  studio
+                </Text>
+                , collaborating on{" "}
+                <Text td="underline" component="span">
+                  screenplays
+                </Text>
+                , or making a{" "}
+                <Text td="underline" component="span">
+                  video game
+                </Text>
+                , Scripto helps you do your best work and save time while you do it.
+              </Text>
+              <Button
+                h={60}
+                w={240}
+                sx={{
+                  borderRadius: 10,
+                  fontSize: 18,
+                  background: "#876AC2",
+                  padding: 20,
+                }}
+              >
+                Book a Demo
+              </Button>
+            </Box>
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ width: "100%", paddingTop: "15%", paddingBottom: "15%" }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundImage: "url(/images/landing-page.png)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "90%",
+                width: "70%",
+                position: "relative",
+              }}
+            >
+              <Image
+                src="/images/script-editor.png"
+                width={"80%"}
+                radius={10}
+                ml="auto"
+                // sx={{ position: "absolute", zIndex: 1, marginLeft: 110, overflow: "hidden" }}
+                alt="script editor"
+              />
+            </Box>
+          </MediaQuery>
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            backgroundImage: "url(/images/landing-page.png)",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "90%",
-            width: "70%",
-            position: "relative",
-          }}
-        >
-          <Image
-            src="/images/script-editor.png"
-            width={"80%"}
-            radius={10}
-            ml="auto"
-            // sx={{ position: "absolute", zIndex: 1, marginLeft: 110, overflow: "hidden" }}
-            alt="script editor"
-          />
-        </Box>
-      </Box>
+      </MediaQuery>
       <Box
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
