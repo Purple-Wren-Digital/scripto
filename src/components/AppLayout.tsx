@@ -24,9 +24,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                 Our Team
               </Text>
             </Link>
-            <Text size={15} mr={20} color={"#FBFBFD"}>
-              Careers
-            </Text>
+            <Link href="/careers" style={{ textDecoration: "none" }}>
+              <Text size={15} mr={20} color={"#FBFBFD"}>
+                Careers
+              </Text>
+            </Link>
             <Link href="/features" style={{ textDecoration: "none" }}>
               <Text size={15} mr={20} color={"#FBFBFD"}>
                 Features
@@ -38,7 +40,6 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
           </Box>
           <Box sx={{ position: "absolute", right: "50%", transform: "translateX(50%)" }}>
             <Link href="/" style={{ textDecoration: "none" }}>
-              {/* <Text color={"#FBFBFD"}>scripto</Text> */}
               <Image
                 src="/images/logo-light-400w.png"
                 width={100}

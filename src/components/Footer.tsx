@@ -53,15 +53,15 @@ export default function Footer() {
       <Box sx={{ display: "flex", flexDirection: "column", width: "70%" }}>
         <Box mb={40} sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", position: "relative" }}>
           <Box sx={{ display: "flex" }}>
-            <Link href="#" style={{ textDecoration: "none", marginLeft: "50px" }}>
+            <Link href="/team" style={{ textDecoration: "none", marginLeft: "50px" }}>
               <Text size={14} fw={700} color={colors.text}>Our Team</Text>
             </Link>
-            <Link href="#" style={{ textDecoration: "none", marginLeft: "50px" }}>
+            <Link href="/features" style={{ textDecoration: "none", marginLeft: "50px" }}>
               <Text size={14} fw={700} color={colors.text}>Features</Text>
             </Link>
           </Box>
           <Box sx={{ position: "absolute", right: "50%", transform: "translateX(50%)" }}>
-            <Link href="#" >
+            <Link href="/" >
               <Image
                 src="/images/logo-light-400w.png"
                 width={100}
@@ -73,7 +73,7 @@ export default function Footer() {
             <Link href="#" style={{ textDecoration: "none", marginRight: "50px" }}>
               <Text size={14} fw={700} color={colors.text}>Plans</Text>
             </Link>
-            <Link href="#" style={{ textDecoration: "none", marginRight: "50px" }}>
+            <Link href="/" style={{ textDecoration: "none", marginRight: "50px" }}>
               <Text size={14} fw={700} color={colors.text}>Home</Text>
             </Link>
           </Box>

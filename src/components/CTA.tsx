@@ -7,7 +7,6 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        // background: "#FBFBFD",
         background: background,
         color: text,
       }}
@@ -26,7 +25,6 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         sx={{
           borderRadius: 10,
           fontSize: 18,
-          // background: "#301F55",
           background: buttonColor,
           padding: 20,
         }}
