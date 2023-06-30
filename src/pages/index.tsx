@@ -27,56 +27,62 @@ const LandingPage: PageWithLayout = () => {
             query="(max-width: 768px)"
             styles={{ width: "100%", paddingRight: "10%" }}
           >
-            <Box
-              my={50}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                width: "50%",
-                paddingLeft: "10%",
-                // marginLeft: "10%",
-              }}
+            <MediaQuery
+            query="(max-width: 480px)"
+            styles={{ fontSize: "32px", }}
             >
-              <Text size={48} fw={700} sx={{ maxWidth: "100%"}}>
-                Write.
-              </Text>
-              <Text size={48} fw={700}>
-                Plan.
-              </Text>
-              <Text size={48} fw={700}>
-                Produce.
-              </Text>
-              <Text size={48} mb="md" fw={700}>
-                Together.
-              </Text>
-              <Text mb="md" ta={"left"}>
-                Whether you&apos;re taping a show in a{" "}
-                <Text td="underline" component="span">
-                  studio
-                </Text>
-                , collaborating on{" "}
-                <Text td="underline" component="span">
-                  screenplays
-                </Text>
-                , or making a{" "}
-                <Text td="underline" component="span">
-                  video game
-                </Text>
-                , Scripto helps you do your best work and save time while you do it.
-              </Text>
-              <Button
-                h={60}
-                w={240}
+              <Box
+                my={50}
                 sx={{
-                  borderRadius: 10,
-                  fontSize: 18,
-                  background: "#876AC2",
-                  padding: 20,
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "50%",
+                  paddingLeft: "10%",
+                  // marginLeft: "10%",
+                  fontSize: "48px",
                 }}
               >
-                Book a Demo
-              </Button>
-            </Box>
+                <Text fw={700} sx={{ maxWidth: "100%"}}>
+                  Write.
+                </Text>
+                <Text fw={700}>
+                  Plan.
+                </Text>
+                <Text fw={700}>
+                  Produce.
+                </Text>
+                <Text mb="md" fw={700}>
+                  Together.
+                </Text>
+                <Text mb="md" ta={"left"} size={18}>
+                  Whether you&apos;re taping a show in a{" "}
+                  <Text td="underline" component="span">
+                    studio
+                  </Text>
+                  , collaborating on{" "}
+                  <Text td="underline" component="span">
+                    screenplays
+                  </Text>
+                  , or making a{" "}
+                  <Text td="underline" component="span">
+                    video game
+                  </Text>
+                  , Scripto helps you do your best work and save time while you do it.
+                </Text>
+                <Button
+                  h={60}
+                  w={240}
+                  sx={{
+                    borderRadius: 10,
+                    fontSize: 18,
+                    background: "#876AC2",
+                    padding: 20,
+                  }}
+                >
+                  Book a Demo
+                </Button>
+              </Box>
+            </MediaQuery>
           </MediaQuery>
           <MediaQuery
             query="(max-width: 768px)"
@@ -110,46 +116,63 @@ const LandingPage: PageWithLayout = () => {
       <Box
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
-        <Box ta="center">
-          <Text mt={70} size={40} fw={700}>
-            Streamlining Your Project is Easy
-          </Text>
+        <Box ta="center" sx={{ paddingLeft: "10%", paddingRight: "10%" }}>
+          <MediaQuery
+            query="(max-width: 480px)"
+            styles={{ fontSize: "32px" }}
+          >
+            <Text mt={70} size={40} fw={700}>
+              Streamlining Your Project is Easy
+            </Text>
+          </MediaQuery>
           <Text mb="50px">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam,
           </Text>
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            width: "90%",
-            background: "#FBFBFD",
-            borderRadius: "50px",
-            padding: "50px",
-            boxShadow: "15px 20px 45px 5px rgba(0, 0, 0, 0.25)",
+        <MediaQuery
+          query="(max-width: 768px)"
+          styles={{ 
+            flexDirection: "column", 
+            alignItems: "center", 
+            width: "100%", 
+            background: "none", 
+            borderRadius: "0px", 
+            boxShadow: "none" 
           }}
         >
-          <Card
-            imgSrc="/images/collaboration.png"
-            title="True Collaboration."
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-            link="/features"
-          />
-          <Card
-            imgSrc="/images/rundowns.png"
-            title="Smart Rundowns."
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-            link="/features"
-          />
-          <Card
-            imgSrc="/images/format.png"
-            title="Any Format."
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-            link="/features"
-          />
-        </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              width: "90%",
+              background: "#FBFBFD",
+              borderRadius: "50px",
+              padding: "50px",
+              boxShadow: "15px 20px 45px 5px rgba(0, 0, 0, 0.25)",
+            }}
+          >
+            <Card
+              imgSrc="/images/collaboration.png"
+              title="True Collaboration."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              link="/features"
+            />
+            <Card
+              imgSrc="/images/rundowns.png"
+              title="Smart Rundowns."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              link="/features"
+            />
+            <Card
+              imgSrc="/images/format.png"
+              title="Any Format."
+              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+              link="/features"
+            />
+          </Box>
+        </MediaQuery>
       </Box>
       <Box
         mt={125}
