@@ -11,7 +11,7 @@ const LandingPage: PageWithLayout = () => {
     <AppLayout>
       <MediaQuery
         query="(max-width: 768px)"
-        styles={{ flexDirection: "column-reverse" }}
+        styles={{ flexDirection: "column" }}
       >
         <Box
           sx={{
