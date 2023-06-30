@@ -9,7 +9,8 @@ import { useMediaQuery } from "@mantine/hooks";
 
 const LandingPage: PageWithLayout = () => {
   const isShortCarousel = useMediaQuery("(max-width: 680px)");
-  console.log(isShortCarousel);
+  const isTablet = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 480px)");
 
   return (
     <AppLayout>
@@ -121,9 +122,26 @@ const LandingPage: PageWithLayout = () => {
         styles={{ background: "#FBFBFD" }}
       >
         <Box
-          sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+          sx={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative" }}
         >
-          <Box ta="center" sx={{ paddingLeft: "10%", paddingRight: "10%" }}>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.3, top: 350 }}
+          >
+            <Image
+              src="/images/landing-page-bg/streamline-bg-ellipse.png"
+              alt="streamline bg ellipse"
+              width={ isMobile ? 500 : isTablet ? 550 : 400 }
+              sx={{
+                position: "absolute",
+                left: 0,
+                top: 80,
+                zIndex: 0,
+                width: "400px",
+              }}
+            />
+          </MediaQuery>
+          <Box ta="center" sx={{ paddingLeft: "10%", paddingRight: "10%", zIndex: 1 }}>
             <MediaQuery
               query="(max-width: 480px)"
               styles={{ fontSize: "32px" }}
@@ -163,6 +181,7 @@ const LandingPage: PageWithLayout = () => {
                 borderRadius: "50px",
                 padding: "50px",
                 boxShadow: "15px 20px 45px 5px rgba(0, 0, 0, 0.25)",
+                zIndex: 1,
               }}
             >
               <Card
@@ -1125,6 +1144,7 @@ const LandingPage: PageWithLayout = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   height: "500px",
+                  
                 }}
               >
                 <MediaQuery

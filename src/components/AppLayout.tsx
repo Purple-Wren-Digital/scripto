@@ -91,7 +91,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                 height: "100vh", 
                 zIndex: -1, 
                 background: "#252634",
-                transform: opened ? "translateY(0)" : "translateY(-100%)",
+                transform: opened ? "translateX(0)" : "translateX(100%)",
                 transition: "transform 250ms ease-in-out",
               }}
             >
