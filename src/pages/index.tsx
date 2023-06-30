@@ -137,7 +137,6 @@ const LandingPage: PageWithLayout = () => {
                 left: 0,
                 top: 80,
                 zIndex: 0,
-                width: "400px",
               }}
             />
           </MediaQuery>
@@ -1160,7 +1159,6 @@ const LandingPage: PageWithLayout = () => {
                       right: -5,
                       top: -200,
                       zIndex: 1,
-                      width: "400px",
                     }}
                   />
                 </MediaQuery>
@@ -1241,7 +1239,6 @@ const LandingPage: PageWithLayout = () => {
               left: 0,
               top: -500,
               zIndex: 1,
-              width: "400px",
             }}
           />
         </MediaQuery>

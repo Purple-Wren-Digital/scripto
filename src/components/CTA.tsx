@@ -1,6 +1,10 @@
-import { Box, Button, Text } from "@mantine/core";
+import { Box, Button, Text, Image, MediaQuery } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 const CTA: React.FC<{ background: string, buttonColor: string, text: string }> = ({ background, buttonColor, text }) => {
+  const isTablet = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 480px)");
+
   return (
     <Box
       sx={{
@@ -11,12 +15,45 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         color: text,
         paddingLeft: "10%",
         paddingRight: "10%",
+        position: "relative",
       }}
     >
-      <Text size={24} fw={700} mt={120} mb={40}>
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ display: "none" }}
+      >
+        <Image
+          src="/images/cta-bg/cta-ellipse1.png"
+          alt="cta bg ellipse"
+          width={500}
+          sx={{
+            position: "absolute",
+            left: 60,
+            bottom: 0,
+            zIndex: 0,
+          }}
+        />
+      </MediaQuery>
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
+      >
+        <Image
+          src="/images/cta-bg/cta-ellipse2.png"
+          alt="cta bg ellipse"
+          width={350}
+          sx={{
+            position: "absolute",
+            right: 30,
+            top: -100,
+            zIndex: 0,
+          }}
+        />
+      </MediaQuery>
+      <Text size={24} fw={700} mt={120} mb={40} sx={{ zIndex: 2 }}>
         Ready to get started?
       </Text>
-      <Text mb={25} ta="center" sx={{ maxWidth: "420px" }}>
+      <Text mb={25} ta="center" sx={{ maxWidth: "420px", zIndex: 2 }}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </Text>
@@ -29,6 +66,7 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
           fontSize: 18,
           background: buttonColor,
           padding: 20,
+          zIndex: 2
         }}
       >
         Start free trial
