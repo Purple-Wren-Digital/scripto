@@ -2,8 +2,13 @@ import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
 import { Text, Box, Button, Space, Image, MediaQuery } from "@mantine/core";
 import { PageWithLayout } from "next";
+import { useMediaQuery } from "@mantine/hooks";
 
 const TeamPage: PageWithLayout = () => {
+  const isTablet = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 480px)");
+  const isSmallDesktop = useMediaQuery("(max-width: 1024px)");
+
   return (
     <AppLayout>
       <Box sx={{ display: "flex", flexDirection: "column", color: "#000" }}>
@@ -81,78 +86,120 @@ const TeamPage: PageWithLayout = () => {
       <Box sx={{ display: "flex", flexDirection: "column", color: "#000" }}>
         <Box
           sx={{
-            display: "flex",
-            alignItems: "stretch",
-            justifyContent: "space-between",
+            // display: "flex",
+            // alignItems: "stretch",
+            // justifyContent: "space-between",
             minHeight: "800px",
             position: "relative",
             background: "#F0EFF1",
+
+            display: "grid",
+            gridTemplateColumns: "repeat(10, 1fr)",
           }}
         >
-          <Box
-            sx={{
-              width: "30%",
-              // backgroundImage: "url(/images/team-page/goat-graphic.png)",
-              // backgroundRepeat: "no-repeat",
-              // backgroundPosition: "center",
-              // backgroundSize: "cover",
-              position: "relative",
-              overflow: "hidden",
-            }}
+          <MediaQuery
+            query="(max-width: 1024px) and (min-width: 768px)"
+            styles={{ gridColumn: "1 / 5" }}
           >
-            <Image
-              src="/images/team-page/goat-graphic.png"
-              width={"100%"}
-              sx={{
-                position: "absolute",
-                bottom: 0,
-                left: 0
-              }}
-              alt="goat"
-            />
-          </Box>
-          <Box
-            sx={{
-              width: "70%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "relative"
-            }}
-          >
-            <Image
-              src="/images/team-page/bg-ellipse-1.png"
-              width={600}
-              sx={{
-                position: "absolute",
-                bottom: 30,
-                right: 20,
-              }}
-              alt="goat"
-            />
-            <Box
-              my={50}
-              sx={{
-                width: "80%",
-                padding: "60px",
-                background: "#FBFBFD",
-                borderRadius: "10px",
-                boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-                zIndex: 1
-              }}
+            <MediaQuery
+              query="(max-width: 768px) and (min-width: 480px)"
+              styles={{ gridColumn: "1 / 6", opacity: 0.7 }}
             >
-              <Text size={24} fw={700} mb={24} >It All Started With a Goat...</Text>
-              <Text size={20} mb={24} >
-                Long ago, before Scripto existed, there was a show called The Colbert Report, where some writers optimistically wrote in a surprise appearance by a live goat. To everyone’s surprise, the idea moved forward — which meant booking a showbiz-grade goat from an ethical and TV-ready animal handler, at significant expense to the production.
-              </Text>
-              <Text size={20} mb={24}>
-                Only problem was: TV being TV, the goat’s appearance was cut from the script in revisions. And because they weren’t using Scripto, the show didn’t find out about the script change until the Tom Cruise of goats was already en route to the studio.
-              </Text>
-              <Text size={20} mb={24}>
-                We all learned an important lesson that day: It’s good to make changes to a script, but only if everyone else can see them too. That was the first spark of an idea that led to the creation of Scripto.
-              </Text>
-            </Box>
-          </Box>
+              <MediaQuery
+                query="(max-width: 480px)"
+                styles={{ gridColumn: "1 / 8", opacity: 0.7}}
+              >
+                <Box
+                  sx={{
+                    gridColumn: "1 / 4",
+                    gridRow: "1 / 2",
+                    position: "relative",
+                    overflow: "hidden",
+                  }}
+                >
+                  <Image
+                    src="/images/team-page/goat-graphic.png"
+                    width={"100%"}
+                    sx={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0
+                    }}
+                    alt="goat"
+                  />
+                </Box>
+              </MediaQuery>
+            </MediaQuery>
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 1024px) and (min-width: 480px)"
+            styles={{ gridColumn: "2 / 11" }}
+          >
+            <MediaQuery
+              query="(max-width: 480px)"
+              styles={{ gridColumn: "1 / 11" }}
+            > 
+              <Box
+                sx={{
+                  gridColumn: "3 / 11",
+                  gridRow: "1 / 2",
+                  // width: "70%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  position: "relative"
+                }}
+              >
+                <MediaQuery
+                  query="(max-width: 1024px)"
+                  styles={{ right: 5 }}
+                >
+                  <MediaQuery
+                    query="(max-width: 768px)"
+                    styles={{ display: "none" }}
+                  >
+                    <Image
+                      src="/images/team-page/bg-ellipse-1.png"
+                      width={isSmallDesktop ? 600 : 650}
+                      sx={{
+                        position: "absolute",
+                        bottom: 30,
+                        right: 20,
+                      }}
+                      alt="goat"
+                    />
+                  </MediaQuery>
+                </MediaQuery>
+                <MediaQuery
+                  query="(max-width: 768px)"
+                  styles={{ background: "none", boxShadow: "none", padding: 0 }}
+                >
+                  <Box
+                    my={50}
+                    sx={{
+                      width: "80%",
+                      padding: "60px",
+                      background: "#FBFBFD",
+                      borderRadius: "10px",
+                      boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      zIndex: 1
+                    }}
+                  >
+                    <Text size={24} fw={700} mb={24} >It All Started With a Goat...</Text>
+                    <Text size={20} mb={24} >
+                      Long ago, before Scripto existed, there was a show called The Colbert Report, where some writers optimistically wrote in a surprise appearance by a live goat. To everyone’s surprise, the idea moved forward — which meant booking a showbiz-grade goat from an ethical and TV-ready animal handler, at significant expense to the production.
+                    </Text>
+                    <Text size={20} mb={24}>
+                      Only problem was: TV being TV, the goat’s appearance was cut from the script in revisions. And because they weren’t using Scripto, the show didn’t find out about the script change until the Tom Cruise of goats was already en route to the studio.
+                    </Text>
+                    <Text size={20} mb={24}>
+                      We all learned an important lesson that day: It’s good to make changes to a script, but only if everyone else can see them too. That was the first spark of an idea that led to the creation of Scripto.
+                    </Text>
+                  </Box>
+                </MediaQuery>
+              </Box>
+            </MediaQuery>
+          </MediaQuery>
         </Box>
       </Box>
       <Box 
