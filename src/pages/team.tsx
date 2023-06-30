@@ -1,6 +1,6 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
-import { Text, Box, Button, Space, Image} from "@mantine/core";
+import { Text, Box, Button, Space, Image, MediaQuery } from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const TeamPage: PageWithLayout = () => {
@@ -15,10 +15,65 @@ const TeamPage: PageWithLayout = () => {
             justifyContent: "center",
             minHeight: "400px",
             background: "#EAD8AD",
+            paddingLeft: "10%",
+            paddingRight: "10%",
           }}
         >
-          <Text size={48} fw={700} mb={25}>About Us</Text>
-          <Text ta="center" size={20} sx={{ maxWidth: 645}}>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.5 }}
+          >
+            <Image
+              src="/images/team-page/team-ellipse1.png"
+              alt="cta bg ellipse"
+              width={350}
+              sx={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.5, right: -100 }}
+          >
+            <MediaQuery
+            query="(max-width: 480px)"
+            styles={{ display: "none" }}
+            >
+              <Image
+                src="/images/team-page/team-ellipse2.png"
+                alt="cta bg ellipse"
+                width={350}
+                sx={{
+                  position: "absolute",
+                  right: 100,
+                  top: 0,
+                  zIndex: 0,
+                }}
+              />
+            </MediaQuery>
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ display: "none" }}
+          >
+            <Image
+              src="/images/team-page/team-ellipse3.png"
+              alt="cta bg ellipse"
+              width={200}
+              sx={{
+                position: "absolute",
+                right: 0,
+                top: 180,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+          <Text size={48} fw={700} mb={25} sx={{ zIndex: 1 }}>About Us</Text>
+          <Text ta="center" size={20} sx={{ maxWidth: 645, zIndex: 1 }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Text>
         </Box>
