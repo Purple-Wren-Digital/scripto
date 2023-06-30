@@ -683,36 +683,41 @@ const LandingPage: PageWithLayout = () => {
                   height: "500px",
                 }}
               >
-                <Box
-                  m={20}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    width: "80%",
-                    padding: "40px",
-                  }}
+                <MediaQuery
+                  query="(max-width: 480px)"
+                  styles={{ width: "95%", padding: "20px" }}
                 >
-                  <Text size={24} fw={700} mb={40}>
-                    True Collaboration.
-                  </Text>
-                  <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Write with others in the same script at the same time, with
-                    automatic and flexible industry-standard formatting for variety
-                    shows, screenplays, video games, and more. You deserve better
-                    than Google Docs!
-                  </Text>
-                  <Link href="/features" >
-                    <Button
-                      variant="outline"
-                      h={60}
-                      w={200}
-                      sx={{ borderRadius: "10px" }}
-                    >
-                      Learn more
-                    </Button>
-                  </Link>
-                </Box>
+                  <Box
+                    m={20}
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "flex-start",
+                      width: "80%",
+                      padding: "40px",
+                    }}
+                  >
+                    <Text size={24} fw={700} mb={40}>
+                      True Collaboration.
+                    </Text>
+                    <Text mb={40} sx={{ maxWidth: "420px" }}>
+                      Write with others in the same script at the same time, with
+                      automatic and flexible industry-standard formatting for variety
+                      shows, screenplays, video games, and more. You deserve better
+                      than Google Docs!
+                    </Text>
+                    <Link href="/features" >
+                      <Button
+                        variant="outline"
+                        h={60}
+                        w={200}
+                        sx={{ borderRadius: "10px" }}
+                      >
+                        Learn more
+                      </Button>
+                    </Link>
+                  </Box>
+                </MediaQuery>
               </Box>
             </Box>
           </MediaQuery>
@@ -729,34 +734,39 @@ const LandingPage: PageWithLayout = () => {
                   height: "500px",
                 }}
               >
-                <Box
-                  m={20}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    width: "80%",
-                    padding: "40px",
-                  }}
+                <MediaQuery
+                  query="(max-width: 480px)"
+                  styles={{ width: "95%", padding: "20px" }}
                 >
-                  <Text size={24} fw={700} mb={40}>
-                    Feature that is amazing
-                  </Text>
-                  <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </Text>
-                  <Link href="/features" >
-                    <Button
-                      variant="outline"
-                      h={60}
-                      w={200}
-                      sx={{ borderRadius: "10px" }}
-                    >
-                      Learn more
-                    </Button>
-                  </Link>
-                </Box>
+                  <Box
+                    m={20}
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "flex-start",
+                      width: "80%",
+                      padding: "40px",
+                    }}
+                  >
+                    <Text size={24} fw={700} mb={40}>
+                      Feature that is amazing
+                    </Text>
+                    <Text mb={40} sx={{ maxWidth: "420px" }}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </Text>
+                    <Link href="/features" >
+                      <Button
+                        variant="outline"
+                        h={60}
+                        w={200}
+                        sx={{ borderRadius: "10px" }}
+                      >
+                        Learn more
+                      </Button>
+                    </Link>
+                  </Box>
+                </MediaQuery>
               </Box>
               <Box
                 sx={{

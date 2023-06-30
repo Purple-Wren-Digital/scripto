@@ -9,6 +9,8 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         alignItems: "center",
         background: background,
         color: text,
+        paddingLeft: "10%",
+        paddingRight: "10%",
       }}
     >
       <Text size={24} fw={700} mt={120} mb={40}>
