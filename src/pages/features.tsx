@@ -172,7 +172,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
         </Box>
         <AlternatingLayout features={features && features} />
 
-        <Box mt={120} sx={{ display: "flex", minHeight: "682px" }}>
+        <Box mt={120} mb={80} sx={{ display: "flex", minHeight: "682px" }}>
           <Box
             sx={{
               display: "flex",
@@ -259,7 +259,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
             </Box>
           </Box>
         </Box>
-        <CTA background="#301F55" buttonColor="#8252C6" text="#FFF" />
+        <CTA background="#FBFBFD" buttonColor="#8252C6" text="#000" />
       </Box>
     </AppLayout>
   );

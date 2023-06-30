@@ -1,9 +1,19 @@
 import { Box, Button, Text, Image, MediaQuery } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const CTA: React.FC<{ background: string, buttonColor: string, text: string }> = ({ background, buttonColor, text }) => {
   const isTablet = useMediaQuery("(max-width: 768px)");
   const isMobile = useMediaQuery("(max-width: 480px)");
+
+  const router = useRouter();
+  const [pathname, setPathname] = useState(router.pathname);
+
+  useEffect(() => {
+    setPathname(router.pathname);
+  }, [router.pathname]);
+
 
   return (
     <Box
@@ -18,38 +28,80 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         position: "relative",
       }}
     >
-      <MediaQuery
-        query="(max-width: 768px)"
-        styles={{ display: "none" }}
-      >
-        <Image
-          src="/images/cta-bg/cta-ellipse1.png"
-          alt="cta bg ellipse"
-          width={500}
-          sx={{
-            position: "absolute",
-            left: 60,
-            bottom: 0,
-            zIndex: 0,
-          }}
-        />
-      </MediaQuery>
-      <MediaQuery
-        query="(max-width: 768px)"
-        styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
-      >
-        <Image
-          src="/images/cta-bg/cta-ellipse2.png"
-          alt="cta bg ellipse"
-          width={350}
-          sx={{
-            position: "absolute",
-            right: 30,
-            top: -100,
-            zIndex: 0,
-          }}
-        />
-      </MediaQuery>
+      {pathname == "/" && (
+        <>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ display: "none" }}
+          >
+            <Image
+              src="/images/cta-bg/cta-ellipse1.png"
+              alt="cta bg ellipse"
+              width={500}
+              sx={{
+                position: "absolute",
+                left: 60,
+                bottom: 0,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
+          >
+            <Image
+              src="/images/cta-bg/cta-ellipse2.png"
+              alt="cta bg ellipse"
+              width={350}
+              sx={{
+                position: "absolute",
+                right: 30,
+                top: -100,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+        </>
+      )}
+      {pathname == "/features" && (
+        <>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ display: "none" }}
+          >
+            <Image
+              src="/images/cta-bg/cta-features1.png"
+              alt="cta bg ellipse"
+              width={500}
+              sx={{
+                position: "absolute",
+                left: 60,
+                bottom: 0,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
+          >
+            <Image
+              src="/images/cta-bg/cta-features2.png"
+              alt="cta bg ellipse"
+              width={350}
+              sx={{
+                position: "absolute",
+                right: 30,
+                top: -100,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+        </>
+      )}
+
+
       <Text size={24} fw={700} mt={120} mb={40} sx={{ zIndex: 2 }}>
         Ready to get started?
       </Text>
