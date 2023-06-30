@@ -1144,9 +1144,26 @@ const LandingPage: PageWithLayout = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   height: "500px",
-                  
+                  position: "relative",
                 }}
               >
+                <MediaQuery
+                  query="(max-width: 768px)"
+                  styles={{ display: "none" }}
+                >
+                  <Image
+                    src="/images/landing-page-bg/landing-grid-bg-ellipse.png"
+                    alt="streamline bg ellipse"
+                    width={220}
+                    sx={{
+                      position: "absolute",
+                      right: -5,
+                      top: -200,
+                      zIndex: 1,
+                      width: "400px",
+                    }}
+                  />
+                </MediaQuery>
                 <MediaQuery
                   query="(max-width: 480px)"
                   styles={{ width: "95%", padding: "20px" }}
@@ -1159,6 +1176,7 @@ const LandingPage: PageWithLayout = () => {
                       alignItems: "flex-start",
                       width: "80%",
                       padding: "40px",
+                      zIndex: 2,
                     }}
                   >
                     <Text size={24} fw={700} mb={40}>
