@@ -100,6 +100,42 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
           </MediaQuery>
         </>
       )}
+      {pathname == "/team" && (
+        <>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ display: "none" }}
+          >
+            <Image
+              src="/images/cta-bg/cta-team1.png"
+              alt="cta bg ellipse"
+              width={400}
+              sx={{
+                position: "absolute",
+                left: 0,
+                top: -80,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
+          >
+            <Image
+              src="/images/cta-bg/cta-team2.png"
+              alt="cta bg ellipse"
+              width={350}
+              sx={{
+                position: "absolute",
+                right: 30,
+                bottom: -80,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+        </>
+      )}
 
 
       <Text size={24} fw={700} mt={120} mb={40} sx={{ zIndex: 2 }}>
