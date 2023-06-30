@@ -218,6 +218,8 @@ const TeamPage: PageWithLayout = () => {
               alignItems: "center",
               justifyContent: "center",
               color: "#FBFBFD",
+              paddingLeft: "10%",
+              paddingRight: "10%",
             }}
           >
             <Text size={24} fw={700} mb={25}>Meet The Crew</Text>
@@ -240,7 +242,7 @@ const TeamPage: PageWithLayout = () => {
           >
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
@@ -265,7 +267,7 @@ const TeamPage: PageWithLayout = () => {
             </Box>
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
@@ -290,7 +292,7 @@ const TeamPage: PageWithLayout = () => {
             </Box>
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
@@ -315,7 +317,7 @@ const TeamPage: PageWithLayout = () => {
             </Box>
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
@@ -340,7 +342,7 @@ const TeamPage: PageWithLayout = () => {
             </Box>
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
@@ -365,7 +367,7 @@ const TeamPage: PageWithLayout = () => {
             </Box>
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
@@ -390,7 +392,7 @@ const TeamPage: PageWithLayout = () => {
             </Box>
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
@@ -415,7 +417,7 @@ const TeamPage: PageWithLayout = () => {
             </Box>
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
@@ -440,7 +442,7 @@ const TeamPage: PageWithLayout = () => {
             </Box>
             <Box
               mx="auto"
-              mb={120}
+              mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
                 width: "225px",
                 height: "225px",
