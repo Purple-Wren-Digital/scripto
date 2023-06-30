@@ -116,82 +116,87 @@ const LandingPage: PageWithLayout = () => {
           </MediaQuery>
         </Box>
       </MediaQuery>
-      <Box
-        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-      >
-        <Box ta="center" sx={{ paddingLeft: "10%", paddingRight: "10%" }}>
-          <MediaQuery
-            query="(max-width: 480px)"
-            styles={{ fontSize: "32px" }}
-          >
-            <Text mt={70} size={40} fw={700}>
-              Streamlining Your Project is Easy
-            </Text>
-          </MediaQuery>
-          <MediaQuery
-            query="(max-width: 480px)"
-            styles={{ marginBottom: "20px" }}
-          >
-            <Text mb="50px">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam,
-            </Text>
-          </MediaQuery>
-        </Box>
-        <MediaQuery
-          query="(max-width: 768px)"
-          styles={{ 
-            flexDirection: "column", 
-            alignItems: "center", 
-            width: "100%", 
-            background: "none", 
-            borderRadius: "0px", 
-            boxShadow: "none" 
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              width: "90%",
-              background: "#FBFBFD",
-              borderRadius: "50px",
-              padding: "50px",
-              boxShadow: "15px 20px 45px 5px rgba(0, 0, 0, 0.25)",
-            }}
-          >
-            <Card
-              imgSrc="/images/collaboration.png"
-              title="True Collaboration."
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-              link="/features"
-            />
-            <Card
-              imgSrc="/images/rundowns.png"
-              title="Smart Rundowns."
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-              link="/features"
-            />
-            <Card
-              imgSrc="/images/format.png"
-              title="Any Format."
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-              link="/features"
-            />
-          </Box>
-        </MediaQuery>
-      </Box>
       <MediaQuery
         query="(max-width: 768px)"
-        styles={{ marginTop: "40px" }}
+        styles={{ background: "#FBFBFD" }}
       >
         <Box
-          mt={120}
+          sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+        >
+          <Box ta="center" sx={{ paddingLeft: "10%", paddingRight: "10%" }}>
+            <MediaQuery
+              query="(max-width: 480px)"
+              styles={{ fontSize: "32px" }}
+            >
+              <Text mt={70} size={40} fw={700}>
+                Streamlining Your Project is Easy
+              </Text>
+            </MediaQuery>
+            <MediaQuery
+              query="(max-width: 480px)"
+              styles={{ marginBottom: "20px" }}
+            >
+              <Text mb="50px">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam,
+              </Text>
+            </MediaQuery>
+          </Box>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ 
+              flexDirection: "column", 
+              alignItems: "center", 
+              width: "100%", 
+              background: "none", 
+              borderRadius: "0px", 
+              boxShadow: "none" 
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                width: "90%",
+                background: "#FBFBFD",
+                borderRadius: "50px",
+                padding: "50px",
+                boxShadow: "15px 20px 45px 5px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <Card
+                imgSrc="/images/collaboration.png"
+                title="True Collaboration."
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                link="/features"
+              />
+              <Card
+                imgSrc="/images/rundowns.png"
+                title="Smart Rundowns."
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                link="/features"
+              />
+              <Card
+                imgSrc="/images/format.png"
+                title="Any Format."
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                link="/features"
+              />
+            </Box>
+          </MediaQuery>
+        </Box>
+      </MediaQuery>
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ paddingTop: "40px", background: "#FBFBFD" }}
+      >
+        <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            paddingTop: "120px",
           }}
         >
           <Box sx={{ 
@@ -507,7 +512,7 @@ const LandingPage: PageWithLayout = () => {
                     >
                       <Image
                         alt="problem areas"
-                        src="/images/show-logos/problem-with-jon-stewart.png"
+                        src="/images/show-logos/wyatt-cenacs-problem-areas.png"
                         width={"100%"}
                       />
                     </Box>
@@ -904,7 +909,7 @@ const LandingPage: PageWithLayout = () => {
                     >
                       <Image
                         alt="problem areas"
-                        src="/images/show-logos/problem-with-jon-stewart.png"
+                        src="/images/show-logos/wyatt-cenacs-problem-areas.png"
                         width={"100%"}
                       />
                     </Box>
@@ -1033,9 +1038,9 @@ const LandingPage: PageWithLayout = () => {
       </MediaQuery>
       <MediaQuery
         query="(max-width: 768px)"
-        styles={{ flexDirection: "column" }}
+        styles={{ flexDirection: "column", background: "#FBFBFD", paddingTop: "60px" }}
       >
-        <Box mt={100} sx={{ display: "flex", background: "#FBFBFD" }}>
+        <Box sx={{ display: "flex", background: "#FBFBFD", paddingTop: "100px" }}>
           <MediaQuery
             query="(max-width: 768px)"
             styles={{ width: "100%" }}
