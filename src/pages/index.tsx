@@ -189,7 +189,7 @@ const LandingPage: PageWithLayout = () => {
       </MediaQuery>
       <MediaQuery
         query="(max-width: 768px)"
-        styles={{ paddingTop: "40px", background: "#FBFBFD" }}
+        styles={{ paddingTop: "40px", paddingBottom: "60px", background: "#FBFBFD" }}
       >
         <Box
           sx={{
@@ -197,6 +197,7 @@ const LandingPage: PageWithLayout = () => {
             flexDirection: "column",
             alignItems: "center",
             paddingTop: "120px",
+            paddingBottom: "120px",
           }}
         >
           <Box sx={{ 
@@ -1038,9 +1039,9 @@ const LandingPage: PageWithLayout = () => {
       </MediaQuery>
       <MediaQuery
         query="(max-width: 768px)"
-        styles={{ flexDirection: "column", background: "#FBFBFD", paddingTop: "60px" }}
+        styles={{ flexDirection: "column" }}
       >
-        <Box sx={{ display: "flex", background: "#FBFBFD", paddingTop: "100px" }}>
+        <Box sx={{ display: "flex", background: "#FBFBFD" }}>
           <MediaQuery
             query="(max-width: 768px)"
             styles={{ width: "100%" }}
