@@ -1,11 +1,8 @@
 import { Box, Button, Text, Image, MediaQuery } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const CTA: React.FC<{ background: string, buttonColor: string, text: string }> = ({ background, buttonColor, text }) => {
-  const isTablet = useMediaQuery("(max-width: 768px)");
-  const isMobile = useMediaQuery("(max-width: 480px)");
 
   const router = useRouter();
   const [pathname, setPathname] = useState(router.pathname);

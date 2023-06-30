@@ -2,7 +2,7 @@ import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
 import Card from "@/components/Card";
 import Footer from "@/components/Footer";
-import { Text, Box, Button, Space, Image, Flex, Avatar } from "@mantine/core";
+import { Text, Box, Button, Space, Image, Flex, Avatar, MediaQuery } from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const AlternatingFeature = ({
@@ -23,96 +23,174 @@ const AlternatingFeature = ({
   orderIndex: number;
 }) => {
   return (
-    <Box 
-      // sx={{ display: "flex", minHeight: "682px" }}
-      sx={orderIndex == 0 ? (
-          { display: "flex", minHeight: "682px", background: "#301F55"}
-        ) : orderIndex == 1 ? (
-          { display: "flex", minHeight: "682px", background: "#8252C6"}
-        ) : (
-          { display: "flex", minHeight: "682px", background: "#B89ADE"}
-        )
-      }
+    <MediaQuery
+      query="(max-width: 1024px)"
+      styles={{ minHeight: "550px" }}
     >
-      {isImgAlignLeft ? (
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "50%",
-            backgroundImage: `url(${bgImgPath})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "90%",
-          }}
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={orderIndex == 1 ? { flexDirection: "column-reverse"} : { flexDirection: "column" }}
+      >
+        <Box 
+          // sx={{ display: "flex", minHeight: "682px" }}
+          sx={orderIndex == 0 ? (
+              { display: "flex", minHeight: "682px", background: "#301F55"}
+            ) : orderIndex == 1 ? (
+              { display: "flex", minHeight: "682px", background: "#8252C6"}
+            ) : (
+              { display: "flex", minHeight: "682px", background: "#B89ADE"}
+            )
+          }
         >
-          <Image
-            src={imgPath}
-            width={"85%"}
-            radius={10}
-            ml="auto"
-            alt={altText}
-          />
+          {isImgAlignLeft ? (
+            <MediaQuery
+              query="(max-width: 1024px) and (min-width: 768px)"
+              styles={{ width: "55%" }}
+            >
+              <MediaQuery
+                query="(max-width: 768px)"
+                styles={{ width: "100%", marginTop: "80px" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "50%",
+                    position: "relative",
+                  }}
+                >
+                  <MediaQuery
+                    query="(max-width: 768px)"
+                    styles={bgImgPath == "/images/features-page/prompter-bg.png" ? { right: 0, top: -120 } : { right: 0, top: -100 }}
+                  >
+                    <Image
+                      src={bgImgPath}
+                      width={bgImgPath == "/images/features-page/rundowns-bg.png" ? "98%" : "110%"}
+                      alt="bg image"
+                      sx={{
+                        position: "absolute",
+                        right: bgImgPath == "/images/features-page/rundowns-bg.png" ? -30 : 0,
+                        top: bgImgPath == "/images/features-page/rundowns-bg.png" ? -50 : -20,
+                      }}
+                    />
+                  </MediaQuery>
+                  <Image
+                    src={imgPath}
+                    width={"90%"}
+                    radius={10}
+                    ml="auto"
+                    alt={altText}
+                  />
+                </Box>
+              </MediaQuery>
+            </MediaQuery>
+          ) : (
+            <MediaQuery
+              query="(max-width: 1024px) and (min-width: 768px)"
+              styles={{ width: "45%" }}
+            >
+              <MediaQuery
+                query="(max-width: 768px)"
+                styles={{ width: "100%", marginTop: "40px", marginBottom: "40px" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    width: "50%",
+                    zIndex: 1,
+                    padding: "40px",
+                  }}
+                >
+                  <Box ta="left" sx={{ maxWidth: "420px" }}>
+                    <Text size={24} fw={700} mb={24}>
+                      {title}
+                    </Text>
+                    <Text size={20}>{copy}</Text>
+                  </Box>
+                </Box>
+              </MediaQuery>
+            </MediaQuery>
+          )}{" "}
+          {isImgAlignLeft ? (
+            <MediaQuery
+            query="(max-width: 1024px) and (min-width: 768px)"
+            styles={{ width: "45%" }}
+            >
+              <MediaQuery
+                query="(max-width: 768px)"
+                styles={{ width: "100%", marginTop: "40px", marginBottom: "40px" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    width: "50%",
+                    zIndex: 1,
+                    padding: "40px",
+                  }}
+                >
+                  <Box ta="left" sx={{ maxWidth: "420px" }}>
+                    <Text size={24} fw={700} mb={24}>
+                      {title}
+                    </Text>
+                    <Text size={20}>{copy}</Text>
+                  </Box>
+                </Box>
+              </MediaQuery>
+            </MediaQuery>
+          ) : (
+            <MediaQuery
+              query="(max-width: 1024px) and (min-width: 768px)"
+              styles={{ width: "55%" }}
+            >
+              <MediaQuery
+                query="(max-width: 768px)"
+                styles={{ width: "100%", marginTop: "40px" }}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "50%",
+                    position: "relative",
+                  }}
+                >
+                  <MediaQuery
+                    query="(max-width: 768px)"
+                    styles={bgImgPath == "/images/features-page/prompter-bg.png" ? { right: 0, top: -120 } : { right: 0, top: -100 }}
+                  >
+                    <Image
+                      src={bgImgPath}
+                      width={bgImgPath == "/images/features-page/rundowns-bg.png" ? "100%" : "110%"}
+                      alt="bg image"
+                      sx={{
+                        position: "absolute",
+                        right: bgImgPath == "/images/features-page/rundowns-bg.png" ? -30 : 0,
+                        top: bgImgPath == "/images/features-page/rundowns-bg.png" ? -50 : -20,
+                      }}
+                    />
+                  </MediaQuery>
+                  <Image
+                    src={imgPath}
+                    width={"90%"}
+                    radius={10}
+                    ml="auto"
+                    alt={altText}
+                  />
+                </Box>
+              </MediaQuery>
+            </MediaQuery>
+          )}
         </Box>
-      ) : (
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            width: "50%",
-          }}
-        >
-          <Box ta="left" sx={{ maxWidth: "420px" }}>
-            <Text size={24} fw={700} mb={24}>
-              {title}
-            </Text>
-            <Text size={20}>{copy}</Text>
-          </Box>
-        </Box>
-      )}{" "}
-      {isImgAlignLeft ? (
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            width: "50%",
-          }}
-        >
-          <Box ta="left" sx={{ maxWidth: "420px" }}>
-            <Text size={24} fw={700} mb={24}>
-              {title}
-            </Text>
-            <Text size={20}>{copy}</Text>
-          </Box>
-        </Box>
-      ) : (
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "50%",
-            backgroundImage: `url(${bgImgPath})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "90%",
-          }}
-        >
-          <Image
-            src={imgPath}
-            width={"85%"}
-            radius={10}
-            ml="auto"
-            alt={altText}
-          />
-        </Box>
-      )}
-    </Box>
+      </MediaQuery>
+    </MediaQuery>
   );
 };
 
@@ -160,12 +238,94 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
             minHeight: "400px",
             background: "#FBFBFD",
             color: "#000",
+            position: "relative",
+            paddingLeft: "10%",
+            paddingRight: "10%",
           }}
         >
-          <Text size={48} fw={700}>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.5 }}
+          >
+            <Image
+              src="/images/team-page/team-ellipse1.png"
+              alt="cta bg ellipse"
+              width={300}
+              sx={{
+                position: "absolute",
+                left: 0,
+                top: 0,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.5, right: -100 }}
+          >
+            <MediaQuery
+            query="(max-width: 480px)"
+            styles={{ display: "none" }}
+            >
+              <Image
+                src="/images/team-page/team-ellipse2.png"
+                alt="cta bg ellipse"
+                width={300}
+                sx={{
+                  position: "absolute",
+                  right: 100,
+                  top: 0,
+                  zIndex: 0,
+                }}
+              />
+            </MediaQuery>
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ display: "none" }}
+          >
+            <Image
+              src="/images/team-page/team-ellipse3.png"
+              alt="cta bg ellipse"
+              width={180}
+              sx={{
+                position: "absolute",
+                right: 0,
+                top: 110,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 1024px) and (min-width: 769px)"
+            styles={{ right: 180 }}
+          >
+            <MediaQuery
+              query="(max-width: 768px)"
+              styles={{ opacity: 0.5, right: -30 }}
+            >
+              <MediaQuery
+                query="(max-width: 480px)"
+                styles={{ display: "none" }}
+              >
+                <Image
+                  src="/images/features-page/key-features-ellipse.png"
+                  alt="cta bg ellipse"
+                  width={300}
+                  sx={{
+                    position: "absolute",
+                    right: 400,
+                    bottom: 0,
+                    zIndex: 0,
+                  }}
+                />
+              </MediaQuery>
+            </MediaQuery>
+          </MediaQuery>
+          <Text ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
             Key Features
           </Text>
-          <Text size={20}>
+          <Text ta="center" size={20} sx={{ zIndex: 1 }}>
             Standing ovation, please. These features are guaranteed
             show-stoppers.
           </Text>
@@ -276,7 +436,7 @@ FeaturesPage.getInitialProps = async () => {
       isImgAlignLeft: true,
     },
     {
-      bgImgPath: "/images/features-page/rundown-bg.png",
+      bgImgPath: "/images/features-page/rundowns-bg.png",
       imgPath: "/images/features-page/rundowns.png",
       altText: "scripto editor",
       title: "Smart Rundowns.",
