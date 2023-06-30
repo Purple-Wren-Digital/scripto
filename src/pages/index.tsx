@@ -1226,15 +1226,33 @@ const LandingPage: PageWithLayout = () => {
       </MediaQuery>
       <Box
         mt={120}
-        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative" }}
       >
+        <MediaQuery
+          query="(max-width: 480px)"
+          styles={{ top: -300 }}
+        >
+          <Image
+            src="/images/landing-page-bg/testimonial-bg-ellipse.png"
+            alt="streamline bg ellipse"
+            width={isMobile ? 250 : 350}
+            sx={{
+              position: "absolute",
+              left: 0,
+              top: -500,
+              zIndex: 1,
+              width: "400px",
+            }}
+          />
+        </MediaQuery>
         <Box
           sx={{
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            width: "80%"
+            width: "80%",
+            zIndex: 2,
           }}
         >
           <Carousel 
