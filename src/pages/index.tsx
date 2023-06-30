@@ -125,11 +125,16 @@ const LandingPage: PageWithLayout = () => {
               Streamlining Your Project is Easy
             </Text>
           </MediaQuery>
-          <Text mb="50px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam,
-          </Text>
+          <MediaQuery
+            query="(max-width: 480px)"
+            styles={{ marginBottom: "20px" }}
+          >
+            <Text mb="50px">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam,
+            </Text>
+          </MediaQuery>
         </Box>
         <MediaQuery
           query="(max-width: 768px)"
