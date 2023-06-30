@@ -83,7 +83,7 @@ const TeamPage: PageWithLayout = () => {
                 background: "#FBFBFD",
                 borderRadius: "10px",
                 boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-                zIndex: 10
+                zIndex: 1
               }}
             >
               <Text size={24} fw={700} mb={24} >It All Started With a Goat...</Text>
@@ -130,7 +130,7 @@ const TeamPage: PageWithLayout = () => {
               // gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
               display: "flex",
               flexWrap: "wrap",
-              gap: 50,
+              gap: 20,
               width: "80%",
               maxWidth: "850px"
               // gap: "120px"
@@ -140,110 +140,227 @@ const TeamPage: PageWithLayout = () => {
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#B89ADE",
                 border: "25px solid #EAD8AD",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#B89ADE",
                 border: "25px solid #EAD8AD",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#EAD8AD",
                 border: "25px solid #C9796F",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#C9796F",
                 border: "25px solid #B89ADE",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#EAD8AD",
                 border: "25px solid #C9796F",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#B89ADE",
                 border: "25px solid #EAD8AD",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#C9796F",
                 border: "25px solid #B89ADE",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#EAD8AD",
                 border: "25px solid #C9796F",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             <Box
               mx="auto"
               mb={120}
               sx={{
-                width: "200px",
-                height: "200px",
+                width: "225px",
+                height: "225px",
                 borderRadius: "50%",
                 background: "#C9796F",
                 border: "25px solid #B89ADE",
                 opacity: "0.5",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                overflow: "hidden"
               }}
-            ></Box>
+            >
+              <Image 
+                width={225}
+                height={225}
+                src={null} 
+                alt="headshot" 
+                withPlaceholder
+                fit="cover" 
+              />
+            </Box>
             
           </Box>
       </Box>
