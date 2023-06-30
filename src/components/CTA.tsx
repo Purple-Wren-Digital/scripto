@@ -28,43 +28,8 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         position: "relative",
       }}
     >
-      {pathname == "/" && (
-        <>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ display: "none" }}
-          >
-            <Image
-              src="/images/cta-bg/cta-ellipse1.png"
-              alt="cta bg ellipse"
-              width={500}
-              sx={{
-                position: "absolute",
-                left: 60,
-                bottom: 0,
-                zIndex: 0,
-              }}
-            />
-          </MediaQuery>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
-          >
-            <Image
-              src="/images/cta-bg/cta-ellipse2.png"
-              alt="cta bg ellipse"
-              width={350}
-              sx={{
-                position: "absolute",
-                right: 30,
-                top: -100,
-                zIndex: 0,
-              }}
-            />
-          </MediaQuery>
-        </>
-      )}
-      {pathname == "/features" && (
+
+      {pathname == "/features" ? (
         <>
           <MediaQuery
             query="(max-width: 768px)"
@@ -99,8 +64,7 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
             />
           </MediaQuery>
         </>
-      )}
-      {pathname == "/team" && (
+      ) : pathname == "/team" ? (
         <>
           <MediaQuery
             query="(max-width: 768px)"
@@ -130,6 +94,41 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
                 position: "absolute",
                 right: 30,
                 bottom: -80,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+        </>
+      ) : (
+        <>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ display: "none" }}
+          >
+            <Image
+              src="/images/cta-bg/cta-ellipse1.png"
+              alt="cta bg ellipse"
+              width={500}
+              sx={{
+                position: "absolute",
+                left: 60,
+                bottom: 0,
+                zIndex: 0,
+              }}
+            />
+          </MediaQuery>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
+          >
+            <Image
+              src="/images/cta-bg/cta-ellipse2.png"
+              alt="cta bg ellipse"
+              width={350}
+              sx={{
+                position: "absolute",
+                right: 30,
+                top: -100,
                 zIndex: 0,
               }}
             />
