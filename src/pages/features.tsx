@@ -332,93 +332,128 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
         </Box>
         <AlternatingLayout features={features && features} />
 
-        <Box mt={120} mb={80} sx={{ display: "flex", minHeight: "682px" }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "center",
-              width: "50%",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                maxWidth: "480px",
-              }}
+        <MediaQuery
+          query="(max-width: 768px)"
+          styles={{ flexDirection: "column" }}
+        >
+          <Box mt={120} mb={80} sx={{ display: "flex", minHeight: "682px" }}>
+            <MediaQuery
+              query="(max-width: 768px)"
+              styles={{ width: "100%", marginBottom: 80 }}
             >
               <Box
                 sx={{
-                  background: "#FBFBFD",
-                  padding: "50px 20px",
-                  width: "100%",
-                  height: "320px",
-                  borderRadius: "10px",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "center",
+                  width: "50%",
+                  paddingLeft: "20px",
+                  paddingRight: "20px",
                 }}
               >
-                <Image
-                  src="/images/features-page/collaboration-sc.png"
-                  width={"100%"}
-                  alt="collaboration"
-                />
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    maxWidth: "480px",
+                  }}
+                >
+                  <MediaQuery
+                    query="(max-width: 768px)"
+                    styles={{ height: "auto" }}
+                  >
+                    <Box
+                      sx={{
+                        background: "#FBFBFD",
+                        padding: "50px 20px",
+                        width: "100%",
+                        maxHeight: "315px",
+                        borderRadius: "10px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Image
+                        src="/images/features-page/collaboration-sc.png"
+                        width={"100%"}
+                        alt="collaboration"
+                      />
+                    </Box>
+                  </MediaQuery>
+                  <Text mt={50} size={24} fw={700}>
+                    True Collaboration.
+                  </Text>
+                  <Text mt={20} mb={20} size={20}>
+                    Write with others in the same script at the same time, with
+                    automatic and flexible industry-standard formatting for variety
+                    shows, screenplays, video games, and more. You deserve better
+                    than Google Docs!
+                  </Text>
+                </Box>
               </Box>
-              <Text mt={50} size={24} fw={700}>
-                True Collaboration.
-              </Text>
-              <Text mt={20} mb={20} size={20}>
-                Write with others in the same script at the same time, with
-                automatic and flexible industry-standard formatting for variety
-                shows, screenplays, video games, and more. You deserve better
-                than Google Docs!
-              </Text>
-            </Box>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "center",
-              width: "50%",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                maxWidth: "480px",
-              }}
+            </MediaQuery>
+            <MediaQuery
+              query="(max-width: 768px)"
+              styles={{ width: "100%" }}
             >
               <Box
                 sx={{
-                  background: "#FBFBFD",
-                  padding: "50px 20px",
-                  width: "100%",
-                  height: "320px",
-                  borderRadius: "10px",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  justifyContent: "center",
+                  width: "50%",
+                  paddingLeft: "20px",
+                  paddingRight: "20px",
                 }}
               >
-                <Image
-                  src="/images/features-page/change-tracking-1sc.png"
-                  width={"100%"}
-                  alt="collaboration"
-                />
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    maxWidth: "480px",
+                  }}
+                >
+                  <MediaQuery
+                    query="(max-width: 768px)"
+                    styles={{ height: "auto" }}
+                  >
+                    <Box
+                      sx={{
+                        background: "#FBFBFD",
+                        padding: "50px 20px",
+                        width: "100%",
+                        maxHeight: "315px",
+                        borderRadius: "10px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Image
+                        src="/images/features-page/change-tracking-1sc.png"
+                        width={"100%"}
+                        alt="collaboration"
+                      />
+                    </Box>
+                  </MediaQuery>
+                  <Text mt={50} size={24} fw={700}>
+                    Change Tracking.
+                  </Text>
+                  <Text mt={20} mb={20} size={20}>
+                    No matter what you&apos;re writing, planning, or producing, the
+                    only constant is change. Scripto tracks changes and saves
+                    backups as you work, and generates shareable change reports you
+                    can share with your whole team. Never again will you buy a prop
+                    that got cut two drafts ago.
+                  </Text>
+                </Box>
               </Box>
-              <Text mt={50} size={24} fw={700}>
-                Change Tracking.
-              </Text>
-              <Text mt={20} mb={20} size={20}>
-                No matter what you&apos;re writing, planning, or producing, the
-                only constant is change. Scripto tracks changes and saves
-                backups as you work, and generates shareable change reports you
-                can share with your whole team. Never again will you buy a prop
-                that got cut two drafts ago.
-              </Text>
-            </Box>
+            </MediaQuery>
           </Box>
-        </Box>
+        </MediaQuery>
         <CTA background="#FBFBFD" buttonColor="#8252C6" text="#000" />
       </Box>
     </AppLayout>
