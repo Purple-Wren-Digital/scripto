@@ -1,16 +1,7 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
 import Card from "@/components/Card";
-import {
-  Text,
-  Box,
-  Button,
-  Space,
-  Image,
-  Flex,
-  Avatar,
-  MediaQuery,
-} from "@mantine/core";
+import { Text, Box, Button, Image, Avatar, MediaQuery } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { PageWithLayout } from "next";
 import Link from "next/link";
