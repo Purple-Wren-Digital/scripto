@@ -92,19 +92,24 @@ export default function Footer() {
                 alt="scripto logo"
               />
             </Link>
-            <Button
-              mt={25}
-              h={60}
-              w={200}
-              radius={10}
-              sx={{
-                alignSelf: "center",
-                background: colors.button,
-                fontSize: 18,
-              }}
+            <Link
+              href="mailto:hello@scripto.live"
+              style={{ textDecoration: "none" }}
             >
-              Get in Touch
-            </Button>
+              <Button
+                mt={25}
+                h={60}
+                w={200}
+                radius={10}
+                sx={{
+                  alignSelf: "center",
+                  background: colors.button,
+                  fontSize: 18,
+                }}
+              >
+                Get in Touch
+              </Button>
+            </Link>
             <Box
               mt={50}
               mb={25}
@@ -192,19 +197,24 @@ export default function Footer() {
               </Box>
             </Box>
             <Divider size="sm" color={colors.text} />
-            <Button
-              mt={50}
-              h={60}
-              w={200}
-              radius={10}
-              sx={{
-                alignSelf: "center",
-                background: colors.button,
-                fontSize: 18,
-              }}
+            <Link
+              href="mailto:hello@scripto.live"
+              style={{ textDecoration: "none" }}
             >
-              Get in Touch
-            </Button>
+              <Button
+                mt={50}
+                h={60}
+                w={200}
+                radius={10}
+                sx={{
+                  alignSelf: "center",
+                  background: colors.button,
+                  fontSize: 18,
+                }}
+              >
+                Get in Touch
+              </Button>
+            </Link>
             <Box
               mt={50}
               sx={{ display: "flex", alignSelf: "center", gap: "20px" }}

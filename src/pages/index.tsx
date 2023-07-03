@@ -1,8 +1,17 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
 import Card from "@/components/Card";
-import { Text, Box, Button, Space, Image, Flex, Avatar, MediaQuery } from "@mantine/core";
-import { Carousel } from "@mantine/carousel"
+import {
+  Text,
+  Box,
+  Button,
+  Space,
+  Image,
+  Flex,
+  Avatar,
+  MediaQuery,
+} from "@mantine/core";
+import { Carousel } from "@mantine/carousel";
 import { PageWithLayout } from "next";
 import Link from "next/link";
 import { useMediaQuery } from "@mantine/hooks";
@@ -33,8 +42,8 @@ const LandingPage: PageWithLayout = () => {
             styles={{ width: "100%", paddingRight: "10%" }}
           >
             <MediaQuery
-            query="(max-width: 480px)"
-            styles={{ fontSize: "32px", }}
+              query="(max-width: 480px)"
+              styles={{ fontSize: "32px" }}
             >
               <Box
                 my={50}
@@ -47,15 +56,11 @@ const LandingPage: PageWithLayout = () => {
                   fontSize: "48px",
                 }}
               >
-                <Text fw={700} sx={{ maxWidth: "100%"}}>
+                <Text fw={700} sx={{ maxWidth: "100%" }}>
                   Write.
                 </Text>
-                <Text fw={700}>
-                  Plan.
-                </Text>
-                <Text fw={700}>
-                  Produce.
-                </Text>
+                <Text fw={700}>Plan.</Text>
+                <Text fw={700}>Produce.</Text>
                 <Text mb="md" fw={700}>
                   Together.
                 </Text>
@@ -72,20 +77,26 @@ const LandingPage: PageWithLayout = () => {
                   <Text td="underline" component="span">
                     video game
                   </Text>
-                  , Scripto helps you do your best work and save time while you do it.
+                  , Scripto helps you do your best work and save time while you
+                  do it.
                 </Text>
-                <Button
-                  h={60}
-                  w={240}
-                  sx={{
-                    borderRadius: 10,
-                    fontSize: 18,
-                    background: "#876AC2",
-                    padding: 20,
-                  }}
+                <Link
+                  href="https://calendly.com/nickscripto/scripto-demo"
+                  style={{ textDecoration: "none" }}
                 >
-                  Book a Demo
-                </Button>
+                  <Button
+                    h={60}
+                    w={240}
+                    sx={{
+                      borderRadius: 10,
+                      fontSize: 18,
+                      background: "#876AC2",
+                      padding: 20,
+                    }}
+                  >
+                    Book a Demo
+                  </Button>
+                </Link>
               </Box>
             </MediaQuery>
           </MediaQuery>
@@ -117,12 +128,14 @@ const LandingPage: PageWithLayout = () => {
           </MediaQuery>
         </Box>
       </MediaQuery>
-      <MediaQuery
-        query="(max-width: 768px)"
-        styles={{ background: "#FBFBFD" }}
-      >
+      <MediaQuery query="(max-width: 768px)" styles={{ background: "#FBFBFD" }}>
         <Box
-          sx={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative" }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            position: "relative",
+          }}
         >
           <MediaQuery
             query="(max-width: 768px)"
@@ -131,7 +144,7 @@ const LandingPage: PageWithLayout = () => {
             <Image
               src="/images/landing-page-bg/streamline-bg-ellipse.png"
               alt="streamline bg ellipse"
-              width={ isMobile ? 500 : isTablet ? 550 : 400 }
+              width={isMobile ? 500 : isTablet ? 550 : 400}
               sx={{
                 position: "absolute",
                 left: 0,
@@ -140,7 +153,10 @@ const LandingPage: PageWithLayout = () => {
               }}
             />
           </MediaQuery>
-          <Box ta="center" sx={{ paddingLeft: "10%", paddingRight: "10%", zIndex: 1 }}>
+          <Box
+            ta="center"
+            sx={{ paddingLeft: "10%", paddingRight: "10%", zIndex: 1 }}
+          >
             <MediaQuery
               query="(max-width: 480px)"
               styles={{ fontSize: "32px" }}
@@ -155,20 +171,20 @@ const LandingPage: PageWithLayout = () => {
             >
               <Text mb="50px">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam,
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam,
               </Text>
             </MediaQuery>
           </Box>
           <MediaQuery
             query="(max-width: 768px)"
-            styles={{ 
-              flexDirection: "column", 
-              alignItems: "center", 
-              width: "100%", 
-              background: "none", 
-              borderRadius: "0px", 
-              boxShadow: "none" 
+            styles={{
+              flexDirection: "column",
+              alignItems: "center",
+              width: "100%",
+              background: "none",
+              borderRadius: "0px",
+              boxShadow: "none",
             }}
           >
             <Box
@@ -207,7 +223,11 @@ const LandingPage: PageWithLayout = () => {
       </MediaQuery>
       <MediaQuery
         query="(max-width: 768px)"
-        styles={{ paddingTop: "40px", paddingBottom: "60px", background: "#FBFBFD" }}
+        styles={{
+          paddingTop: "40px",
+          paddingBottom: "60px",
+          background: "#FBFBFD",
+        }}
       >
         <Box
           sx={{
@@ -218,13 +238,14 @@ const LandingPage: PageWithLayout = () => {
             paddingBottom: "120px",
           }}
         >
-          <Box sx={{ 
-            width: "100%", 
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            paddingLeft: "10%",
-            paddingRight: "10%",
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              paddingLeft: "10%",
+              paddingRight: "10%",
             }}
           >
             <MediaQuery
@@ -246,13 +267,13 @@ const LandingPage: PageWithLayout = () => {
             }}
           >
             {isShortCarousel ? (
-              <Carousel 
-                slideSize="100%" 
-                withIndicators 
+              <Carousel
+                slideSize="100%"
+                withIndicators
                 withControls={false}
-                sx={{ 
+                sx={{
                   width: "100%",
-                }} 
+                }}
                 styles={{
                   indicator: {
                     width: "10px",
@@ -263,10 +284,10 @@ const LandingPage: PageWithLayout = () => {
                     marginRight: "5px",
                     transition: "background 250ms ease",
 
-                    '&[data-active]': {
-                      background: "#000"
+                    "&[data-active]": {
+                      background: "#000",
                     },
-                  }
+                  },
                 }}
               >
                 <Carousel.Slide mb={80}>
@@ -343,15 +364,15 @@ const LandingPage: PageWithLayout = () => {
                 </Carousel.Slide>
                 <Carousel.Slide mb={80}>
                   <Box
-                      mt={50}
-                      sx={{
-                        display: "flex",
-                        justifyContent: "center",
-                        flexWrap: "wrap",
-                        width: "100%",
-                      }}
-                    >
-                      <Box
+                    mt={50}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                      width: "100%",
+                    }}
+                  >
+                    <Box
                       sx={{
                         display: "flex",
                         alignItems: "center",
@@ -411,7 +432,7 @@ const LandingPage: PageWithLayout = () => {
                         width={"100%"}
                       />
                     </Box>
-                    </Box>
+                  </Box>
                 </Carousel.Slide>
                 <Carousel.Slide mb={80}>
                   <Box
@@ -667,13 +688,13 @@ const LandingPage: PageWithLayout = () => {
                 </Carousel.Slide>
               </Carousel>
             ) : (
-              <Carousel 
-                slideSize="100%" 
-                withIndicators 
+              <Carousel
+                slideSize="100%"
+                withIndicators
                 withControls={false}
-                sx={{ 
+                sx={{
                   width: "100%",
-                }} 
+                }}
                 styles={{
                   indicator: {
                     width: "10px",
@@ -684,10 +705,10 @@ const LandingPage: PageWithLayout = () => {
                     marginRight: "20px",
                     transition: "background 250ms ease",
 
-                    '&[data-active]': {
-                      background: "#000"
+                    "&[data-active]": {
+                      background: "#000",
                     },
-                  }
+                  },
                 }}
               >
                 <Carousel.Slide mb={80}>
@@ -1060,11 +1081,10 @@ const LandingPage: PageWithLayout = () => {
         styles={{ flexDirection: "column" }}
       >
         <Box sx={{ display: "flex", background: "#FBFBFD" }}>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ width: "100%" }}
-          >
-            <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
+          <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
+            <Box
+              sx={{ display: "flex", flexDirection: "column", width: "50%" }}
+            >
               <Box
                 sx={{
                   display: "flex",
@@ -1112,12 +1132,12 @@ const LandingPage: PageWithLayout = () => {
                       True Collaboration.
                     </Text>
                     <Text mb={40} sx={{ maxWidth: "420px" }}>
-                      Write with others in the same script at the same time, with
-                      automatic and flexible industry-standard formatting for variety
-                      shows, screenplays, video games, and more. You deserve better
-                      than Google Docs!
+                      Write with others in the same script at the same time,
+                      with automatic and flexible industry-standard formatting
+                      for variety shows, screenplays, video games, and more. You
+                      deserve better than Google Docs!
                     </Text>
-                    <Link href="/features" >
+                    <Link href="/features">
                       <Button
                         variant="outline"
                         h={60}
@@ -1136,7 +1156,9 @@ const LandingPage: PageWithLayout = () => {
             query="(max-width: 768px)"
             styles={{ width: "100%", flexDirection: "column-reverse" }}
           >
-            <Box sx={{ display: "flex", flexDirection: "column", width: "50%" }}>
+            <Box
+              sx={{ display: "flex", flexDirection: "column", width: "50%" }}
+            >
               <Box
                 sx={{
                   display: "flex",
@@ -1181,10 +1203,11 @@ const LandingPage: PageWithLayout = () => {
                       Feature that is amazing
                     </Text>
                     <Text mb={40} sx={{ maxWidth: "420px" }}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
                     </Text>
-                    <Link href="/features" >
+                    <Link href="/features">
                       <Button
                         variant="outline"
                         h={60}
@@ -1224,12 +1247,14 @@ const LandingPage: PageWithLayout = () => {
       </MediaQuery>
       <Box
         mt={120}
-        sx={{ display: "flex", flexDirection: "column", alignItems: "center", position: "relative" }}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          position: "relative",
+        }}
       >
-        <MediaQuery
-          query="(max-width: 480px)"
-          styles={{ top: -300 }}
-        >
+        <MediaQuery query="(max-width: 480px)" styles={{ top: -300 }}>
           <Image
             src="/images/landing-page-bg/testimonial-bg-ellipse.png"
             alt="streamline bg ellipse"
@@ -1252,16 +1277,16 @@ const LandingPage: PageWithLayout = () => {
             zIndex: 2,
           }}
         >
-          <Carousel 
+          <Carousel
             mb={80}
-            slideSize="100%" 
-            withIndicators 
+            slideSize="100%"
+            withIndicators
             withControls={false}
             slideGap={"50px"}
-            sx={{ 
+            sx={{
               width: "100%",
               maxWidth: "900px",
-            }} 
+            }}
             styles={{
               indicator: {
                 width: "10px",
@@ -1272,10 +1297,10 @@ const LandingPage: PageWithLayout = () => {
                 marginRight: "20px",
                 transition: "background 250ms ease",
 
-                '&[data-active]': {
-                  background: "#000"
+                "&[data-active]": {
+                  background: "#000",
                 },
-              }
+              },
             }}
           >
             <Carousel.Slide mb={50}>
@@ -1289,10 +1314,16 @@ const LandingPage: PageWithLayout = () => {
                 }}
               >
                 <Text mb={20} size={24}>
-                  “Testimonial one. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt.”
+                  “Testimonial one. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt.”
                 </Text>
-                <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark" />
+                <Avatar
+                  mb={20}
+                  radius="xl"
+                  size={40}
+                  variant="filled"
+                  color="dark"
+                />
                 <Text size={14} mb={50}>
                   Maria Lopez, VP of Design at Meshery
                 </Text>
@@ -1305,14 +1336,20 @@ const LandingPage: PageWithLayout = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <Text mb={20} size={24}>
-                  “Testimonial two. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt.”
+                  “Testimonial two. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt.”
                 </Text>
-                <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark" />
+                <Avatar
+                  mb={20}
+                  radius="xl"
+                  size={40}
+                  variant="filled"
+                  color="dark"
+                />
                 <Text size={14} mb={50}>
                   Maria Lopez, VP of Design at Meshery
                 </Text>
@@ -1325,28 +1362,29 @@ const LandingPage: PageWithLayout = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  justifyContent: "center"
+                  justifyContent: "center",
                 }}
               >
                 <Text mb={20} size={24}>
-                  “Testimonial three. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt.”
+                  “Testimonial three. Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt.”
                 </Text>
-                <Avatar mb={20} radius="xl" size={40} variant="filled" color="dark" />
+                <Avatar
+                  mb={20}
+                  radius="xl"
+                  size={40}
+                  variant="filled"
+                  color="dark"
+                />
                 <Text size={14} mb={50}>
                   Maria Lopez, VP of Design at Meshery
                 </Text>
               </Box>
             </Carousel.Slide>
-            
           </Carousel>
         </Box>
       </Box>
-      <CTA 
-        background="#FBFBFD"
-        buttonColor="#301F55"
-        text="#000"
-      />
+      <CTA background="#FBFBFD" buttonColor="#301F55" text="#000" />
       {/* <Footer /> */}
     </AppLayout>
   );

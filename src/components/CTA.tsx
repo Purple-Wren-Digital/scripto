@@ -1,16 +1,19 @@
 import { Box, Button, Text, Image, MediaQuery } from "@mantine/core";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const CTA: React.FC<{ background: string, buttonColor: string, text: string }> = ({ background, buttonColor, text }) => {
-
+const CTA: React.FC<{
+  background: string;
+  buttonColor: string;
+  text: string;
+}> = ({ background, buttonColor, text }) => {
   const router = useRouter();
   const [pathname, setPathname] = useState(router.pathname);
 
   useEffect(() => {
     setPathname(router.pathname);
   }, [router.pathname]);
-
 
   return (
     <Box
@@ -25,13 +28,9 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         position: "relative",
       }}
     >
-
       {pathname == "/features" ? (
         <>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ display: "none" }}
-          >
+          <MediaQuery query="(max-width: 768px)" styles={{ display: "none" }}>
             <Image
               src="/images/cta-bg/cta-features1.png"
               alt="cta bg ellipse"
@@ -46,7 +45,12 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
           </MediaQuery>
           <MediaQuery
             query="(max-width: 768px)"
-            styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
+            styles={{
+              opacity: 0.3,
+              right: "50%",
+              transform: "translateX(50%)",
+              top: -20,
+            }}
           >
             <Image
               src="/images/cta-bg/cta-features2.png"
@@ -63,10 +67,7 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         </>
       ) : pathname == "/team" ? (
         <>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ display: "none" }}
-          >
+          <MediaQuery query="(max-width: 768px)" styles={{ display: "none" }}>
             <Image
               src="/images/cta-bg/cta-team1.png"
               alt="cta bg ellipse"
@@ -81,7 +82,12 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
           </MediaQuery>
           <MediaQuery
             query="(max-width: 768px)"
-            styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
+            styles={{
+              opacity: 0.3,
+              right: "50%",
+              transform: "translateX(50%)",
+              top: -20,
+            }}
           >
             <Image
               src="/images/cta-bg/cta-team2.png"
@@ -98,10 +104,7 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         </>
       ) : (
         <>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ display: "none" }}
-          >
+          <MediaQuery query="(max-width: 768px)" styles={{ display: "none" }}>
             <Image
               src="/images/cta-bg/cta-ellipse1.png"
               alt="cta bg ellipse"
@@ -116,7 +119,12 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
           </MediaQuery>
           <MediaQuery
             query="(max-width: 768px)"
-            styles={{ opacity: 0.3, right: "50%", transform: "translateX(50%)", top: -20, }}
+            styles={{
+              opacity: 0.3,
+              right: "50%",
+              transform: "translateX(50%)",
+              top: -20,
+            }}
           >
             <Image
               src="/images/cta-bg/cta-ellipse2.png"
@@ -133,7 +141,6 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         </>
       )}
 
-
       <Text size={24} fw={700} mt={120} mb={40} sx={{ zIndex: 2 }}>
         Ready to get started?
       </Text>
@@ -141,20 +148,25 @@ const CTA: React.FC<{ background: string, buttonColor: string, text: string }> =
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </Text>
-      <Button
-        mb={120}
-        h={60}
-        w={200}
-        sx={{
-          borderRadius: 10,
-          fontSize: 18,
-          background: buttonColor,
-          padding: 20,
-          zIndex: 2
-        }}
+      <Link
+        href="https://app.scripto.live/create-account"
+        style={{ textDecoration: "none" }}
       >
-        Start free trial
-      </Button>
+        <Button
+          mb={120}
+          h={60}
+          w={200}
+          sx={{
+            borderRadius: 10,
+            fontSize: 18,
+            background: buttonColor,
+            padding: 20,
+            zIndex: 2,
+          }}
+        >
+          Start free trial
+        </Button>
+      </Link>
     </Box>
   );
 };
