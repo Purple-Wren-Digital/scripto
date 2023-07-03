@@ -1,13 +1,12 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
-import Card from "@/components/Card";
-import Footer from "@/components/Footer";
-import { Text, Box, Button, Space, Image, Flex, Avatar, MediaQuery } from "@mantine/core";
+import { Text, Box, Space, Image, MediaQuery } from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const AlternatingFeature = ({
   bgImgPath,
   imgPath,
+  bgColor,
   altText,
   title,
   copy,
@@ -16,6 +15,7 @@ const AlternatingFeature = ({
 }: {
   bgImgPath: string;
   imgPath: string;
+  bgColor: string;
   altText: string;
   title: string;
   copy: string;
@@ -23,25 +23,16 @@ const AlternatingFeature = ({
   orderIndex: number;
 }) => {
   return (
-    <MediaQuery
-      query="(max-width: 1024px)"
-      styles={{ minHeight: "550px" }}
-    >
+    <MediaQuery query="(max-width: 1024px)" styles={{ minHeight: "550px" }}>
       <MediaQuery
         query="(max-width: 768px)"
-        styles={orderIndex == 1 ? { flexDirection: "column-reverse"} : { flexDirection: "column" }}
+        styles={
+          orderIndex == 1
+            ? { flexDirection: "column-reverse" }
+            : { flexDirection: "column" }
+        }
       >
-        <Box 
-          // sx={{ display: "flex", minHeight: "682px" }}
-          sx={orderIndex == 0 ? (
-              { display: "flex", minHeight: "682px", background: "#301F55"}
-            ) : orderIndex == 1 ? (
-              { display: "flex", minHeight: "682px", background: "#8252C6"}
-            ) : (
-              { display: "flex", minHeight: "682px", background: "#B89ADE"}
-            )
-          }
-        >
+        <Box sx={{ display: "flex", minHeight: "682px", background: bgColor }}>
           {isImgAlignLeft ? (
             <MediaQuery
               query="(max-width: 1024px) and (min-width: 768px)"
@@ -62,16 +53,30 @@ const AlternatingFeature = ({
                 >
                   <MediaQuery
                     query="(max-width: 768px)"
-                    styles={bgImgPath == "/images/features-page/prompter-bg.png" ? { right: 0, top: -120 } : { right: 0, top: -100 }}
+                    styles={
+                      bgImgPath == "/images/features-page/prompter-bg.png"
+                        ? { right: 0, top: -120 }
+                        : { right: 0, top: -100 }
+                    }
                   >
                     <Image
                       src={bgImgPath}
-                      width={bgImgPath == "/images/features-page/rundowns-bg.png" ? "98%" : "110%"}
+                      width={
+                        bgImgPath == "/images/features-page/rundowns-bg.png"
+                          ? "98%"
+                          : "110%"
+                      }
                       alt="bg image"
                       sx={{
                         position: "absolute",
-                        right: bgImgPath == "/images/features-page/rundowns-bg.png" ? -30 : 0,
-                        top: bgImgPath == "/images/features-page/rundowns-bg.png" ? -50 : -20,
+                        right:
+                          bgImgPath == "/images/features-page/rundowns-bg.png"
+                            ? -30
+                            : 0,
+                        top:
+                          bgImgPath == "/images/features-page/rundowns-bg.png"
+                            ? -50
+                            : -20,
                       }}
                     />
                   </MediaQuery>
@@ -92,7 +97,11 @@ const AlternatingFeature = ({
             >
               <MediaQuery
                 query="(max-width: 768px)"
-                styles={{ width: "100%", marginTop: "40px", marginBottom: "40px" }}
+                styles={{
+                  width: "100%",
+                  marginTop: "40px",
+                  marginBottom: "40px",
+                }}
               >
                 <Box
                   sx={{
@@ -117,12 +126,16 @@ const AlternatingFeature = ({
           )}{" "}
           {isImgAlignLeft ? (
             <MediaQuery
-            query="(max-width: 1024px) and (min-width: 768px)"
-            styles={{ width: "45%" }}
+              query="(max-width: 1024px) and (min-width: 768px)"
+              styles={{ width: "45%" }}
             >
               <MediaQuery
                 query="(max-width: 768px)"
-                styles={{ width: "100%", marginTop: "40px", marginBottom: "40px" }}
+                styles={{
+                  width: "100%",
+                  marginTop: "40px",
+                  marginBottom: "40px",
+                }}
               >
                 <Box
                   sx={{
@@ -164,16 +177,30 @@ const AlternatingFeature = ({
                 >
                   <MediaQuery
                     query="(max-width: 768px)"
-                    styles={bgImgPath == "/images/features-page/prompter-bg.png" ? { right: 0, top: -120 } : { right: 0, top: -100 }}
+                    styles={
+                      bgImgPath == "/images/features-page/prompter-bg.png"
+                        ? { right: 0, top: -120 }
+                        : { right: 0, top: -100 }
+                    }
                   >
                     <Image
                       src={bgImgPath}
-                      width={bgImgPath == "/images/features-page/rundowns-bg.png" ? "100%" : "110%"}
+                      width={
+                        bgImgPath == "/images/features-page/rundowns-bg.png"
+                          ? "100%"
+                          : "110%"
+                      }
                       alt="bg image"
                       sx={{
                         position: "absolute",
-                        right: bgImgPath == "/images/features-page/rundowns-bg.png" ? -30 : 0,
-                        top: bgImgPath == "/images/features-page/rundowns-bg.png" ? -50 : -20,
+                        right:
+                          bgImgPath == "/images/features-page/rundowns-bg.png"
+                            ? -30
+                            : 0,
+                        top:
+                          bgImgPath == "/images/features-page/rundowns-bg.png"
+                            ? -50
+                            : -20,
                       }}
                     />
                   </MediaQuery>
@@ -203,6 +230,7 @@ const AlternatingLayout = ({ features }: any) => {
             key={index}
             bgImgPath={feature.bgImgPath}
             imgPath={feature.imgPath}
+            bgColor={feature.bgColor}
             altText={feature.altText}
             title={feature.title}
             copy={feature.copy}
@@ -218,7 +246,6 @@ const AlternatingLayout = ({ features }: any) => {
 };
 
 const FeaturesPage: PageWithLayout = ({ features }: any) => {
-  console.log(features);
   return (
     <AppLayout>
       <Box
@@ -243,10 +270,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
             paddingRight: "10%",
           }}
         >
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ opacity: 0.5 }}
-          >
+          <MediaQuery query="(max-width: 768px)" styles={{ opacity: 0.5 }}>
             <Image
               src="/images/team-page/team-ellipse1.png"
               alt="cta bg ellipse"
@@ -263,10 +287,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
             query="(max-width: 768px)"
             styles={{ opacity: 0.5, right: -100 }}
           >
-            <MediaQuery
-            query="(max-width: 480px)"
-            styles={{ display: "none" }}
-            >
+            <MediaQuery query="(max-width: 480px)" styles={{ display: "none" }}>
               <Image
                 src="/images/team-page/team-ellipse2.png"
                 alt="cta bg ellipse"
@@ -280,10 +301,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
               />
             </MediaQuery>
           </MediaQuery>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ display: "none" }}
-          >
+          <MediaQuery query="(max-width: 768px)" styles={{ display: "none" }}>
             <Image
               src="/images/team-page/team-ellipse3.png"
               alt="cta bg ellipse"
@@ -387,17 +405,14 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
                   </Text>
                   <Text mt={20} mb={20} size={20}>
                     Write with others in the same script at the same time, with
-                    automatic and flexible industry-standard formatting for variety
-                    shows, screenplays, video games, and more. You deserve better
-                    than Google Docs!
+                    automatic and flexible industry-standard formatting for
+                    variety shows, screenplays, video games, and more. You
+                    deserve better than Google Docs!
                   </Text>
                 </Box>
               </Box>
             </MediaQuery>
-            <MediaQuery
-              query="(max-width: 768px)"
-              styles={{ width: "100%" }}
-            >
+            <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
               <Box
                 sx={{
                   display: "flex",
@@ -443,11 +458,11 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
                     Change Tracking.
                   </Text>
                   <Text mt={20} mb={20} size={20}>
-                    No matter what you&apos;re writing, planning, or producing, the
-                    only constant is change. Scripto tracks changes and saves
-                    backups as you work, and generates shareable change reports you
-                    can share with your whole team. Never again will you buy a prop
-                    that got cut two drafts ago.
+                    No matter what you&apos;re writing, planning, or producing,
+                    the only constant is change. Scripto tracks changes and
+                    saves backups as you work, and generates shareable change
+                    reports you can share with your whole team. Never again will
+                    you buy a prop that got cut two drafts ago.
                   </Text>
                 </Box>
               </Box>
@@ -465,6 +480,7 @@ FeaturesPage.getInitialProps = async () => {
     {
       bgImgPath: "/images/features-page/video-games-bg.png",
       imgPath: "/images/features-page/standard-screenplay.png",
+      bgColor: "#301F55",
       altText: "scripto editor",
       title: "A Missing Piece.",
       copy: "If your game prioritizes narrative design or features multiple content contributors, Scripto lets you run a professional writing process in a cozy editorial environment. We support the Ink interactive scripting language and our API makes it easy to integrate with your build pipeline.",
@@ -473,6 +489,7 @@ FeaturesPage.getInitialProps = async () => {
     {
       bgImgPath: "/images/features-page/rundowns-bg.png",
       imgPath: "/images/features-page/rundowns.png",
+      bgColor: "#8252C6",
       altText: "scripto editor",
       title: "Smart Rundowns.",
       copy: "It’s a law of modern work: Everything becomes a spreadsheet eventually. Scripto’s Rundowns let you do it with the click of a button. Drag and drop any script into our customizable grids and see the magic for yourself.",
@@ -481,6 +498,7 @@ FeaturesPage.getInitialProps = async () => {
     {
       bgImgPath: "/images/features-page/prompter-bg.png",
       imgPath: "/images/features-page/push-to-prompter.png",
+      bgColor: "#B89ADE",
       altText: "scripto editor",
       title: "Push to Prompter.",
       copy: "Scripted shows using the industry-standard screenplay format can now have true collaboration in the writers room. It&apos;s also great for pre-taped sketches at variety shows. Before you buy the new Final Draft, try Scripto for free!",
