@@ -82,7 +82,7 @@ const AlternatingFeature = ({
                   </MediaQuery>
                   <Image
                     src={imgPath}
-                    width={"95%"}
+                    width={"90%"}
                     radius={10}
                     ml="auto"
                     alt={altText}
@@ -206,7 +206,7 @@ const AlternatingFeature = ({
                   </MediaQuery>
                   <Image
                     src={imgPath}
-                    width={"95%"}
+                    width={"90%"}
                     radius={10}
                     ml="auto"
                     alt={altText}
@@ -448,7 +448,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
                       }}
                     >
                       <Image
-                        src="/images/features-page/change-tracking-1sc.png"
+                        src="/images/features-page/side-by-side-comparison.png"
                         width={"100%"}
                         alt="collaboration"
                       />
