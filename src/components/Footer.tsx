@@ -94,7 +94,11 @@ export default function Footer() {
             </Link>
             <Link
               href="mailto:hello@scripto.live"
-              style={{ textDecoration: "none" }}
+              style={{
+                textDecoration: "none",
+                display: "flex",
+                alignSelf: "center",
+              }}
             >
               <Button
                 mt={25}
@@ -102,7 +106,6 @@ export default function Footer() {
                 w={200}
                 radius={10}
                 sx={{
-                  alignSelf: "center",
                   background: colors.button,
                   fontSize: 18,
                 }}
@@ -116,7 +119,7 @@ export default function Footer() {
               sx={{ display: "flex", alignSelf: "center", gap: "20px" }}
             >
               <Text>©️ 2010-{year}</Text>
-              <Text>Privacy-Terms</Text>
+              <Text sx={{ cursor: "pointer" }}>Privacy-Terms</Text>
             </Box>
           </Box>
         </Box>
@@ -199,7 +202,11 @@ export default function Footer() {
             <Divider size="sm" color={colors.text} />
             <Link
               href="mailto:hello@scripto.live"
-              style={{ textDecoration: "none" }}
+              style={{
+                textDecoration: "none",
+                display: "flex",
+                alignSelf: "center",
+              }}
             >
               <Button
                 mt={50}
@@ -207,7 +214,6 @@ export default function Footer() {
                 w={200}
                 radius={10}
                 sx={{
-                  alignSelf: "center",
                   background: colors.button,
                   fontSize: 18,
                 }}
@@ -220,7 +226,14 @@ export default function Footer() {
               sx={{ display: "flex", alignSelf: "center", gap: "20px" }}
             >
               <Text>©️ 2010-{year}</Text>
-              <Text>Privacy-Terms</Text>
+              <Text
+                sx={{
+                  cursor: "pointer",
+                  "&:hover": { textDecoration: "underline" },
+                }}
+              >
+                Privacy-Terms
+              </Text>
             </Box>
           </Box>
         </Box>
