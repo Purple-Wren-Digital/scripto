@@ -119,7 +119,7 @@ const LandingPage: PageWithLayout = () => {
           </MediaQuery>
         </Box>
       </MediaQuery>
-      <MediaQuery query="(max-width: 768px)" styles={{ background: "#FBFBFD" }}>
+      <MediaQuery query="(max-width: 768px)" styles={{ background: "#FBFBFD", overflow: "hidden" }}>
         <Box
           sx={{
             display: "flex",
@@ -135,7 +135,7 @@ const LandingPage: PageWithLayout = () => {
             <Image
               src="/images/landing-page-bg/streamline-bg-ellipse.png"
               alt="streamline bg ellipse"
-              width={isMobile ? 500 : isTablet ? 550 : 400}
+              width={isMobile ? 500 : isTablet ? 520 : 400}
               sx={{
                 position: "absolute",
                 left: 0,
@@ -243,11 +243,11 @@ const LandingPage: PageWithLayout = () => {
               query="(max-width: 480px)"
               styles={{ fontSize: "32px" }}
             >
-              <Text size={40} fw={700} ta="center">
+              <Text size={40} fw={700} ta="center" sx={{ zIndex: 1 }}>
                 Powering the Creative Force: Teams That Choose Us.
               </Text>
             </MediaQuery>
-            <Text ta="center">Trusted by top teams in the industry</Text>
+            <Text sx={{ zIndex: 1 }} ta="center">Trusted by top teams in the industry</Text>
           </Box>
           <Box
             sx={{
