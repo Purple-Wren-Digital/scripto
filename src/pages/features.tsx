@@ -82,7 +82,7 @@ const AlternatingFeature = ({
                   </MediaQuery>
                   <Image
                     src={imgPath}
-                    width={"90%"}
+                    width={"95%"}
                     radius={10}
                     ml="auto"
                     alt={altText}
@@ -206,7 +206,7 @@ const AlternatingFeature = ({
                   </MediaQuery>
                   <Image
                     src={imgPath}
-                    width={"90%"}
+                    width={"95%"}
                     radius={10}
                     ml="auto"
                     alt={altText}
