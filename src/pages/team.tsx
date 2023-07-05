@@ -86,9 +86,6 @@ const TeamPage: PageWithLayout = () => {
       <Box sx={{ display: "flex", flexDirection: "column", color: "#000" }}>
         <Box
           sx={{
-            // display: "flex",
-            // alignItems: "stretch",
-            // justifyContent: "space-between",
             minHeight: "800px",
             position: "relative",
             background: "#F0EFF1",
@@ -230,242 +227,366 @@ const TeamPage: PageWithLayout = () => {
           <Box 
             mt={60}
             sx={{ 
-              // display: "grid",
-              // gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
               display: "flex",
               flexWrap: "wrap",
-              gap: 20,
-              width: "80%",
-              maxWidth: "850px"
-              // gap: "120px"
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 80,
+              width: "90%",
+              maxWidth: "950px"
             }}
           >
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#B89ADE",
-                border: "25px solid #EAD8AD",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#B89ADE",
+                  border: "15px solid #EAD8AD",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#B89ADE",
-                border: "25px solid #EAD8AD",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#B89ADE",
+                  border: "15px solid #EAD8AD",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#EAD8AD",
-                border: "25px solid #C9796F",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#EAD8AD",
+                  border: "15px solid #C9796F",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#C9796F",
-                border: "25px solid #B89ADE",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#C9796F",
+                  border: "15px solid #B89ADE",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#EAD8AD",
-                border: "25px solid #C9796F",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#EAD8AD",
+                  border: "15px solid #C9796F",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#B89ADE",
-                border: "25px solid #EAD8AD",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#B89ADE",
+                  border: "15px solid #EAD8AD",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#C9796F",
-                border: "25px solid #B89ADE",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#C9796F",
+                  border: "15px solid #B89ADE",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#EAD8AD",
-                border: "25px solid #C9796F",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#EAD8AD",
+                  border: "15px solid #C9796F",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
             <Box
-              mx="auto"
               mb={isMobile ? 30 : isTablet ? 40 : 80}
               sx={{
-                width: "225px",
-                height: "225px",
-                borderRadius: "50%",
-                background: "#C9796F",
-                border: "25px solid #B89ADE",
-                opacity: "0.5",
                 display: "flex",
-                justifyContent: "center",
+                flexDirection: "column",
                 alignItems: "center",
-                overflow: "hidden"
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
               }}
             >
-              <Image 
-                width={225}
-                height={225}
-                src={null} 
-                alt="headshot" 
-                withPlaceholder
-                fit="cover" 
-              />
+              <Box
+                mx="auto"
+                // mb={isMobile ? 30 : isTablet ? 40 : 80}
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  background: "#C9796F",
+                  border: "15px solid #B89ADE",
+                  opacity: "0.5",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src={null} 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
+              <Text ta="center" >Title</Text>
             </Box>
-            
           </Box>
       </Box>
       <CTA 
