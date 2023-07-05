@@ -77,11 +77,6 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       Features
                     </Text>
                   </Link>
-                  <Link href="/plans" style={{ textDecoration: "none" }}>
-                    <Text size={15} color={"#FBFBFD"}>
-                      Plans
-                    </Text>
-                  </Link>
                 </Box>
               </MediaQuery>
               <MediaQuery
@@ -148,16 +143,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     Features
                   </Text>
                 </Link>
-                <Link href="/plans" style={{ textDecoration: "none" }}>
-                  <Text size={15} color={"#FBFBFD"}>
-                    Plans
-                  </Text>
-                </Link>
                 <Link
                   href="https://app.scripto.live/login"
                   style={{ textDecoration: "none" }}
                 >
-                  <Text mt={50} size="md" color={"#FBFBFD"}>
+                  <Text size="md" color={"#FBFBFD"}>
                     Sign In
                   </Text>
                 </Link>

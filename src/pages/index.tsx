@@ -110,7 +110,7 @@ const LandingPage: PageWithLayout = () => {
             >
               <Image
                 src="/images/script-editor.png"
-                width={"80%"}
+                width={"85%"}
                 radius={10}
                 ml="auto"
                 alt="script editor"
