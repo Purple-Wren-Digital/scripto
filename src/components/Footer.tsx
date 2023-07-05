@@ -131,8 +131,6 @@ export default function Footer() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            // background: "#252634",
-            // color: "#FBFBFD"
             background: colors.background,
             color: colors.text,
           }}

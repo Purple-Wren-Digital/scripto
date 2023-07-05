@@ -72,11 +72,6 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       Our Team
                     </Text>
                   </Link>
-                  <Link href="/careers" style={{ textDecoration: "none" }}>
-                    <Text size={15} mr={20} color={"#FBFBFD"}>
-                      Careers
-                    </Text>
-                  </Link>
                   <Link href="/features" style={{ textDecoration: "none" }}>
                     <Text size={15} mr={20} color={"#FBFBFD"}>
                       Features
@@ -146,11 +141,6 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                 <Link href="/team" style={{ textDecoration: "none" }}>
                   <Text size={15} color={"#FBFBFD"}>
                     Our Team
-                  </Text>
-                </Link>
-                <Link href="/careers" style={{ textDecoration: "none" }}>
-                  <Text size={15} color={"#FBFBFD"}>
-                    Careers
                   </Text>
                 </Link>
                 <Link href="/features" style={{ textDecoration: "none" }}>

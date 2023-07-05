@@ -8,7 +8,7 @@ export function GlobalStyles() {
     <Global
       styles={{
         "*": {
-          fontStretch: "extra-expanded",
+          // fontStretch: "extra-expanded",
         },
         body: {
           backgroundColor: "#F2F2F2",
