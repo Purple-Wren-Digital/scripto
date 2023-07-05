@@ -92,7 +92,7 @@ export default function Footer() {
                 alt="scripto logo"
               />
             </Link>
-            <Link
+            {/* <Link
               href="mailto:hello@scripto.live"
               style={{
                 textDecoration: "none",
@@ -112,7 +112,7 @@ export default function Footer() {
               >
                 Get in Touch
               </Button>
-            </Link>
+            </Link> */}
             <Box
               mt={50}
               mb={25}
@@ -198,7 +198,7 @@ export default function Footer() {
               </Box>
             </Box>
             <Divider size="sm" color={colors.text} />
-            <Link
+            {/* <Link
               href="mailto:hello@scripto.live"
               style={{
                 textDecoration: "none",
@@ -218,7 +218,7 @@ export default function Footer() {
               >
                 Get in Touch
               </Button>
-            </Link>
+            </Link> */}
             <Box
               mt={50}
               sx={{ display: "flex", alignSelf: "center", gap: "20px" }}
