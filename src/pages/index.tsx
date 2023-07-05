@@ -1305,8 +1305,7 @@ const LandingPage: PageWithLayout = () => {
                 }}
               >
                 <Text mb={20} size={24}>
-                  “Testimonial one. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt.”
+                  “<span style={{ fontStyle: "italic" }}>Tooning Out The News</span> requires such a fast writing and production process. Scripto allows us to efficiently and reliably collaborate on scripts, punch up jokes, rewrite, export production-friendly drafts, and more.”
                 </Text>
                 <Avatar
                   mb={20}
@@ -1316,7 +1315,7 @@ const LandingPage: PageWithLayout = () => {
                   color="dark"
                 />
                 <Text size={14} mb={50}>
-                  Maria Lopez, VP of Design at Meshery
+                  RJ Fried, Executive Producer <span style={{ fontStyle: "italic" }}>Tooning Out The News</span>
                 </Text>
               </Box>
             </Carousel.Slide>
@@ -1331,8 +1330,7 @@ const LandingPage: PageWithLayout = () => {
                 }}
               >
                 <Text mb={20} size={24}>
-                  “Testimonial two. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt.”
+                  “It feels like this was made specifically for us, specifically for this project.”
                 </Text>
                 <Avatar
                   mb={20}
@@ -1342,11 +1340,11 @@ const LandingPage: PageWithLayout = () => {
                   color="dark"
                 />
                 <Text size={14} mb={50}>
-                  Maria Lopez, VP of Design at Meshery
+                  Adam Saltsman, founder <span style={{ fontStyle: "italic" }}>Finji</span>
                 </Text>
               </Box>
             </Carousel.Slide>
-            <Carousel.Slide mb={50}>
+            {/* <Carousel.Slide mb={50}>
               <Box
                 ta="center"
                 sx={{
@@ -1371,7 +1369,7 @@ const LandingPage: PageWithLayout = () => {
                   Maria Lopez, VP of Design at Meshery
                 </Text>
               </Box>
-            </Carousel.Slide>
+            </Carousel.Slide> */}
           </Carousel>
         </Box>
       </Box>
