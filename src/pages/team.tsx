@@ -226,6 +226,7 @@ const TeamPage: PageWithLayout = () => {
           </Box>
           <Box 
             mt={60}
+            mb={80}
             sx={{ 
               display: "flex",
               flexWrap: "wrap",
@@ -237,7 +238,7 @@ const TeamPage: PageWithLayout = () => {
             }}
           >
             <Box
-              mb={isMobile ? 30 : isTablet ? 40 : 80}
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -249,14 +250,11 @@ const TeamPage: PageWithLayout = () => {
             >
               <Box
                 mx="auto"
-                // mb={isMobile ? 30 : isTablet ? 40 : 80}
                 sx={{
                   width: "235px",
                   height: "235px",
                   borderRadius: "50%",
-                  background: "#B89ADE",
-                  border: "15px solid #EAD8AD",
-                  opacity: "0.5",
+                  border: "15px solid rgba(234, 216, 173, 0.5)",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -266,17 +264,18 @@ const TeamPage: PageWithLayout = () => {
                 <Image 
                   width={235}
                   height={235}
-                  src={null} 
+                  src="/images/team-page/headshots/stephen-colbert.png" 
                   alt="headshot" 
                   withPlaceholder
                   fit="cover" 
                 />
               </Box>
-              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
-              <Text ta="center" >Title</Text>
+              <Text ta="center" size={20} fw={700} mt={20}>Stephen Colbert</Text>
+              <Text size={18} ta="center" >Founder</Text>
+              <Text size={18} ta="center" >New York, NY</Text>
             </Box>
             <Box
-              mb={isMobile ? 30 : isTablet ? 40 : 80}
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -288,14 +287,11 @@ const TeamPage: PageWithLayout = () => {
             >
               <Box
                 mx="auto"
-                // mb={isMobile ? 30 : isTablet ? 40 : 80}
                 sx={{
                   width: "235px",
                   height: "235px",
                   borderRadius: "50%",
-                  background: "#B89ADE",
-                  border: "15px solid #EAD8AD",
-                  opacity: "0.5",
+                  border: "15px solid rgba(234, 216, 173, 0.5)",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -305,17 +301,18 @@ const TeamPage: PageWithLayout = () => {
                 <Image 
                   width={235}
                   height={235}
-                  src={null} 
+                  src="/images/team-page/headshots/evelyn-mcgee-colbert.png"
                   alt="headshot" 
                   withPlaceholder
                   fit="cover" 
                 />
               </Box>
-              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
-              <Text ta="center" >Title</Text>
+              <Text ta="center" size={20} fw={700} mt={20}>Evelyn McGee-Colbert</Text>
+              <Text size={18} ta="center" >Founder</Text>
+              <Text size={18} ta="center" >New York, NY</Text>
             </Box>
             <Box
-              mb={isMobile ? 30 : isTablet ? 40 : 80}
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -327,14 +324,11 @@ const TeamPage: PageWithLayout = () => {
             >
               <Box
                 mx="auto"
-                // mb={isMobile ? 30 : isTablet ? 40 : 80}
                 sx={{
                   width: "235px",
                   height: "235px",
                   borderRadius: "50%",
-                  background: "#EAD8AD",
-                  border: "15px solid #C9796F",
-                  opacity: "0.5",
+                  border: "15px solid rgba(201, 121, 111, 0.5)",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -344,17 +338,18 @@ const TeamPage: PageWithLayout = () => {
                 <Image 
                   width={235}
                   height={235}
-                  src={null} 
+                  src="/images/team-page/headshots/rob-dubbin.png"
                   alt="headshot" 
                   withPlaceholder
                   fit="cover" 
                 />
               </Box>
-              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
-              <Text ta="center" >Title</Text>
+              <Text ta="center" size={20} fw={700} mt={20}>Rob Dubbin</Text>
+              <Text size={18} ta="center" >Founder</Text>
+              <Text size={18} ta="center" >The Catskills, NY</Text>
             </Box>
             <Box
-              mb={isMobile ? 30 : isTablet ? 40 : 80}
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -366,14 +361,11 @@ const TeamPage: PageWithLayout = () => {
             >
               <Box
                 mx="auto"
-                // mb={isMobile ? 30 : isTablet ? 40 : 80}
                 sx={{
                   width: "235px",
                   height: "235px",
                   borderRadius: "50%",
-                  background: "#C9796F",
-                  border: "15px solid #B89ADE",
-                  opacity: "0.5",
+                  border: "15px solid rgba(184, 154, 222, 0.5)",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -383,17 +375,18 @@ const TeamPage: PageWithLayout = () => {
                 <Image 
                   width={235}
                   height={235}
-                  src={null} 
+                  src="/images/team-page/headshots/elisabeth-boonin.png"
                   alt="headshot" 
                   withPlaceholder
                   fit="cover" 
                 />
               </Box>
-              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
-              <Text ta="center" >Title</Text>
+              <Text ta="center" size={20} fw={700} mt={20}>Elisabeth &quot;Boon&quot; Boonin</Text>
+              <Text size={18} ta="center" >Engineering</Text>
+              <Text size={18} ta="center" >Petaluma, CA</Text>
             </Box>
             <Box
-              mb={isMobile ? 30 : isTablet ? 40 : 80}
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -405,14 +398,11 @@ const TeamPage: PageWithLayout = () => {
             >
               <Box
                 mx="auto"
-                // mb={isMobile ? 30 : isTablet ? 40 : 80}
                 sx={{
                   width: "235px",
                   height: "235px",
                   borderRadius: "50%",
-                  background: "#EAD8AD",
-                  border: "15px solid #C9796F",
-                  opacity: "0.5",
+                  border: "15px solid rgba(201, 121, 111, 0.5)",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -422,17 +412,18 @@ const TeamPage: PageWithLayout = () => {
                 <Image 
                   width={235}
                   height={235}
-                  src={null} 
+                  src="/images/team-page/headshots/juan-de-los-rios.png" 
                   alt="headshot" 
                   withPlaceholder
                   fit="cover" 
                 />
               </Box>
-              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
-              <Text ta="center" >Title</Text>
+              <Text ta="center" size={20} fw={700} mt={20}>Juan de los Rios</Text>
+              <Text size={18} ta="center" >Engineering</Text>
+              <Text size={18} ta="center" >San Francisco, CA</Text>
             </Box>
             <Box
-              mb={isMobile ? 30 : isTablet ? 40 : 80}
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -444,14 +435,11 @@ const TeamPage: PageWithLayout = () => {
             >
               <Box
                 mx="auto"
-                // mb={isMobile ? 30 : isTablet ? 40 : 80}
                 sx={{
                   width: "235px",
                   height: "235px",
                   borderRadius: "50%",
-                  background: "#B89ADE",
-                  border: "15px solid #EAD8AD",
-                  opacity: "0.5",
+                  border: "15px solid rgba(234, 216, 173, 0.5)",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -461,14 +449,126 @@ const TeamPage: PageWithLayout = () => {
                 <Image 
                   width={235}
                   height={235}
-                  src={null} 
+                  src="/images/team-page/headshots/alice-dubois.png"
                   alt="headshot" 
                   withPlaceholder
                   fit="cover" 
                 />
               </Box>
-              <Text ta="center" size={20} fw={700} mt={20}>First Last</Text>
-              <Text ta="center" >Title</Text>
+              <Text ta="center" size={20} fw={700} mt={20}>Alice DuBois</Text>
+              <Text size={18} ta="center" >Product</Text>
+              <Text size={18} ta="center" >Los Angeles, CA</Text>
+            </Box>
+            <Box
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
+              }}
+            >
+              <Box
+                mx="auto"
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  border: "15px solid rgba(184, 154, 222, 0.5)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src="/images/team-page/headshots/john-gravois.png"
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>John Gravoisn</Text>
+              <Text size={18} ta="center" >Engineering</Text>
+              <Text size={18} ta="center" >Orange County, CA</Text>
+            </Box>
+            <Box
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
+              }}
+            >
+              <Box
+                mx="auto"
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  border: "15px solid rgba(201, 121, 111, 0.5)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src="/images/team-page/headshots/mel-thomas.png" 
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>Mel Thomas</Text>
+              <Text size={18} ta="center" >Design</Text>
+              <Text size={18} ta="center" >Louisville, KY</Text>
+            </Box>
+            <Box
+              mb={isMobile ? 10 : isTablet ? 30 : 40}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#FBFBFD",
+                maxWidth: 250,
+              }}
+            >
+              <Box
+                mx="auto"
+                sx={{
+                  width: "235px",
+                  height: "235px",
+                  borderRadius: "50%",
+                  border: "15px solid rgba(184, 154, 222, 0.5)",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  overflow: "hidden"
+                }}
+              >
+                <Image 
+                  width={235}
+                  height={235}
+                  src="/images/team-page/headshots/nick-wakeham.png"
+                  alt="headshot" 
+                  withPlaceholder
+                  fit="cover" 
+                />
+              </Box>
+              <Text ta="center" size={20} fw={700} mt={20}>Nick Wakeham</Text>
+              <Text size={18} ta="center" >Business Development</Text>
+              <Text size={18} ta="center" >Toronto, Ontario</Text>
             </Box>
           </Box>
         </Box>
