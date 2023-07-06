@@ -145,8 +145,13 @@ const CTA: React.FC<{
         Ready to get started?
       </Text>
       <Text mb={25} ta="center" sx={{ maxWidth: "420px", zIndex: 2 }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Scripto is free for up to 3 collaborators with our basic variety and
+        screenplay formats. Sign up now and try it out!
+      </Text>
+      <Text mb={25} ta="center" sx={{ maxWidth: "420px", zIndex: 2 }}>
+        For larger teams, we tailor plans and pricing to your team size,
+        production order, and feature needs. Get in touch for a customized demo
+        and free trial of our paid features.
       </Text>
       <Link
         href="https://app.scripto.live/create-account"

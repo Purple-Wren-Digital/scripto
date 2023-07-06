@@ -1,11 +1,20 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
 import Card from "@/components/Card";
-import { Text, Box, Button, Image, Avatar, MediaQuery } from "@mantine/core";
+import {
+  Text,
+  Box,
+  Button,
+  Image,
+  Avatar,
+  MediaQuery,
+  List,
+} from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { PageWithLayout } from "next";
 import Link from "next/link";
 import { useMediaQuery } from "@mantine/hooks";
+import { ListItem } from "@mantine/core/lib/List/ListItem/ListItem";
 
 const LandingPage: PageWithLayout = () => {
   const isShortCarousel = useMediaQuery("(max-width: 680px)");
@@ -71,6 +80,29 @@ const LandingPage: PageWithLayout = () => {
                   , Scripto helps you do your best work and save time while you
                   do it.
                 </Text>
+                <List type="unordered" mb={10}>
+                  <List.Item mb={10}>
+                    <Text size={18}>
+                      Purpose-built: Scripto is made by professional creators,
+                      for professional creators. Scripto understands the unique
+                      needs of script-driven production.
+                    </Text>
+                  </List.Item>
+                  <List.Item mb={10}>
+                    <Text size={18}>
+                      Fits into your workflow: Writing is only part of the story
+                      - Scripto fits well into planning and production
+                      workflows, is flexible enough to BLAH, and integrates
+                      easily into teleprompters, game engines, and more.
+                    </Text>
+                  </List.Item>
+                  <List.Item mb={10}>
+                    <Text size={18}>
+                      Easy to manage - Scripto is software-as-a-service, no need
+                      to install and manage software or worry about uptime.
+                    </Text>
+                  </List.Item>
+                </List>
                 <Link
                   href="https://calendly.com/nickscripto/scripto-demo"
                   style={{ textDecoration: "none" }}
@@ -119,7 +151,10 @@ const LandingPage: PageWithLayout = () => {
           </MediaQuery>
         </Box>
       </MediaQuery>
-      <MediaQuery query="(max-width: 768px)" styles={{ background: "#FBFBFD", overflow: "hidden" }}>
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ background: "#FBFBFD", overflow: "hidden" }}
+      >
         <Box
           sx={{
             display: "flex",
@@ -197,7 +232,7 @@ const LandingPage: PageWithLayout = () => {
                 link="/features"
               />
               <Card
-                imgSrc="/images/rundowns.png"
+                imgSrc="/images/edit.png"
                 title="Smart Rundowns."
                 text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
                 link="/features"
@@ -247,7 +282,9 @@ const LandingPage: PageWithLayout = () => {
                 Powering the Creative Force: Teams That Choose Us.
               </Text>
             </MediaQuery>
-            <Text sx={{ zIndex: 1 }} ta="center">Trusted by top teams in the industry</Text>
+            <Text sx={{ zIndex: 1 }} ta="center">
+              Trusted by top teams in the industry
+            </Text>
           </Box>
           <Box
             sx={{
@@ -1305,7 +1342,14 @@ const LandingPage: PageWithLayout = () => {
                 }}
               >
                 <Text mb={20} size={24}>
-                  “<span style={{ fontStyle: "italic" }}>Tooning Out The News</span> requires such a fast writing and production process. Scripto allows us to efficiently and reliably collaborate on scripts, punch up jokes, rewrite, export production-friendly drafts, and more.”
+                  “
+                  <span style={{ fontStyle: "italic" }}>
+                    Tooning Out The News
+                  </span>{" "}
+                  requires such a fast writing and production process. Scripto
+                  allows us to efficiently and reliably collaborate on scripts,
+                  punch up jokes, rewrite, export production-friendly drafts,
+                  and more.”
                 </Text>
                 <Avatar
                   mb={20}
@@ -1315,7 +1359,10 @@ const LandingPage: PageWithLayout = () => {
                   color="dark"
                 />
                 <Text size={14} mb={50}>
-                  RJ Fried, Executive Producer <span style={{ fontStyle: "italic" }}>Tooning Out The News</span>
+                  RJ Fried, Executive Producer{" "}
+                  <span style={{ fontStyle: "italic" }}>
+                    Tooning Out The News
+                  </span>
                 </Text>
               </Box>
             </Carousel.Slide>
@@ -1330,7 +1377,8 @@ const LandingPage: PageWithLayout = () => {
                 }}
               >
                 <Text mb={20} size={24}>
-                  “It feels like this was made specifically for us, specifically for this project.”
+                  “It feels like this was made specifically for us, specifically
+                  for this project.”
                 </Text>
                 <Avatar
                   mb={20}
@@ -1340,7 +1388,8 @@ const LandingPage: PageWithLayout = () => {
                   color="dark"
                 />
                 <Text size={14} mb={50}>
-                  Adam Saltsman, founder <span style={{ fontStyle: "italic" }}>Finji</span>
+                  Adam Saltsman, founder{" "}
+                  <span style={{ fontStyle: "italic" }}>Finji</span>
                 </Text>
               </Box>
             </Carousel.Slide>
