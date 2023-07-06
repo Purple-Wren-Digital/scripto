@@ -80,29 +80,24 @@ const LandingPage: PageWithLayout = () => {
                   , Scripto helps you do your best work and save time while you
                   do it.
                 </Text>
-                <List type="unordered" mb={10}>
-                  <List.Item mb={10}>
-                    <Text size={18}>
-                      Purpose-built: Scripto is made by professional creators,
-                      for professional creators. Scripto understands the unique
-                      needs of script-driven production.
-                    </Text>
-                  </List.Item>
-                  <List.Item mb={10}>
-                    <Text size={18}>
-                      Fits into your workflow: Writing is only part of the story
-                      - Scripto fits well into planning and production
-                      workflows, is flexible enough to BLAH, and integrates
-                      easily into teleprompters, game engines, and more.
-                    </Text>
-                  </List.Item>
-                  <List.Item mb={10}>
-                    <Text size={18}>
-                      Easy to manage - Scripto is software-as-a-service, no need
-                      to install and manage software or worry about uptime.
-                    </Text>
-                  </List.Item>
-                </List>
+                <Text size={18} mb={10}>
+                  Purpose-built: Scripto is made by professional creators, for
+                  professional creators. Scripto understands the unique needs of
+                  script-driven production.
+                </Text>
+
+                <Text size={18} mb={10}>
+                  Fits into your workflow: Writing is only part of the story -
+                  Scripto fits well into planning and production workflows, is
+                  flexible enough to BLAH, and integrates easily into
+                  teleprompters, game engines, and more.
+                </Text>
+
+                <Text size={18} mb={10}>
+                  Easy to manage - Scripto is software-as-a-service, no need to
+                  install and manage software or worry about uptime.
+                </Text>
+
                 <Link
                   href="https://calendly.com/nickscripto/scripto-demo"
                   style={{ textDecoration: "none" }}
@@ -216,7 +211,7 @@ const LandingPage: PageWithLayout = () => {
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "space-around",
                 width: "90%",
                 background: "#FBFBFD",
                 borderRadius: "50px",
