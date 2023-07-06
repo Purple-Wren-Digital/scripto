@@ -74,17 +74,6 @@ export default function Footer() {
                 Features
               </Text>
             </Link>
-            <Link
-              href="/plans"
-              style={{
-                textDecoration: "none",
-                margin: "25px",
-              }}
-            >
-              <Text size={14} fw={700} color={colors.text}>
-                Plans
-              </Text>
-            </Link>
             <Link href="/" style={{ margin: "25px" }}>
               <Image
                 src="/images/logo-light-400w.png"
@@ -125,19 +114,24 @@ export default function Footer() {
         </Box>
       ) : (
         <Box
-          h={410}
-          w={"100%"}
           sx={{
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             background: colors.background,
             color: colors.text,
+            height: "71.7px",
           }}
         >
-          <Box sx={{ display: "flex", flexDirection: "column", width: "70%" }}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              width: "70%",
+            }}
+          >
             <Box
-              mb={40}
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -179,25 +173,22 @@ export default function Footer() {
                 </Link>
               </Box>
               <Box sx={{ display: "flex" }}>
-                <Link
-                  href="/plans"
-                  style={{ textDecoration: "none", marginRight: "50px" }}
+                <Text size={14} fw={700} color={colors.text} mr={10}>
+                  ©️ 2010-{year}
+                </Text>
+                <Text
+                  size={14}
+                  fw={700}
+                  color={colors.text}
+                  sx={{
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
                 >
-                  <Text size={14} fw={700} color={colors.text}>
-                    Plans
-                  </Text>
-                </Link>
-                <Link
-                  href="/"
-                  style={{ textDecoration: "none", marginRight: "50px" }}
-                >
-                  <Text size={14} fw={700} color={colors.text}>
-                    Home
-                  </Text>
-                </Link>
+                  Privacy-Terms
+                </Text>
               </Box>
             </Box>
-            <Divider size="sm" color={colors.text} />
             {/* <Link
               href="mailto:hello@scripto.live"
               style={{
@@ -219,20 +210,6 @@ export default function Footer() {
                 Get in Touch
               </Button>
             </Link> */}
-            <Box
-              mt={50}
-              sx={{ display: "flex", alignSelf: "center", gap: "20px" }}
-            >
-              <Text>©️ 2010-{year}</Text>
-              <Text
-                sx={{
-                  cursor: "pointer",
-                  "&:hover": { textDecoration: "underline" },
-                }}
-              >
-                Privacy-Terms
-              </Text>
-            </Box>
           </Box>
         </Box>
       )}
