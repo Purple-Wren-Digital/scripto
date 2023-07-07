@@ -19,10 +19,11 @@ const useStyles = createStyles(() => ({
   dropdown: {
     backgroundColor: "#252634",
     color: "#FBFBFD",
+    padding: 10,
   },
   item: {
     '&[data-hovered]': {
-      backgroundColor: "#252634",
+      backgroundColor: '#8252C6',
     }
   },
 }));
