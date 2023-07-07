@@ -7,16 +7,31 @@ import {
   Image,
   MediaQuery,
   Burger,
+  Menu,
+  createStyles,
 } from "@mantine/core";
 import { ReactNode } from "react";
 import Footer from "./Footer";
 import Link from "next/link";
 import { useMediaQuery, useDisclosure } from "@mantine/hooks";
 
+const useStyles = createStyles(() => ({
+  dropdown: {
+    backgroundColor: "#252634",
+    color: "#FBFBFD",
+  },
+  item: {
+    '&[data-hovered]': {
+      backgroundColor: "#252634",
+    }
+  },
+}));
+
 export const AppLayout = ({ children }: { children: ReactNode }) => {
   const isMobileMenu = useMediaQuery("(max-width: 768px)");
   const [opened, { toggle }] = useDisclosure(false);
   const label = opened ? "Close navigation" : "Open navigation";
+  const { classes } = useStyles();
 
   return (
     <AppShell
@@ -72,11 +87,53 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       About Us
                     </Text>
                   </Link>
-                  <Link href="/features" style={{ textDecoration: "none" }}>
+                  {/* <Link href="/features" style={{ textDecoration: "none" }}>
                     <Text size={15} mr={20} color={"#FBFBFD"}>
                       Features
                     </Text>
-                  </Link>
+                  </Link> */}
+                  <Menu
+                    trigger="hover"
+                    position="bottom-start"
+                    withArrow
+                    arrowPosition="center"
+                    transitionProps={{
+                      transition: "fade",
+                      duration: 200,
+                    }}
+                    classNames={classes}
+                  >
+                    <Menu.Target>
+                      <Link href="/features" style={{ textDecoration: "none" }}>
+                        <Text size={15} mr={20} color={"#FBFBFD"}>
+                          Features
+                        </Text>
+                      </Link>
+                    </Menu.Target>
+                    <Menu.Dropdown>
+                      <Menu.Item>
+                        <Link href="/studio" style={{ textDecoration: "none" }}>
+                          <Text size={15} mr={20} color={"#FBFBFD"}>
+                            Studio
+                          </Text>
+                        </Link>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <Link href="/screenplays" style={{ textDecoration: "none" }}>
+                          <Text size={15} mr={20} color={"#FBFBFD"}>
+                            Screenplays
+                          </Text>
+                        </Link>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <Link href="/videogames" style={{ textDecoration: "none" }}>
+                          <Text size={15} mr={20} color={"#FBFBFD"}>
+                            Video Games
+                          </Text>
+                        </Link>
+                      </Menu.Item>
+                    </Menu.Dropdown>
+                  </Menu>
                 </Box>
               </MediaQuery>
               <MediaQuery

@@ -112,7 +112,7 @@ const VideogamesPage: PageWithLayout = ({ features }: any) => {
             query="(max-width: 768px)"
             styles={{ flexDirection: "column" }}
           >
-            <Box sx={{ display: "flex", minHeight: "682px", background: "#B89ADE" }}>
+            <Box sx={{ display: "flex", minHeight: "682px", background: "#8252C6" }}>
               <MediaQuery
                 query="(max-width: 1024px) and (min-width: 768px)"
                 styles={{ width: "55%" }}
