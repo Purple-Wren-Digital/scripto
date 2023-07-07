@@ -27,7 +27,7 @@ const AlternatingFeature = ({
       <MediaQuery
         query="(max-width: 768px)"
         styles={
-          orderIndex == 1
+          orderIndex % 2 != 0
             ? { flexDirection: "column-reverse" }
             : { flexDirection: "column" }
         }
@@ -254,6 +254,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
           flexDirection: "column",
           background: "#301F55",
           color: "#FFF",
+          overflow: "hidden",
         }}
       >
         <Box
