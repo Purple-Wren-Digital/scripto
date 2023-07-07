@@ -145,7 +145,7 @@ export default function Footer() {
                   style={{ textDecoration: "none", marginLeft: "50px" }}
                 >
                   <Text size={14} fw={700} color={colors.text}>
-                    Our Team
+                    About Us
                   </Text>
                 </Link>
                 <Link

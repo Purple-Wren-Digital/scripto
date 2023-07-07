@@ -69,7 +69,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                 >
                   <Link href="/team" style={{ textDecoration: "none" }}>
                     <Text size={15} mr={20} color={"#FBFBFD"}>
-                      Our Team
+                      About Us
                     </Text>
                   </Link>
                   <Link href="/features" style={{ textDecoration: "none" }}>
@@ -135,7 +135,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
               >
                 <Link href="/team" style={{ textDecoration: "none" }}>
                   <Text size={15} color={"#FBFBFD"}>
-                    Our Team
+                    About Us
                   </Text>
                 </Link>
                 <Link href="/features" style={{ textDecoration: "none" }}>
