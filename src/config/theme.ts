@@ -1,4 +1,14 @@
 import { MantineThemeOverride } from "@mantine/core"
+import localFont from "@next/font/local"
+
+const escalator = localFont({
+  src: "../assets/fonts/Escalator_Regular_Variable.woff2",
+  display: "swap"
+})
+const pitch = localFont({
+  src: "../assets/fonts/pitch-bold.woff2",
+  display: "swap"
+})
 
 // To generate a color array:
 // 1. Go to: https://omatsuri.app/color-shades-generator
@@ -83,7 +93,9 @@ export const theme: MantineThemeOverride = {
   black: "#0A2E49",
 
   primaryColor: "purple",
+  fontFamily: `${escalator.style.fontFamily}, sans-serif`,
   headings: {
+    fontFamily: `${pitch.style.fontFamily}, sans-serif`,
     fontWeight: 500
   },
   components: {

@@ -9,6 +9,7 @@ import {
   Avatar,
   MediaQuery,
   List,
+  Title,
 } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
 import { PageWithLayout } from "next";
@@ -56,14 +57,14 @@ const LandingPage: PageWithLayout = () => {
                   fontSize: "48px",
                 }}
               >
-                <Text fw={700} sx={{ maxWidth: "100%" }}>
+                <Title fw={700} sx={{ maxWidth: "100%" }}>
                   Write.
-                </Text>
-                <Text fw={700}>Plan.</Text>
-                <Text fw={700}>Produce.</Text>
-                <Text mb="md" fw={700}>
+                </Title>
+                <Title fw={700}>Plan.</Title>
+                <Title fw={700}>Produce.</Title>
+                <Title mb="md" fw={700}>
                   Together.
-                </Text>
+                </Title>
                 <Text mb="md" ta={"left"} size={18}>
                   Whether you&apos;re taping a show in a{" "}
                   <Text td="underline" component="span">
@@ -182,9 +183,9 @@ const LandingPage: PageWithLayout = () => {
               query="(max-width: 480px)"
               styles={{ fontSize: "32px" }}
             >
-              <Text mt={70} size={40} fw={700}>
+              <Title mt={70} size={40} fw={700}>
                 Streamlining Your Project is Easy
-              </Text>
+              </Title>
             </MediaQuery>
             <MediaQuery
               query="(max-width: 480px)"
@@ -273,9 +274,9 @@ const LandingPage: PageWithLayout = () => {
               query="(max-width: 480px)"
               styles={{ fontSize: "32px" }}
             >
-              <Text size={40} fw={700} ta="center" sx={{ zIndex: 1 }}>
+              <Title size={40} fw={700} ta="center" sx={{ zIndex: 1 }}>
                 Powering the Creative Force: Teams That Choose Us.
-              </Text>
+              </Title>
             </MediaQuery>
             <Text sx={{ zIndex: 1 }} ta="center">
               Trusted by top teams in the industry
@@ -1151,9 +1152,9 @@ const LandingPage: PageWithLayout = () => {
                       padding: "40px",
                     }}
                   >
-                    <Text size={24} fw={700} mb={40}>
+                    <Title size={24} fw={700} mb={40}>
                       True Collaboration.
-                    </Text>
+                    </Title>
                     <Text mb={40} sx={{ maxWidth: "420px" }}>
                       Write with others in the same script at the same time,
                       with automatic and flexible industry-standard formatting
@@ -1222,9 +1223,9 @@ const LandingPage: PageWithLayout = () => {
                       zIndex: 2,
                     }}
                   >
-                    <Text size={24} fw={700} mb={40}>
+                    <Title size={24} fw={700} mb={40}>
                       Feature that is amazing
-                    </Text>
+                    </Title>
                     <Text mb={40} sx={{ maxWidth: "420px" }}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna

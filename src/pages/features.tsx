@@ -1,6 +1,6 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
-import { Text, Box, Space, Image, MediaQuery } from "@mantine/core";
+import { Text, Box, Space, Image, MediaQuery, Title } from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const AlternatingFeature = ({
@@ -340,9 +340,9 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
               </MediaQuery>
             </MediaQuery>
           </MediaQuery>
-          <Text ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
+          <Title ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
             Key Features
-          </Text>
+          </Title>
           <Text ta="center" size={20} sx={{ zIndex: 1 }}>
             Standing ovation, please. These features are guaranteed
             show-stoppers.
