@@ -1,4 +1,4 @@
-import { Box, Button, Text, Image, MediaQuery } from "@mantine/core";
+import { Box, Button, Text, Image, MediaQuery, Title } from "@mantine/core";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -96,7 +96,7 @@ const CTA: React.FC<{
               sx={{
                 position: "absolute",
                 right: 30,
-                bottom: -80,
+                bottom: -20,
                 zIndex: 0,
               }}
             />
@@ -141,9 +141,9 @@ const CTA: React.FC<{
         </>
       )}
 
-      <Text size={24} fw={700} mt={120} mb={40} sx={{ zIndex: 2 }}>
+      <Title size={24} fw={700} mt={120} mb={40} sx={{ zIndex: 2 }}>
         Ready to get started?
-      </Text>
+      </Title>
       <Text mb={25} ta="center" sx={{ maxWidth: "525px", zIndex: 2 }}>
         Scripto is free for up to 3 collaborators with our basic variety and
         screenplay formats. Sign up now and try it out!
