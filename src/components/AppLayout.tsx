@@ -83,7 +83,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                   ml={50}
                   sx={{ display: "flex", justifyContent: "space-around" }}
                 >
-                  <Link href="/team" style={{ textDecoration: "none" }}>
+                  <Link href="/about" style={{ textDecoration: "none" }}>
                     <Text size={15} mr={20} color={"#FBFBFD"}>
                       About Us
                     </Text>
@@ -127,7 +127,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                         </Link>
                       </Menu.Item>
                       <Menu.Item>
-                        <Link href="/videogames" style={{ textDecoration: "none" }}>
+                        <Link href="/games" style={{ textDecoration: "none" }}>
                           <Text size={15} mr={20} color={"#FBFBFD"}>
                             Video Games
                           </Text>
@@ -191,7 +191,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                   gap: "20px",
                 }}
               >
-                <Link href="/team" style={{ textDecoration: "none" }}>
+                <Link href="/about" style={{ textDecoration: "none" }}>
                   <Text size={15} color={"#FBFBFD"}>
                     About Us
                   </Text>

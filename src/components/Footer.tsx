@@ -59,11 +59,11 @@ export default function Footer() {
             }}
           >
             <Link
-              href="/team"
+              href="/about"
               style={{ textDecoration: "none", margin: "25px" }}
             >
               <Text size={14} fw={700} color={colors.text}>
-                Our Team
+                About Us
               </Text>
             </Link>
             <Link
@@ -81,27 +81,6 @@ export default function Footer() {
                 alt="scripto logo"
               />
             </Link>
-            {/* <Link
-              href="mailto:hello@scripto.live"
-              style={{
-                textDecoration: "none",
-                display: "flex",
-                alignSelf: "center",
-              }}
-            >
-              <Button
-                mt={25}
-                h={60}
-                w={200}
-                radius={10}
-                sx={{
-                  background: colors.button,
-                  fontSize: 18,
-                }}
-              >
-                Get in Touch
-              </Button>
-            </Link> */}
             <Box
               mt={50}
               mb={25}
@@ -141,7 +120,7 @@ export default function Footer() {
             >
               <Box sx={{ display: "flex" }}>
                 <Link
-                  href="/team"
+                  href="/about"
                   style={{ textDecoration: "none", marginLeft: "50px" }}
                 >
                   <Text size={14} fw={700} color={colors.text}>
@@ -189,27 +168,6 @@ export default function Footer() {
                 </Text>
               </Box>
             </Box>
-            {/* <Link
-              href="mailto:hello@scripto.live"
-              style={{
-                textDecoration: "none",
-                display: "flex",
-                alignSelf: "center",
-              }}
-            >
-              <Button
-                mt={50}
-                h={60}
-                w={200}
-                radius={10}
-                sx={{
-                  background: colors.button,
-                  fontSize: 18,
-                }}
-              >
-                Get in Touch
-              </Button>
-            </Link> */}
           </Box>
         </Box>
       )}

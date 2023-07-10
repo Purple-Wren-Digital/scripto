@@ -12,7 +12,7 @@ import {
 import { PageWithLayout } from "next";
 import { useMediaQuery } from "@mantine/hooks";
 
-const TeamPage: PageWithLayout = () => {
+const AboutPage: PageWithLayout = () => {
   const isTablet = useMediaQuery("(max-width: 768px)");
   const isMobile = useMediaQuery("(max-width: 480px)");
   const isSmallDesktop = useMediaQuery("(max-width: 1024px)");
@@ -648,4 +648,4 @@ const TeamPage: PageWithLayout = () => {
   );
 };
 
-export default TeamPage;
+export default AboutPage;
