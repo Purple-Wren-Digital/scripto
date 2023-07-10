@@ -13,7 +13,8 @@ import {
 import { ReactNode } from "react";
 import Footer from "./Footer";
 import Link from "next/link";
-import { useMediaQuery, useDisclosure } from "@mantine/hooks";
+import { useMediaQuery, useDisclosure, useToggle } from "@mantine/hooks";
+import { useState } from "react";
 
 const useStyles = createStyles(() => ({
   dropdown: {
@@ -33,6 +34,14 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
   const [opened, { toggle }] = useDisclosure(false);
   const label = opened ? "Close navigation" : "Open navigation";
   const { classes } = useStyles();
+
+  const [isToggledOpen, setIsToggledOpen] = useState(false);
+
+  const closeMenu = () => {
+    toggle();
+    setIsToggledOpen(false);
+  }
+  
 
   return (
     <AppShell
@@ -68,7 +77,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
           {isMobileMenu ? (
             <Burger
               opened={opened}
-              onClick={toggle}
+              onClick={() => closeMenu()}
               aria-label={label}
               color="white"
               sx={{ marginLeft: "auto" }}
@@ -188,22 +197,77 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  gap: "20px",
                 }}
               >
-                <Link href="/about" style={{ textDecoration: "none" }}>
+                <Link href="/about" style={{ textDecoration: "none", marginBottom: 20 }}>
                   <Text size={15} color={"#FBFBFD"}>
                     About Us
                   </Text>
                 </Link>
-                <Link href="/features" style={{ textDecoration: "none" }}>
+                {/* <Link href="/features" style={{ textDecoration: "none" }}>
                   <Text size={15} color={"#FBFBFD"}>
                     Features
                   </Text>
+                </Link> */}
+
+                {/* dropdown menu */}
+                <Link href={isToggledOpen ? "/features" : "#0"} style={{ textDecoration: "none",  marginBottom: 20 }}>
+                  <Text size={15} color={"#FBFBFD"} onClick={() => setIsToggledOpen(!isToggledOpen)}>
+                    Features
+                  </Text>
                 </Link>
+                <Box 
+                  sx={{ 
+                    height: isToggledOpen ? 130 : 0,
+                    overflow: 'hidden',
+                    transition: 'height 250ms ease-in-out',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: 20,
+                  }}
+                >
+                  <Link 
+                    href='/studio' 
+                    style={{ 
+                      textDecoration: "none",
+                      opacity: isToggledOpen ? 1 : 0,
+                      transition: 'opacity 250ms ease-in', 
+                    }}
+                  >
+                    <Text size={15} color={"#FBFBFD"}>
+                      Studio
+                    </Text>
+                  </Link>
+                  <Link 
+                    href='/screenplays' 
+                    style={{ 
+                      textDecoration: "none",
+                      opacity: isToggledOpen ? 1 : 0,
+                      transition: 'opacity 250ms ease-in', 
+                    }}
+                  >
+                    <Text size={15} color={"#FBFBFD"}>
+                      Screenplays
+                    </Text>
+                  </Link>
+                  <Link 
+                    href='/games' 
+                    style={{ 
+                      textDecoration: "none",
+                      opacity: isToggledOpen ? 1 : 0,
+                      transition: 'opacity 250ms ease-in', 
+                    }}
+                  >
+                    <Text size={15} color={"#FBFBFD"}>
+                      Video Games
+                    </Text>
+                  </Link>
+                </Box>
+
                 <Link
                   href="https://app.scripto.live/login"
-                  style={{ textDecoration: "none" }}
+                  style={{ textDecoration: "none", marginBottom: 20 }}
                 >
                   <Text size="md" color={"#FBFBFD"}>
                     Sign In
