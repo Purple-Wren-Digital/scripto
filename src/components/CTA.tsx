@@ -252,17 +252,17 @@ const CTA: React.FC<{
         </>
       )}
 
-      <Title size={24} fw={700} mt={120} mb={40} sx={{ zIndex: 2 }}>
+      <Title size={24} ta="center" fw={700} mt={120} mb={40} sx={{ zIndex: 2 }}>
         Ready to get started?
       </Title>
       <Text mb={25} ta="center" sx={{ maxWidth: "525px", zIndex: 2 }}>
         Scripto is free for up to 3 collaborators with our basic variety and
-        screenplay formats. Sign up now and try it out!
+        screenplay formats. Sign up now and try&nbsp;it&nbsp;out!
       </Text>
       <Text mb={25} ta="center" sx={{ maxWidth: "525px", zIndex: 2 }}>
         For larger teams, we tailor plans and pricing to your team size,
         production order, and feature needs. Get in touch for a customized demo
-        and free trial of our paid features.
+        and free trial of our&nbsp;paid&nbsp;features.
       </Text>
       <Link
         href="https://app.scripto.live/create-account"

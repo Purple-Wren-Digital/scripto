@@ -184,7 +184,7 @@ const LandingPage: PageWithLayout = () => {
               styles={{ fontSize: "32px" }}
             >
               <Title mt={70} size={40} fw={700}>
-                Streamlining Your Project is Easy
+                Streamlining Your Project is&nbsp;Easy
               </Title>
             </MediaQuery>
             <MediaQuery
@@ -275,7 +275,7 @@ const LandingPage: PageWithLayout = () => {
               styles={{ fontSize: "32px" }}
             >
               <Title size={40} fw={700} ta="center" sx={{ zIndex: 1 }}>
-                Powering the Creative Force: Teams That Choose Us.
+                Powering the Creative Force: Teams That Choose&nbsp;Us.
               </Title>
             </MediaQuery>
             <Text sx={{ zIndex: 1 }} ta="center">
@@ -1159,7 +1159,7 @@ const LandingPage: PageWithLayout = () => {
                       Write with others in the same script at the same time,
                       with automatic and flexible industry-standard formatting
                       for variety shows, screenplays, video games, and more. You
-                      deserve better than Google Docs!
+                      deserve better than Google&nbsp;Docs!
                     </Text>
                     <Link href="/features">
                       <Button
@@ -1344,8 +1344,7 @@ const LandingPage: PageWithLayout = () => {
                   </span>{" "}
                   requires such a fast writing and production process. Scripto
                   allows us to efficiently and reliably collaborate on scripts,
-                  punch up jokes, rewrite, export production-friendly drafts,
-                  and more.”
+                  punch up jokes, rewrite, export production-friendly drafts,&nbsp;and&nbsp;more.”
                 </Text>
                 <Avatar
                   mb={20}
