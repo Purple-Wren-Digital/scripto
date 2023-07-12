@@ -15,7 +15,6 @@ import { Carousel } from "@mantine/carousel";
 import { PageWithLayout } from "next";
 import Link from "next/link";
 import { useMediaQuery } from "@mantine/hooks";
-import { ListItem } from "@mantine/core/lib/List/ListItem/ListItem";
 
 const LandingPage: PageWithLayout = () => {
   const isShortCarousel = useMediaQuery("(max-width: 680px)");
@@ -68,37 +67,28 @@ const LandingPage: PageWithLayout = () => {
                 <Text mb="md" ta={"left"} size={18}>
                   Whether you&apos;re taping a show in a{" "}
                   <Text td="underline" component="span">
-                    studio
+                    <Link style={{ color: "#0A2E49"}} href="/studio">
+                      studio
+                    </Link>
                   </Text>
                   , collaborating on{" "}
                   <Text td="underline" component="span">
-                    screenplays
+                    <Link style={{ color: "#0A2E49"}} href="/screenplays">
+                      screenplays
+                    </Link>
                   </Text>
                   , or making a{" "}
                   <Text td="underline" component="span">
-                    video game
+                    <Link style={{ color: "#0A2E49"}} href="/games">
+                      video game
+                    </Link>
                   </Text>
                   , Scripto helps you do your best work and save time while you
                   do it.
                 </Text>
                 <Text size={18} mb={10}>
-                  Purpose-built: Scripto is made by professional creators, for
-                  professional creators. Scripto understands the unique needs of
-                  script-driven production.
+                  Scripto is your team’s shared brain from conception through production. Ditch last century’s soul-crushing tools and unlock your project’s true potential. Made by professional creators, for professional creators.
                 </Text>
-
-                <Text size={18} mb={10}>
-                  Fits into your workflow: Writing is only part of the story -
-                  Scripto fits well into planning and production workflows, is
-                  flexible enough to BLAH, and integrates easily into
-                  teleprompters, game engines, and more.
-                </Text>
-
-                <Text size={18} mb={10}>
-                  Easy to manage - Scripto is software-as-a-service, no need to
-                  install and manage software or worry about uptime.
-                </Text>
-
                 <Link
                   href="https://calendly.com/nickscripto/scripto-demo"
                   style={{ textDecoration: "none" }}
@@ -184,17 +174,15 @@ const LandingPage: PageWithLayout = () => {
               styles={{ fontSize: "32px" }}
             >
               <Title mt={70} size={40} fw={700}>
-                Streamlining Your Project is&nbsp;Easy
+                Upgrade to an Award-Winning Workflow
               </Title>
             </MediaQuery>
             <MediaQuery
               query="(max-width: 480px)"
               styles={{ marginBottom: "20px" }}
             >
-              <Text mb="50px">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam,
+              <Text mt={20} mb="50px" style={{ maxWidth: "850px"}}>
+              Scripto reduces friction and enables collaboration at every step of the writing and production process. See why Scripto teams move faster and work better&nbsp;together.
               </Text>
             </MediaQuery>
           </Box>
@@ -224,19 +212,19 @@ const LandingPage: PageWithLayout = () => {
               <Card
                 imgSrc="/images/collaboration.png"
                 title="True Collaboration."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                text="Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Every document in Scripto is fully collaborative by nature — no more trading PDFs or getting “locked out” because someone left a file open on their computer."
                 link="/features"
               />
               <Card
                 imgSrc="/images/edit.png"
                 title="Smart Rundowns."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                text="Practically every line of a professional script contains instructions for someone else working on the team. You can use Scripto’s rundowns to organize and communicate about that work, crafting templates for shows, events, localization, and more. If it looks like a spreadsheet, Scripto can generate it for you with the click of a button."
                 link="/features"
               />
               <Card
                 imgSrc="/images/format.png"
                 title="Any Format."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                text="Been working in Word or Google Docs? You probably have a format you’re used to writing in. But you might also have to spend a lot of time manually centering speech blocks or highlighting script elements in certain colors. Scripto’s customizable format engine lets you create a repeatable template, so your team can focus on what really matters: The content itself."
                 link="/features"
               />
             </Box>
@@ -275,11 +263,11 @@ const LandingPage: PageWithLayout = () => {
               styles={{ fontSize: "32px" }}
             >
               <Title size={40} fw={700} ta="center" sx={{ zIndex: 1 }}>
-                Powering the Creative Force: Teams That Choose&nbsp;Us.
+                Trusted by Top Teams For&nbsp;Years
               </Title>
             </MediaQuery>
-            <Text sx={{ zIndex: 1 }} ta="center">
-              Trusted by top teams in the industry
+            <Text mt={20} sx={{ zIndex: 1 }} ta="center">
+              See who’s making some of your favorite TV and games with a little help from&nbsp;Scripto.
             </Text>
           </Box>
           <Box
@@ -339,9 +327,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="full frontal"
-                        src="/images/show-logos/full-frontal-with-samantha-bee.png"
-                        width={"100%"}
+                        alt="last week tonight"
+                        src="/images/show-logos/last-week-tonight.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -359,9 +348,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="the problem"
-                        src="/images/show-logos/problem-with-jon-stewart.png"
-                        width={"100%"}
+                        alt="late show"
+                        src="/images/show-logos/late-show.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -411,8 +401,29 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="the opposition"
-                        src="/images/show-logos/the-opposition-with-jordan-klepper.png"
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="the problem"
+                        src="/images/show-logos/problem-with-jon-stewart.png"
                         width={"100%"}
                       />
                     </Box>
@@ -431,29 +442,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="patriot act"
-                        src="/images/show-logos/patriot-act.png"
-                        width={"100%"}
-                      />
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: "20px",
-                        margin: "12.5px 25px",
-                        width: "285px",
-                        height: "190px",
-                        background: "#FBFBFD",
-                        borderRadius: "10px",
-                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-                      }}
-                    >
-                      <Image
-                        alt="game theory"
-                        src="/images/show-logos/game-theory-with-bomani-jones.png"
-                        width={"100%"}
+                        alt="finji"
+                        src="/images/show-logos/finji.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                   </Box>
@@ -483,11 +475,137 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="the rundown"
-                        src="/images/show-logos/rundown-with-robin-thede.png"
+                        alt="tooning out the news"
+                        src="/images/show-logos/tooning-out-the-news.png"
                         width={"100%"}
                       />
                     </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="nerial"
+                        src="/images/show-logos/nerial.png"
+                        height={"150px"}
+                        fit="contain"
+                      />
+                    </Box>
+                  </Box>
+                </Carousel.Slide>
+                <Carousel.Slide mb={80}>
+                  <Box
+                    mt={50}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                      width: "100%",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="game theory"
+                        src="/images/show-logos/game-theory-with-bomani-jones.png"
+                        width={"100%"}
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="full frontal"
+                        src="/images/show-logos/full-frontal-with-samantha-bee.png"
+                        width={"100%"}
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="patriot act"
+                        src="/images/show-logos/patriot-act.png"
+                        width={"100%"}
+                      />
+                    </Box>
+                  </Box>
+                </Carousel.Slide>
+                <Carousel.Slide mb={80}>
+                  <Box
+                    mt={50}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                      width: "100%",
+                    }}
+                  >
                     <Box
                       sx={{
                         display: "flex",
@@ -523,9 +641,31 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="a little late"
-                        src="/images/show-logos/a-little-late-with-lilly-singh.png"
+                        alt=""
+                        src=""
                         width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
                       />
                     </Box>
                   </Box>
@@ -555,8 +695,28 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="jim jefferies show"
-                        src="/images/show-logos/jim-jefferies-show.png"
+                        alt="the opposition"
+                        src="/images/show-logos/the-opposition-with-jordan-klepper.png"
+                        width={"100%"}
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="the rundown"
+                        src="/images/show-logos/rundown-with-robin-thede.png"
                         width={"100%"}
                       />
                     </Box>
@@ -580,6 +740,18 @@ const LandingPage: PageWithLayout = () => {
                         width={"100%"}
                       />
                     </Box>
+                  </Box>
+                </Carousel.Slide>
+                <Carousel.Slide mb={80}>
+                  <Box
+                    mt={50}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                      width: "100%",
+                    }}
+                  >
                     <Box
                       sx={{
                         display: "flex",
@@ -595,23 +767,11 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="tooning out the news"
-                        src="/images/show-logos/tooning-out-the-news.png"
+                        alt="a little late"
+                        src="/images/show-logos/a-little-late-with-lilly-singh.png"
                         width={"100%"}
                       />
                     </Box>
-                  </Box>
-                </Carousel.Slide>
-                <Carousel.Slide mb={80}>
-                  <Box
-                    mt={50}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                      width: "100%",
-                    }}
-                  >
                     <Box
                       sx={{
                         display: "flex",
@@ -627,10 +787,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="late show"
-                        src="/images/show-logos/late-show.png"
-                        height={"150px"}
-                        fit="contain"
+                        alt="jim jefferies"
+                        src="/images/show-logos/jim-jefferies-show.png"
+                        width={"100%"}
                       />
                     </Box>
                     <Box
@@ -648,31 +807,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="finji"
-                        src="/images/show-logos/finji.png"
-                        height={"150px"}
-                        fit="contain"
-                      />
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: "20px",
-                        margin: "12.5px 25px",
-                        width: "285px",
-                        height: "190px",
-                        background: "#FBFBFD",
-                        borderRadius: "10px",
-                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-                      }}
-                    >
-                      <Image
-                        alt="last week tonight"
-                        src="/images/show-logos/last-week-tonight.png"
-                        height={"150px"}
-                        fit="contain"
+                        alt="the break"
+                        src="/images/show-logos/the-break-with-michelle-wolf.png"
+                        width={"100%"}
+                        withPlaceholder
                       />
                     </Box>
                   </Box>
@@ -702,10 +840,52 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="nerial"
-                        src="/images/show-logos/nerial.png"
-                        height={"150px"}
-                        fit="contain"
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
                       />
                     </Box>
                   </Box>
@@ -760,9 +940,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="full frontal"
-                        src="/images/show-logos/full-frontal-with-samantha-bee.png"
-                        width={"100%"}
+                        alt="last week tonight"
+                        src="/images/show-logos/last-week-tonight.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -780,9 +961,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="the problem"
-                        src="/images/show-logos/problem-with-jon-stewart.png"
-                        width={"100%"}
+                        alt="late show"
+                        src="/images/show-logos/late-show.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -820,8 +1002,29 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="the opposition"
-                        src="/images/show-logos/the-opposition-with-jordan-klepper.png"
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="the problem"
+                        src="/images/show-logos/problem-with-jon-stewart.png"
                         width={"100%"}
                       />
                     </Box>
@@ -840,29 +1043,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="patriot act"
-                        src="/images/show-logos/patriot-act.png"
-                        width={"100%"}
-                      />
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: "20px",
-                        margin: "12.5px 25px",
-                        width: "285px",
-                        height: "190px",
-                        background: "#FBFBFD",
-                        borderRadius: "10px",
-                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-                      }}
-                    >
-                      <Image
-                        alt="game theory"
-                        src="/images/show-logos/game-theory-with-bomani-jones.png"
-                        width={"100%"}
+                        alt="finji"
+                        src="/images/show-logos/finji.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                   </Box>
@@ -892,11 +1076,125 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="the rundown"
-                        src="/images/show-logos/rundown-with-robin-thede.png"
+                        alt="tooning out the news"
+                        src="/images/show-logos/tooning-out-the-news.png"
                         width={"100%"}
                       />
                     </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="nerial"
+                        src="/images/show-logos/nerial.png"
+                        height={"150px"}
+                        fit="contain"
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="game theory"
+                        src="/images/show-logos/game-theory-with-bomani-jones.png"
+                        width={"100%"}
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="full frontal"
+                        src="/images/show-logos/full-frontal-with-samantha-bee.png"
+                        width={"100%"}
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="patriot act"
+                        src="/images/show-logos/patriot-act.png"
+                        width={"100%"}
+                      />
+                    </Box>
+                  </Box>
+                </Carousel.Slide>
+                <Carousel.Slide mb={80}>
+                  <Box
+                    mt={50}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                      width: "100%",
+                    }}
+                  >
                     <Box
                       sx={{
                         display: "flex",
@@ -932,8 +1230,50 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="a little late"
-                        src="/images/show-logos/a-little-late-with-lilly-singh.png"
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt="the opposition"
+                        src="/images/show-logos/the-opposition-with-jordan-klepper.png"
                         width={"100%"}
                       />
                     </Box>
@@ -952,8 +1292,8 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="jim jefferies show"
-                        src="/images/show-logos/jim-jefferies-show.png"
+                        alt="the rundown"
+                        src="/images/show-logos/rundown-with-robin-thede.png"
                         width={"100%"}
                       />
                     </Box>
@@ -974,26 +1314,6 @@ const LandingPage: PageWithLayout = () => {
                       <Image
                         alt="problem areas"
                         src="/images/show-logos/wyatt-cenacs-problem-areas.png"
-                        width={"100%"}
-                      />
-                    </Box>
-                    <Box
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: "20px",
-                        margin: "12.5px 25px",
-                        width: "285px",
-                        height: "190px",
-                        background: "#FBFBFD",
-                        borderRadius: "10px",
-                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-                      }}
-                    >
-                      <Image
-                        alt="tooning out the news"
-                        src="/images/show-logos/tooning-out-the-news.png"
                         width={"100%"}
                       />
                     </Box>
@@ -1024,10 +1344,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="late show"
-                        src="/images/show-logos/late-show.png"
-                        height={"150px"}
-                        fit="contain"
+                        alt="a little late"
+                        src="/images/show-logos/a-little-late-with-lilly-singh.png"
+                        width={"100%"}
                       />
                     </Box>
                     <Box
@@ -1045,10 +1364,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="finji"
-                        src="/images/show-logos/finji.png"
-                        height={"150px"}
-                        fit="contain"
+                        alt="jim jefferies"
+                        src="/images/show-logos/jim-jefferies-show.png"
+                        width={"100%"}
                       />
                     </Box>
                     <Box
@@ -1066,10 +1384,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="last week tonight"
-                        src="/images/show-logos/last-week-tonight.png"
-                        height={"150px"}
-                        fit="contain"
+                        alt="the break"
+                        src="/images/show-logos/the-break-with-michelle-wolf.png"
+                        width={"100%"}
+                        withPlaceholder
                       />
                     </Box>
                     <Box
@@ -1087,10 +1405,52 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt="nerial"
-                        src="/images/show-logos/nerial.png"
-                        height={"150px"}
-                        fit="contain"
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
+                      />
+                    </Box>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "20px",
+                        margin: "12.5px 25px",
+                        width: "285px",
+                        height: "190px",
+                        background: "#FBFBFD",
+                        borderRadius: "10px",
+                        boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      }}
+                    >
+                      <Image
+                        alt=""
+                        src=""
+                        width={"100%"}
+                        withPlaceholder
                       />
                     </Box>
                   </Box>

@@ -80,8 +80,7 @@ const AboutPage: PageWithLayout = () => {
             About Us
           </Title>
           <Text ta="center" size={20} sx={{ maxWidth: 645, zIndex: 1 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Stephen Colbert and Rob Dubbin co-founded Scripto to solve their own problem: In a highly collaborative TV environment with ambitious daily deadlines, their pre-cloud software couldn’t keep up. Now, Scripto combines the real-time flow of Google Docs with the professional writing and production formats used in TV, video games, and&nbsp;other&nbsp;media.
           </Text>
         </Box>
       </Box>
@@ -237,8 +236,7 @@ const AboutPage: PageWithLayout = () => {
             Meet The Crew
           </Text>
           <Text ta="center" size={20} sx={{ maxWidth: 645 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            At Scripto, collaboration is also important to us internally. We’re a small but mighty team supporting some of the most ambitious creative productions across the entertainment&nbsp;industry.
           </Text>
         </Box>
         <Box
