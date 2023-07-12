@@ -810,7 +810,6 @@ const LandingPage: PageWithLayout = () => {
                         alt="the break"
                         src="/images/show-logos/the-break-with-michelle-wolf.png"
                         width={"100%"}
-                        withPlaceholder
                       />
                     </Box>
                   </Box>
