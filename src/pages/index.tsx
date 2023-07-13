@@ -1500,6 +1500,22 @@ const LandingPage: PageWithLayout = () => {
               }}
             >
               <MediaQuery
+                query="(max-width: 768px)"
+                styles={{ display: "none" }}
+              >
+                <Image
+                  src="/images/landing-page-bg/landing-grid-bg-ellipse.png"
+                  alt="streamline bg ellipse"
+                  width={220}
+                  sx={{
+                    position: "absolute",
+                    right: -5,
+                    top: -200,
+                    zIndex: 1,
+                  }}
+                />
+              </MediaQuery>
+              <MediaQuery
                 query="(max-width: 480px)"
                 styles={{ width: "95%", padding: "20px" }}
               >
