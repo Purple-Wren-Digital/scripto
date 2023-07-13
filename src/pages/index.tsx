@@ -1458,7 +1458,7 @@ const LandingPage: PageWithLayout = () => {
           </Box>
         </Box>
       </MediaQuery>
-      <MediaQuery
+      {/* <MediaQuery
         query="(max-width: 768px)"
         styles={{ flexDirection: "column" }}
       >
@@ -1511,7 +1511,7 @@ const LandingPage: PageWithLayout = () => {
                     }}
                   >
                     <Title size={24} fw={700} mb={40}>
-                      True Collaboration.
+                      Screenplays
                     </Title>
                     <Text mb={40} sx={{ maxWidth: "420px" }}>
                       Write with others in the same script at the same time,
@@ -1519,7 +1519,7 @@ const LandingPage: PageWithLayout = () => {
                       for variety shows, screenplays, video games, and more. You
                       deserve better than Google&nbsp;Docs!
                     </Text>
-                    <Link href="/features">
+                    <Link href="/screenplays">
                       <Button
                         variant="outline"
                         h={60}
@@ -1582,14 +1582,14 @@ const LandingPage: PageWithLayout = () => {
                     }}
                   >
                     <Title size={24} fw={700} mb={40}>
-                      Feature that is amazing
+                      Studio
                     </Title>
                     <Text mb={40} sx={{ maxWidth: "420px" }}>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua.
                     </Text>
-                    <Link href="/features">
+                    <Link href="/studio">
                       <Button
                         variant="outline"
                         h={60}
@@ -1626,7 +1626,248 @@ const LandingPage: PageWithLayout = () => {
             </Box>
           </MediaQuery>
         </Box>
+      </MediaQuery> */}
+
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ flexDirection: "column" }}
+      >
+        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}> 
+          <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "500px",
+                width: "50%",
+                backgroundImage: "url(/images/studio.png)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: "#B89ADE",
+                  opacity: "0.35",
+                }}
+              ></Box>
+            </Box>
+          </MediaQuery>
+          <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "500px",
+                width: "50%",
+                position: "relative",
+              }}
+            >
+              <MediaQuery
+                query="(max-width: 480px)"
+                styles={{ width: "95%", padding: "20px" }}
+              >
+                <Box
+                  m={20}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    width: "80%",
+                    padding: "40px",
+                    zIndex: 2,
+                  }}
+                >
+                  <Title size={24} fw={700} mb={40}>
+                    Studio
+                  </Title>
+                  <Text mb={40} sx={{ maxWidth: "420px" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Text>
+                  <Link href="/studio">
+                    <Button
+                      variant="outline"
+                      h={60}
+                      w={200}
+                      sx={{ borderRadius: "10px" }}
+                    >
+                      Learn more
+                    </Button>
+                  </Link>
+                </Box>
+              </MediaQuery>
+            </Box>
+          </MediaQuery>
+        </Box>
       </MediaQuery>
+
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ flexDirection: "column-reverse" }}
+      >
+        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}> 
+          <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "500px",
+                width: "50%",
+                position: "relative",
+              }}
+            >
+              <MediaQuery
+                query="(max-width: 480px)"
+                styles={{ width: "95%", padding: "20px" }}
+              >
+                <Box
+                  m={20}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    width: "80%",
+                    padding: "40px",
+                    zIndex: 2,
+                  }}
+                >
+                  <Title size={24} fw={700} mb={40}>
+                    Screenplays
+                  </Title>
+                  <Text mb={40} sx={{ maxWidth: "420px" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Text>
+                  <Link href="/screenplays">
+                    <Button
+                      variant="outline"
+                      h={60}
+                      w={200}
+                      sx={{ borderRadius: "10px" }}
+                    >
+                      Learn more
+                    </Button>
+                  </Link>
+                </Box>
+              </MediaQuery>
+            </Box>
+          </MediaQuery>
+          <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "500px",
+                width: "50%",
+                backgroundImage: "url(/images/workspace.png)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: "#B89ADE",
+                  opacity: "0.35",
+                }}
+              ></Box>
+            </Box>
+          </MediaQuery>
+        </Box>
+      </MediaQuery>
+
+      <MediaQuery
+        query="(max-width: 768px)"
+        styles={{ flexDirection: "column" }}
+      >
+        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}> 
+          <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "500px",
+                width: "50%",
+                backgroundImage: "url(/images/games.png)",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  background: "#B89ADE",
+                  opacity: "0.35",
+                }}
+              ></Box>
+            </Box>
+          </MediaQuery>
+          <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "500px",
+                width: "50%",
+                position: "relative",
+              }}
+            >
+              <MediaQuery
+                query="(max-width: 480px)"
+                styles={{ width: "95%", padding: "20px" }}
+              >
+                <Box
+                  m={20}
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    width: "80%",
+                    padding: "40px",
+                    zIndex: 2,
+                  }}
+                >
+                  <Title size={24} fw={700} mb={40}>
+                    Video Games
+                  </Title>
+                  <Text mb={40} sx={{ maxWidth: "420px" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Text>
+                  <Link href="/games">
+                    <Button
+                      variant="outline"
+                      h={60}
+                      w={200}
+                      sx={{ borderRadius: "10px" }}
+                    >
+                      Learn more
+                    </Button>
+                  </Link>
+                </Box>
+              </MediaQuery>
+            </Box>
+          </MediaQuery>
+        </Box>
+      </MediaQuery>
+
       <Box
         mt={120}
         sx={{
@@ -1746,32 +1987,6 @@ const LandingPage: PageWithLayout = () => {
                 </Text>
               </Box>
             </Carousel.Slide>
-            {/* <Carousel.Slide mb={50}>
-              <Box
-                ta="center"
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Text mb={20} size={24}>
-                  “Testimonial three. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod tempor incididunt.”
-                </Text>
-                <Avatar
-                  mb={20}
-                  radius="xl"
-                  size={40}
-                  variant="filled"
-                  color="dark"
-                />
-                <Text size={14} mb={50}>
-                  Maria Lopez, VP of Design at Meshery
-                </Text>
-              </Box>
-            </Carousel.Slide> */}
           </Carousel>
         </Box>
       </Box>
