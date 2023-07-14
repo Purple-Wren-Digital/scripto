@@ -641,10 +641,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
-                        width={"100%"}
-                        withPlaceholder
+                        alt="pickled"
+                        src="/images/show-logos/pickled.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -662,10 +662,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="g word"
+                        src="/images/show-logos/g_word.png"
                         width={"100%"}
-                        withPlaceholder
                       />
                     </Box>
                   </Box>
@@ -808,7 +807,7 @@ const LandingPage: PageWithLayout = () => {
                     >
                       <Image
                         alt="the break"
-                        src="/images/show-logos/the-break-with-michelle-wolf.png"
+                        src="/images/show-logos/the-break-michelle-wolf.png"
                         width={"100%"}
                       />
                     </Box>
@@ -839,10 +838,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="the president show"
+                        src="/images/show-logos/president-show.png"
                         width={"100%"}
-                        withPlaceholder
                       />
                     </Box>
                     <Box
@@ -860,10 +858,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
-                        width={"100%"}
-                        withPlaceholder
+                        alt="nightly show"
+                        src="/images/show-logos/the-nightly-show-logo.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -881,10 +879,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="colbert report"
+                        src="/images/show-logos/colbert-report.png"
                         width={"100%"}
-                        withPlaceholder
                       />
                     </Box>
                   </Box>
@@ -1229,10 +1226,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
-                        width={"100%"}
-                        withPlaceholder
+                        alt="pickled"
+                        src="/images/show-logos/pickled.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -1250,10 +1247,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="g word"
+                        src="/images/show-logos/g_word.png"
                         width={"100%"}
-                        withPlaceholder
                       />
                     </Box>
                     <Box
@@ -1384,7 +1380,7 @@ const LandingPage: PageWithLayout = () => {
                     >
                       <Image
                         alt="the break"
-                        src="/images/show-logos/the-break-with-michelle-wolf.png"
+                        src="/images/show-logos/the-break-michelle-wolf.png"
                         width={"100%"}
                       />
                     </Box>
@@ -1403,10 +1399,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="the president show"
+                        src="/images/show-logos/president-show.png"
                         width={"100%"}
-                        withPlaceholder
                       />
                     </Box>
                     <Box
@@ -1424,10 +1419,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
-                        width={"100%"}
-                        withPlaceholder
+                        alt="nightly show"
+                        src="/images/show-logos/the-nightly-show-logo.png"
+                        height={"150px"}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -1445,10 +1440,9 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="colbert report"
+                        src="/images/show-logos/colbert-report.png"
                         width={"100%"}
-                        withPlaceholder
                       />
                     </Box>
                   </Box>
