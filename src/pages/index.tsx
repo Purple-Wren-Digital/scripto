@@ -67,19 +67,19 @@ const LandingPage: PageWithLayout = () => {
                 <Text mb="md" ta={"left"} size={18}>
                   Whether you&apos;re taping a show in a{" "}
                   <Text td="underline" component="span">
-                    <Link style={{ color: "#0A2E49"}} href="/studio">
+                    <Link style={{ color: "#0A2E49" }} href="/studio">
                       studio
                     </Link>
                   </Text>
                   , collaborating on{" "}
                   <Text td="underline" component="span">
-                    <Link style={{ color: "#0A2E49"}} href="/screenplays">
+                    <Link style={{ color: "#0A2E49" }} href="/screenplays">
                       screenplays
                     </Link>
                   </Text>
                   , or making a{" "}
                   <Text td="underline" component="span">
-                    <Link style={{ color: "#0A2E49"}} href="/games">
+                    <Link style={{ color: "#0A2E49" }} href="/games">
                       video game
                     </Link>
                   </Text>
@@ -87,7 +87,10 @@ const LandingPage: PageWithLayout = () => {
                   do it.
                 </Text>
                 <Text size={18} mb={10}>
-                  Scripto is your team’s shared brain from conception through production. Ditch last century’s soul-crushing tools and unlock your project’s true potential. Made by professional creators, for professional creators.
+                  Scripto is your team’s shared brain from conception through
+                  production. Ditch last century’s soul-crushing tools and
+                  unlock your project’s true potential. Made by professional
+                  creators, for professional creators.
                 </Text>
                 <Link
                   href="https://calendly.com/nickscripto/scripto-demo"
@@ -181,8 +184,10 @@ const LandingPage: PageWithLayout = () => {
               query="(max-width: 480px)"
               styles={{ marginBottom: "20px" }}
             >
-              <Text mt={20} mb="50px" style={{ maxWidth: "850px"}}>
-              Scripto reduces friction and enables collaboration at every step of the writing and production process. See why Scripto teams move faster and work better&nbsp;together.
+              <Text mt={20} mb="50px" style={{ maxWidth: "850px" }}>
+                Scripto reduces friction and enables collaboration at every step
+                of the writing and production process. See why Scripto teams
+                move faster and work better&nbsp;together.
               </Text>
             </MediaQuery>
           </Box>
@@ -267,7 +272,8 @@ const LandingPage: PageWithLayout = () => {
               </Title>
             </MediaQuery>
             <Text mt={20} sx={{ zIndex: 1 }} ta="center">
-              See who’s making some of your favorite TV and games with a little help from&nbsp;Scripto.
+              See who’s making some of your favorite TV and games with a little
+              help from&nbsp;Scripto.
             </Text>
           </Box>
           <Box
@@ -401,10 +407,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
-                        width={"100%"}
-                        withPlaceholder
+                        alt="major league"
+                        src="/images/show-logos/problem-with-jon-stewart.png"
+                        width={100}
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -477,6 +483,7 @@ const LandingPage: PageWithLayout = () => {
                       <Image
                         alt="tooning out the news"
                         src="/images/show-logos/tooning-out-the-news.png"
+                        height={"150px"}
                         width={"100%"}
                       />
                     </Box>
@@ -495,10 +502,10 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="sketch show"
+                        src="/images/show-logos/sketch-show.png"
                         width={"100%"}
-                        withPlaceholder
+                        height={"150px"}
                       />
                     </Box>
                     <Box
@@ -998,10 +1005,11 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="major league"
+                        src="/images/show-logos/sports-league.png"
+                        height={"150px"}
                         width={"100%"}
-                        withPlaceholder
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -1092,10 +1100,11 @@ const LandingPage: PageWithLayout = () => {
                       }}
                     >
                       <Image
-                        alt=""
-                        src=""
+                        alt="major league"
+                        src="/images/show-logos/sketch-show.png"
+                        height={"150px"}
                         width={"100%"}
-                        withPlaceholder
+                        fit="contain"
                       />
                     </Box>
                     <Box
@@ -1457,7 +1466,7 @@ const LandingPage: PageWithLayout = () => {
         query="(max-width: 768px)"
         styles={{ flexDirection: "column" }}
       >
-        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}> 
+        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}>
           <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
             <Box
               sx={{
@@ -1528,8 +1537,8 @@ const LandingPage: PageWithLayout = () => {
                     Studio
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </Text>
                   <Link href="/studio">
@@ -1553,7 +1562,7 @@ const LandingPage: PageWithLayout = () => {
         query="(max-width: 768px)"
         styles={{ flexDirection: "column-reverse" }}
       >
-        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}> 
+        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}>
           <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
             <Box
               sx={{
@@ -1584,8 +1593,8 @@ const LandingPage: PageWithLayout = () => {
                     Screenplays
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </Text>
                   <Link href="/screenplays">
@@ -1633,7 +1642,7 @@ const LandingPage: PageWithLayout = () => {
         query="(max-width: 768px)"
         styles={{ flexDirection: "column" }}
       >
-        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}> 
+        <Box sx={{ display: "flex", background: "#FBFBFD", width: "100%" }}>
           <MediaQuery query="(max-width: 768px)" styles={{ width: "100%" }}>
             <Box
               sx={{
@@ -1688,8 +1697,8 @@ const LandingPage: PageWithLayout = () => {
                     Video Games
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
                     aliqua.
                   </Text>
                   <Link href="/games">
@@ -1784,7 +1793,8 @@ const LandingPage: PageWithLayout = () => {
                   </span>{" "}
                   requires such a fast writing and production process. Scripto
                   allows us to efficiently and reliably collaborate on scripts,
-                  punch up jokes, rewrite, export production-friendly drafts,&nbsp;and&nbsp;more.”
+                  punch up jokes, rewrite, export production-friendly
+                  drafts,&nbsp;and&nbsp;more.”
                 </Text>
                 <Avatar
                   mb={20}
