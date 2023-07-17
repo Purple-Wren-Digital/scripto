@@ -408,9 +408,8 @@ const LandingPage: PageWithLayout = () => {
                     >
                       <Image
                         alt="major league"
-                        src="/images/show-logos/problem-with-jon-stewart.png"
-                        width={100}
-                        fit="contain"
+                        src="/images/show-logos/sports-league.png"
+                        width={"100%"}
                       />
                     </Box>
                     <Box
@@ -483,7 +482,6 @@ const LandingPage: PageWithLayout = () => {
                       <Image
                         alt="tooning out the news"
                         src="/images/show-logos/tooning-out-the-news.png"
-                        height={"150px"}
                         width={"100%"}
                       />
                     </Box>
