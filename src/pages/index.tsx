@@ -15,6 +15,7 @@ import { Carousel } from "@mantine/carousel";
 import { PageWithLayout } from "next";
 import Link from "next/link";
 import { useMediaQuery } from "@mantine/hooks";
+import Banner from "../components/Banner";
 
 const LandingPage: PageWithLayout = () => {
   const isShortCarousel = useMediaQuery("(max-width: 680px)");
@@ -23,6 +24,7 @@ const LandingPage: PageWithLayout = () => {
 
   return (
     <AppLayout>
+      <Banner />
       <MediaQuery
         query="(max-width: 768px)"
         styles={{ flexDirection: "column" }}
