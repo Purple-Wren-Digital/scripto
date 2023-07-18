@@ -362,8 +362,8 @@ FeaturesPage.getInitialProps = async () => {
       imgPath: "/images/features-page/video-game.gif",
       bgColor: "#301F55",
       altText: "scripto editor",
-      title: "A Missing Piece.",
-      copy: "If your game prioritizes narrative design or features multiple content contributors, Scripto lets you run a professional writing process in a cozy editorial environment. We support the Ink interactive scripting language and our API makes it easy to integrate with your build pipeline.",
+      title: "Any Format.",
+      copy: "Been working in Word or Google Docs? You probably have a format you’re used to writing in. But you might also have to spend a lot of time manually centering speech blocks or highlighting script elements in certain colors. Scripto’s customizable format engine lets us configure scripts and rundowns to fit your project’s unique workflow, so your team can focus on what really matters: The content itself.",
       isImgAlignLeft: true,
     },
     {
@@ -380,8 +380,8 @@ FeaturesPage.getInitialProps = async () => {
       imgPath: "/images/features-page/screenplay-format.gif",
       bgColor: "#B89ADE",
       altText: "scripto editor",
-      title: "Push to Prompter.",
-      copy: "Scripted shows using the industry-standard screenplay format can now have true collaboration in the writers room. It&apos;s also great for pre-taped sketches at variety shows. Before you buy the new Final Draft, try Scripto for free!",
+      title: "Search.",
+      copy: "Lorem ipsum dolor sit amet. Non laboriosam numquam et modi vero ab fugit assumenda. Ut voluptas quaerat ut enim possimus non necessitatibus quia et tempora quia ut maxime Quis eos quisquam expedita non perspiciatis consectetur.",
       isImgAlignLeft: true,
     },
     {

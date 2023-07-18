@@ -444,7 +444,7 @@ const StudioPage: PageWithLayout = ({ features }: any) => {
                       />
                     </MediaQuery>
                     <Image
-                      src="/images/features-page/push-to-prompter.png"
+                      src="/images/features-page/screenplay-format.gif"
                       width={"90%"}
                       radius={10}
                       ml="auto"
