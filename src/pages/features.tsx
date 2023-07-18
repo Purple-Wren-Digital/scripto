@@ -360,7 +360,7 @@ FeaturesPage.getInitialProps = async () => {
   const features = [
     {
       bgImgPath: "/images/features-page/video-games-bg.png",
-      imgPath: "/images/features-page/standard-screenplay.png",
+      imgPath: "/images/features-page/video-game.gif",
       bgColor: "#301F55",
       altText: "scripto editor",
       title: "A Missing Piece.",
@@ -369,7 +369,7 @@ FeaturesPage.getInitialProps = async () => {
     },
     {
       bgImgPath: "/images/features-page/rundowns-bg.png",
-      imgPath: "/images/features-page/rundowns.png",
+      imgPath: "/images/features-page/smart-rundowns.gif",
       bgColor: "#8252C6",
       altText: "scripto editor",
       title: "Smart Rundowns.",
@@ -378,7 +378,7 @@ FeaturesPage.getInitialProps = async () => {
     },
     {
       bgImgPath: "/images/features-page/prompter-bg.png",
-      imgPath: "/images/features-page/push-to-prompter.png",
+      imgPath: "/images/features-page/screenplay-format.gif",
       bgColor: "#B89ADE",
       altText: "scripto editor",
       title: "Push to Prompter.",
@@ -387,7 +387,7 @@ FeaturesPage.getInitialProps = async () => {
     },
     {
       bgImgPath: "/images/features-page/video-games-bg.png",
-      imgPath: "/images/features-page/collaboration-sc.png",
+      imgPath: "/images/features-page/collaboration-sc.gif",
       bgColor: "#301F55",
       altText: "scripto editor",
       title: "True Collaboration.",
@@ -396,7 +396,7 @@ FeaturesPage.getInitialProps = async () => {
     },
     {
       bgImgPath: "/images/features-page/prompter-bg.png",
-      imgPath: "/images/features-page/side-by-side-comparison.png",
+      imgPath: "/images/features-page/change-tracking.gif",
       bgColor: "#B89ADE",
       altText: "scripto editor",
       title: "Change Tracking.",
