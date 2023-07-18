@@ -102,8 +102,8 @@ const VideogamesPage: PageWithLayout = ({ features }: any) => {
           <Title ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
             Video Games
           </Title>
-          <Text ta="center" size={20} sx={{ zIndex: 1 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, architecto!
+          <Text ta="center" size={20} sx={{ zIndex: 1, maxWidth: "850px" }}>
+            A missing piece for video games.
           </Text>
         </Box>
 
@@ -180,10 +180,10 @@ const VideogamesPage: PageWithLayout = ({ features }: any) => {
                   >
                     <Box ta="left" sx={{ maxWidth: "420px" }}>
                       <Text size={24} fw={700} mb={24}>
-                        Video Games Use Case
+                        Custom Formats.
                       </Text>
                       <Text size={20}>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, labore consequatur non asperiores deserunt cumque. Voluptatem dolor architecto autem repudiandae.
+                        Video games have their own unique production requirements that have to be represented in scripts. Scripto’s flexible format system can accommodate emotes, camera blocking, and other engine-focused directions.
                       </Text>
                     </Box>
                   </Box>
@@ -224,10 +224,182 @@ const VideogamesPage: PageWithLayout = ({ features }: any) => {
                   >
                     <Box ta="left" sx={{ maxWidth: "420px" }}>
                       <Text size={24} fw={700} mb={24}>
-                        Video Games Use Case
+                        Ink Different.
                       </Text>
                       <Text size={20}>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, labore consequatur non asperiores deserunt cumque. Voluptatem dolor architecto autem repudiandae.
+                        Scripto supports the Ink interactive scripting language, with real-time compilation.
+                      </Text>
+                    </Box>
+                  </Box>
+                </MediaQuery>
+              </MediaQuery>
+              <MediaQuery
+                query="(max-width: 1024px) and (min-width: 768px)"
+                styles={{ width: "55%" }}
+              >
+                <MediaQuery
+                  query="(max-width: 768px)"
+                  styles={{ width: "100%", marginTop: "80px" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "50%",
+                      position: "relative",
+                    }}
+                  >
+                    <MediaQuery
+                      query="(max-width: 768px)"
+                      styles={{ right: 0, top: -120 }}
+                    >
+                      <Image
+                        src="/images/features-page/rundowns-bg.png"
+                        width={"98%"}
+                        alt="bg image"
+                        sx={{
+                          position: "absolute",
+                          right: -30,
+                          top: -50,
+                        }}
+                      />
+                    </MediaQuery>
+                    <Image
+                      src="/images/features-page/standard-screenplay.png"
+                      width={"90%"}
+                      radius={10}
+                      ml="auto"
+                      alt="screen image"
+                    />
+                  </Box>
+                </MediaQuery>
+              </MediaQuery>
+            </Box>
+          </MediaQuery>
+        </MediaQuery>
+
+        <MediaQuery query="(max-width: 1024px)" styles={{ minHeight: "550px" }}>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ flexDirection: "column" }}
+          >
+            <Box sx={{ display: "flex", minHeight: "682px", background: "#8252C6" }}>
+              <MediaQuery
+                query="(max-width: 1024px) and (min-width: 768px)"
+                styles={{ width: "55%" }}
+              >
+                <MediaQuery
+                  query="(max-width: 768px)"
+                  styles={{ width: "100%", marginTop: "80px" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "50%",
+                      position: "relative",
+                    }}
+                  >
+                    <MediaQuery
+                      query="(max-width: 768px)"
+                      styles={{ right: 0, top: -120 }}
+                    >
+                      <Image
+                        src="/images/features-page/video-games-bg.png"
+                        width={"110%"}
+                        alt="bg image"
+                        sx={{
+                          position: "absolute",
+                          right: -30,
+                          top: -50,
+                        }}
+                      />
+                    </MediaQuery>
+                    <Image
+                      src="/images/features-page/side-by-side-comparison.png"
+                      width={"90%"}
+                      radius={10}
+                      ml="auto"
+                      alt="screen image"
+                    />
+                  </Box>
+                </MediaQuery>
+              </MediaQuery>
+              <MediaQuery
+                query="(max-width: 1024px) and (min-width: 768px)"
+                styles={{ width: "45%" }}
+              >
+                <MediaQuery
+                  query="(max-width: 768px)"
+                  styles={{
+                    width: "100%",
+                    marginTop: "40px",
+                    marginBottom: "40px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                      width: "50%",
+                      zIndex: 1,
+                      padding: "40px",
+                    }}
+                  >
+                    <Box ta="left" sx={{ maxWidth: "420px" }}>
+                      <Text size={24} fw={700} mb={24}>
+                        Engine Ready.
+                      </Text>
+                      <Text size={20}>
+                        Scripto’s API provides clean, machine-readable JSON that updates in real time. That means your team can integrate up-to-the-second content changes into your build pipeline, dramatically tightening your iteration cycle and helping you get better results sooner.
+                      </Text>
+                    </Box>
+                  </Box>
+                </MediaQuery>
+              </MediaQuery>
+            </Box>
+          </MediaQuery>
+        </MediaQuery>
+
+        <MediaQuery query="(max-width: 1024px)" styles={{ minHeight: "550px" }}>
+          <MediaQuery
+            query="(max-width: 768px)"
+            styles={{ flexDirection: "column-reverse" }}
+          >
+            <Box sx={{ display: "flex", minHeight: "682px", background: "#301F55" }}>
+            <MediaQuery
+                query="(max-width: 1024px) and (min-width: 768px)"
+                styles={{ width: "45%" }}
+              >
+                <MediaQuery
+                  query="(max-width: 768px)"
+                  styles={{
+                    width: "100%",
+                    marginTop: "40px",
+                    marginBottom: "40px",
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexDirection: "column",
+                      width: "50%",
+                      zIndex: 1,
+                      padding: "40px",
+                    }}
+                  >
+                    <Box ta="left" sx={{ maxWidth: "420px" }}>
+                      <Text size={24} fw={700} mb={24}>
+                        Localize This.
+                      </Text>
+                      <Text size={20}>
+                        We can integrate your game’s script format with Scripto’s Rundown feature, so that you can auto-generate spreadsheets and reports for VO recording and localization. Scripto takes the manual copying and pasting out of the process so you can focus on the material itself.
                       </Text>
                     </Box>
                   </Box>

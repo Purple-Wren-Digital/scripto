@@ -176,7 +176,7 @@ const CTA: React.FC<{
             />
           </MediaQuery>
         </>
-      ) : pathname == "/videogames" ? (
+      ) : pathname == "/games" ? (
         <>
           <MediaQuery query="(max-width: 768px)" styles={{ display: "none" }}>
             <Image
