@@ -345,8 +345,7 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
             Key Features
           </Title>
           <Text ta="center" size={20} sx={{ zIndex: 1 }}>
-            Standing ovation, please. These features are guaranteed
-            show-stoppers.
+            Collaborative script writing and production software built for creative teams.
           </Text>
         </Box>
         <AlternatingLayout features={features && features} />
@@ -373,7 +372,7 @@ FeaturesPage.getInitialProps = async () => {
       bgColor: "#8252C6",
       altText: "scripto editor",
       title: "Smart Rundowns.",
-      copy: "It’s a law of modern work: Everything becomes a spreadsheet eventually. Scripto’s Rundowns let you do it with the click of a button. Drag and drop any script into our customizable grids and see the magic for yourself.",
+      copy: "Practically every line of a professional script contains instructions for someone else working on the team. You can use Scripto’s rundowns to organize and communicate about that work, crafting templates for shows, events, localization, and more. If it looks like a spreadsheet, Scripto can generate it for you with the click of a button.",
       isImgAlignLeft: true,
     },
     {
@@ -391,7 +390,7 @@ FeaturesPage.getInitialProps = async () => {
       bgColor: "#301F55",
       altText: "scripto editor",
       title: "True Collaboration.",
-      copy: "Write with others in the same script at the same time, with automatic and flexible industry-standard formatting for variety shows, screenplays, video games, and more. You deserve better than Google Docs!",
+      copy: "Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Every document in Scripto is fully collaborative by nature — no more trading PDFs or getting “locked out” because someone left a file open on their computer.",
       isImgAlignLeft: true,
     },
     {
@@ -400,7 +399,7 @@ FeaturesPage.getInitialProps = async () => {
       bgColor: "#B89ADE",
       altText: "scripto editor",
       title: "Change Tracking.",
-      copy: "No matter what you're writing, planning, or producing, the only constant is change. Scripto tracks changes and saves backups as you work, and generates shareable change reports you can share with your whole team. Never again will you buy a prop that got cut two drafts ago.",
+      copy: "No matter what you’re writing, planning, or producing, the only constant is change. Scripto tracks changes and saves backups as you work, and generates shareable change reports you can share with your whole team.",
       isImgAlignLeft: true,
     },
   ];

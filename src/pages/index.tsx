@@ -1534,12 +1534,10 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Title size={24} fw={700} mb={40}>
-                    Studio
+                    Studio TV
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Scripto powers the world-class writing process at Emmy-winning shows like Last Week Tonight and The Late Show. If you’re taping a variety or talk show in studio, use the same specialized workflows that help our clients stay on time and on point.
                   </Text>
                   <Link href="/studio">
                     <Button
