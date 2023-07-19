@@ -207,6 +207,7 @@ const LandingPage: PageWithLayout = () => {
             <Box
               sx={{
                 display: "flex",
+                flexWrap: "wrap",
                 justifyContent: "space-around",
                 width: "90%",
                 background: "#FBFBFD",
@@ -218,20 +219,20 @@ const LandingPage: PageWithLayout = () => {
             >
               <Card
                 imgSrc="/images/collaboration.png"
-                title="True Collaboration."
-                text="Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Every document in Scripto is fully collaborative by nature — no more trading PDFs or getting “locked out” because someone left a file open on their computer."
+                title="Collaborative Scriptwriting."
+                text="Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page."
                 link="/features"
               />
               <Card
                 imgSrc="/images/edit.png"
                 title="Smart Rundowns."
-                text="Practically every line of a professional script contains instructions for someone else working on the team. You can use Scripto’s rundowns to organize and communicate about that work, crafting templates for shows, events, localization, and more. If it looks like a spreadsheet, Scripto can generate it for you with the click of a button."
+                text="Script-aware rundowns let production teams turn a script into a spreadsheet fast."
                 link="/features"
               />
               <Card
                 imgSrc="/images/format.png"
-                title="Any Format."
-                text="Been working in Word or Google Docs? You probably have a format you’re used to writing in. But you might also have to spend a lot of time manually centering speech blocks or highlighting script elements in certain colors. Scripto’s customizable format engine lets you create a repeatable template, so your team can focus on what really matters: The content itself."
+                title="Organizational Hub."
+                text="Keep your docs in a secure central location, and manage who has access to them. Less email, we promise."
                 link="/features"
               />
             </Box>
@@ -898,7 +899,6 @@ const LandingPage: PageWithLayout = () => {
               <Carousel
                 slideSize="100%"
                 withIndicators
-                withControls={false}
                 sx={{
                   width: "100%",
                 }}
@@ -914,6 +914,14 @@ const LandingPage: PageWithLayout = () => {
 
                     "&[data-active]": {
                       background: "#000",
+                    },
+                  },
+                  control: {
+                    border: "none",
+
+                    '&[data-inactive]': {
+                      opacity: 0,
+                      cursor: 'default',
                     },
                   },
                 }}
@@ -1537,7 +1545,10 @@ const LandingPage: PageWithLayout = () => {
                     Studio TV
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Scripto powers the world-class writing process at Emmy-winning shows like Last Week Tonight and The Late Show. If you’re taping a variety or talk show in studio, use the same specialized workflows that help our clients stay on time and on point.
+                    Scripto powers the world-class writing process at Emmy-winning shows like{" "}
+                    <span style={{ fontStyle: "italic" }}>Last Week Tonight{" "}</span>and
+                    <span style={{ fontStyle: "italic" }}>{" "}The Late Show</span>.{" "}
+                    If you’re taping a variety or talk show in studio, use the same specialized workflows that help our clients stay on time and on point.
                   </Text>
                   <Link href="/studio">
                     <Button
@@ -1588,12 +1599,10 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Title size={24} fw={700} mb={40}>
-                    Screenplays
+                    Writers Rooms
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Whether you’re writing a scripted comedy, a sketch show, or a podcast, Scripto brings true collaboration to the writers room.
                   </Text>
                   <Link href="/screenplays">
                     <Button
@@ -1692,12 +1701,10 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Title size={24} fw={700} mb={40}>
-                    Video Games
+                    Video Game Studios
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    If your game prioritizes narrative design or features multiple content contributors, Scripto lets you run a professional writing process in a cozy editorial environment that integrates directly with your build pipeline. 
                   </Text>
                   <Link href="/games">
                     <Button
@@ -1752,7 +1759,7 @@ const LandingPage: PageWithLayout = () => {
             mb={80}
             slideSize="100%"
             withIndicators
-            withControls={false}
+            withControls={isMobile ? false : true}
             slideGap={"50px"}
             sx={{
               width: "100%",
@@ -1770,6 +1777,14 @@ const LandingPage: PageWithLayout = () => {
 
                 "&[data-active]": {
                   background: "#000",
+                }
+                },
+              control: {
+                border: "none",
+
+                '&[data-inactive]': {
+                  opacity: 0,
+                  cursor: 'default',
                 },
               },
             }}

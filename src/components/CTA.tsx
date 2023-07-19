@@ -256,12 +256,16 @@ const CTA: React.FC<{
         Ready to get started?
       </Title>
       <Text mb={25} ta="center" sx={{ maxWidth: "525px", zIndex: 2 }}>
-        Scripto is free for up to 3 collaborators with our basic variety and
+        Scripto is free for up to 3 collaborators with our basic studio and
         screenplay formats. Sign up now and try&nbsp;it&nbsp;out!
       </Text>
       <Text mb={25} ta="center" sx={{ maxWidth: "525px", zIndex: 2 }}>
         For larger teams, we tailor plans and pricing to your team size,
-        production order, and feature needs. Get in touch for a customized demo
+        production order, and feature needs.{" "}
+        <Link href="mailto:hello@scripto.live" style={{ color: "#000" }}>
+          Get in touch
+        </Link>
+        {" "}for a customized demo
         and free trial of our&nbsp;paid&nbsp;features.
       </Text>
       <Link

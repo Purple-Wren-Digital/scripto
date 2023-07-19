@@ -35,7 +35,7 @@ export default function Card({
             {title}
           </Title>
           <Text mt={20} mb="md">{text}</Text>
-          <Link href={link} style={{ textDecoration: "none" }}>
+          <Link href={link} style={{ textDecoration: "none", marginTop: "auto" }}>
             <Text size={14} color="#8252C6">
               Learn More
             </Text>
