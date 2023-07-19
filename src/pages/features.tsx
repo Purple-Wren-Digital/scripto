@@ -1,6 +1,6 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
-import { Text, Box, Space, Image, MediaQuery, Title } from "@mantine/core";
+import { Text, Box, Space, Image, MediaQuery, Title, List } from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const AlternatingFeature = ({
@@ -8,8 +8,14 @@ const AlternatingFeature = ({
   imgPath,
   bgColor,
   altText,
-  title,
-  copy,
+  mainTitle,
+  mainCopy,
+  subTitleOne,
+  subCopyOne,
+  subTitleTwo,
+  subCopyTwo,
+  subTitleThree,
+  subCopyThree,
   isImgAlignLeft,
   orderIndex,
 }: {
@@ -17,8 +23,14 @@ const AlternatingFeature = ({
   imgPath: string;
   bgColor: string;
   altText: string;
-  title: string;
-  copy: string;
+  mainTitle: string;
+  mainCopy: string;
+  subTitleOne: string;
+  subCopyOne: string;
+  subTitleTwo: string;
+  subCopyTwo: string;
+  subTitleThree: string;
+  subCopyThree: string;
   isImgAlignLeft: boolean;
   orderIndex: number;
 }) => {
@@ -114,11 +126,16 @@ const AlternatingFeature = ({
                     padding: "40px",
                   }}
                 >
-                  <Box ta="left" sx={{ maxWidth: "420px" }}>
+                  <Box ta="left" sx={{ maxWidth: "450px", color: "#FBFBFD" }}>
                     <Text size={24} fw={700} mb={24}>
-                      {title}
+                      {mainTitle}
                     </Text>
-                    <Text size={20}>{copy}</Text>
+                    <Text mb={10}>{mainCopy}</Text>
+                    <List listStyleType="disc" sx={{ color: "#FBFBFD" }}>
+                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleOne}</span> - {subCopyOne}</List.Item>
+                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleTwo}</span> - {subCopyTwo}</List.Item>
+                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleThree}</span> - {subCopyThree}</List.Item>
+                    </List>
                   </Box>
                 </Box>
               </MediaQuery>
@@ -148,11 +165,16 @@ const AlternatingFeature = ({
                     padding: "40px",
                   }}
                 >
-                  <Box ta="left" sx={{ maxWidth: "420px" }}>
+                  <Box ta="left" sx={{ maxWidth: "450px", color: "#FBFBFD" }}>
                     <Text size={24} fw={700} mb={24}>
-                      {title}
+                      {mainTitle}
                     </Text>
-                    <Text size={20}>{copy}</Text>
+                    <Text mb={10}>{mainCopy}</Text>
+                    <List listStyleType="disc" sx={{ color: "#FBFBFD" }}>
+                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleOne}</span> - {subCopyOne}</List.Item>
+                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleTwo}</span> - {subCopyTwo}</List.Item>
+                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleThree}</span> - {subCopyThree}</List.Item>
+                    </List>
                   </Box>
                 </Box>
               </MediaQuery>
@@ -232,8 +254,14 @@ const AlternatingLayout = ({ features }: any) => {
             imgPath={feature.imgPath}
             bgColor={feature.bgColor}
             altText={feature.altText}
-            title={feature.title}
-            copy={feature.copy}
+            mainTitle={feature.mainTitle}
+            mainCopy={feature.mainCopy}
+            subTitleOne={feature.subTitleOne}
+            subCopyOne={feature.subCopyOne}
+            subTitleTwo={feature.subTitleTwo}
+            subCopyTwo={feature.subCopyTwo}
+            subTitleThree={feature.subTitleThree}
+            subCopyThree={feature.subCopyThree}
             isImgAlignLeft={index % 2 === 0}
             orderIndex={index}
           />
@@ -359,11 +387,17 @@ FeaturesPage.getInitialProps = async () => {
   const features = [
     {
       bgImgPath: "/images/features-page/video-games-bg.png",
-      imgPath: "/images/features-page/video-game.gif",
+      imgPath: "/images/features-page/change-tracking.gif",
       bgColor: "#301F55",
       altText: "scripto editor",
-      title: "Any Format.",
-      copy: "Been working in Word or Google Docs? You probably have a format you’re used to writing in. But you might also have to spend a lot of time manually centering speech blocks or highlighting script elements in certain colors. Scripto’s customizable format engine lets us configure scripts and rundowns to fit your project’s unique workflow, so your team can focus on what really matters: The content itself.",
+      mainTitle: "Collaborative Scriptwriting.",
+      mainCopy: "Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Every document in Scripto is fully collaborative by nature — no more trading PDFs or getting “locked out” because someone left a file open on their computer.",
+      subTitleOne: "Real-time collaboration",
+      subCopyOne: "Write with others in the same script at the same time.",
+      subTitleTwo: "Any format",
+      subCopyTwo: "Industry-standard screenplay and studio/variety formats come for free, but script formats can be customized to the requirements of your project.",
+      subTitleThree: "Change Tracking",
+      subCopyThree: "No matter what you're writing, planning, or producing, the only constant is change. Scripto tracks changes and saves backups as you work, providing detailed views of what’s been added and removed with every revision.",
       isImgAlignLeft: true,
     },
     {
@@ -371,8 +405,14 @@ FeaturesPage.getInitialProps = async () => {
       imgPath: "/images/features-page/smart-rundowns.gif",
       bgColor: "#8252C6",
       altText: "scripto editor",
-      title: "Smart Rundowns.",
-      copy: "Practically every line of a professional script contains instructions for someone else working on the team. You can use Scripto’s rundowns to organize and communicate about that work, crafting templates for shows, events, localization, and more. If it looks like a spreadsheet, Scripto can generate it for you with the click of a button.",
+      mainTitle: "Smart Rundowns.",
+      mainCopy: "Practically every line of a professional script contains instructions for someone else working on the team. You can use Scripto’s rundowns to organize and communicate about that work, crafting templates for shows, events, localization, and more. If it looks like a spreadsheet, Scripto can generate it for you with the click of a button.",
+      subTitleOne: "Real-time collaboration",
+      subCopyOne: "Works with others in the same rundown at the same time.",
+      subTitleTwo: "Flexible formats",
+      subCopyTwo: "Rundowns are highly customizable. They can be used for anything from a run-of-show for live events to a localization tracker for video game translations.",
+      subTitleThree: "Auto-import",
+      subCopyThree: "Import lines from a script into rows in a spreadsheet with the click of a button.",
       isImgAlignLeft: true,
     },
     {
@@ -380,29 +420,18 @@ FeaturesPage.getInitialProps = async () => {
       imgPath: "/images/features-page/screenplay-format.gif",
       bgColor: "#B89ADE",
       altText: "scripto editor",
-      title: "Search.",
-      copy: "Lorem ipsum dolor sit amet. Non laboriosam numquam et modi vero ab fugit assumenda. Ut voluptas quaerat ut enim possimus non necessitatibus quia et tempora quia ut maxime Quis eos quisquam expedita non perspiciatis consectetur.",
-      isImgAlignLeft: true,
-    },
-    {
-      bgImgPath: "/images/features-page/video-games-bg.png",
-      imgPath: "/images/features-page/collaboration-sc.gif",
-      bgColor: "#301F55",
-      altText: "scripto editor",
-      title: "True Collaboration.",
-      copy: "Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Every document in Scripto is fully collaborative by nature — no more trading PDFs or getting “locked out” because someone left a file open on their computer.",
-      isImgAlignLeft: true,
-    },
-    {
-      bgImgPath: "/images/features-page/prompter-bg.png",
-      imgPath: "/images/features-page/change-tracking.gif",
-      bgColor: "#B89ADE",
-      altText: "scripto editor",
-      title: "Change Tracking.",
-      copy: "No matter what you’re writing, planning, or producing, the only constant is change. Scripto tracks changes and saves backups as you work, and generates shareable change reports you can share with your whole team.",
+      mainTitle: "Organizational Hub.",
+      mainCopy: "Scripto is your project’s shared brain. Everyone on the team knows where to go to find what they need, and everything’s linkable. Keep your docs in a secure central location, and manage who has access to them. Less email, we promise.",
+      subTitleOne: "Flexible folders",
+      subCopyOne: "Organize folders to suit your project’s workflow, and use Favorites and Recently Edited views to keep an eye on where the work is happening.",
+      subTitleTwo: "Search",
+      subCopyTwo: "No more combing through folders or email for the files you need – search your whole project archive at once.",
+      subTitleThree: "Manage your workspace",
+      subCopyThree: "Invite collaborators to work on your project, and manage their roles and permissions.",
       isImgAlignLeft: true,
     },
   ];
+
   const shuffledFeatures = features
     .map((value) => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
