@@ -9,6 +9,7 @@ import {
   Burger,
   Menu,
   createStyles,
+  Accordion,
 } from "@mantine/core";
 import { ReactNode } from "react";
 import Footer from "./Footer";
@@ -97,13 +98,13 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       About Us
                     </Text>
                   </Link>
-                  {/* <Link href="/features" style={{ textDecoration: "none" }}>
+                  <Link href="/features" style={{ textDecoration: "none" }}>
                     <Text size={15} mr={20} color={"#FBFBFD"}>
-                      Features
+                      What Is Scripto?
                     </Text>
-                  </Link> */}
+                  </Link>
                   <Menu
-                    trigger="hover"
+                    trigger="click"
                     position="bottom-start"
                     withArrow
                     arrowPosition="center"
@@ -114,31 +115,29 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     classNames={classes}
                   >
                     <Menu.Target>
-                      <Link href="/features" style={{ textDecoration: "none" }}>
-                        <Text size={15} mr={20} color={"#FBFBFD"}>
-                          Features
-                        </Text>
-                      </Link>
+                      <Text size={15} mr={20} color={"#FBFBFD"}>
+                        Who Uses Scripto?
+                      </Text>
                     </Menu.Target>
                     <Menu.Dropdown>
                       <Menu.Item>
                         <Link href="/studio" style={{ textDecoration: "none" }}>
                           <Text size={15} mr={20} color={"#FBFBFD"}>
-                            Studio
+                            Studio TV
                           </Text>
                         </Link>
                       </Menu.Item>
                       <Menu.Item>
                         <Link href="/screenplays" style={{ textDecoration: "none" }}>
                           <Text size={15} mr={20} color={"#FBFBFD"}>
-                            Screenplays
+                            Writers Rooms
                           </Text>
                         </Link>
                       </Menu.Item>
                       <Menu.Item>
                         <Link href="/games" style={{ textDecoration: "none" }}>
                           <Text size={15} mr={20} color={"#FBFBFD"}>
-                            Video Games
+                            Video Game Studios
                           </Text>
                         </Link>
                       </Menu.Item>
@@ -204,18 +203,16 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     About Us
                   </Text>
                 </Link>
-                {/* <Link href="/features" style={{ textDecoration: "none" }}>
+                <Link href={"/features"} style={{ textDecoration: "none",  marginBottom: 20 }}>
                   <Text size={15} color={"#FBFBFD"}>
-                    Features
-                  </Text>
-                </Link> */}
-
-                {/* dropdown menu */}
-                <Link href={isToggledOpen ? "/features" : "#0"} style={{ textDecoration: "none",  marginBottom: 20 }}>
-                  <Text size={15} color={"#FBFBFD"} onClick={() => setIsToggledOpen(!isToggledOpen)}>
-                    Features
+                    What is Scripto?
                   </Text>
                 </Link>
+
+                {/* dropdown menu */}
+                <Text size={15} color={"#FBFBFD"} mb={15} onClick={() => setIsToggledOpen(!isToggledOpen)}>
+                  Who Uses Scripto?
+                </Text>
                 <Box 
                   sx={{ 
                     height: isToggledOpen ? 130 : 0,
@@ -236,7 +233,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     }}
                   >
                     <Text size={15} color={"#FBFBFD"}>
-                      Studio
+                      Studio TV
                     </Text>
                   </Link>
                   <Link 
@@ -248,7 +245,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     }}
                   >
                     <Text size={15} color={"#FBFBFD"}>
-                      Screenplays
+                      Writers Rooms
                     </Text>
                   </Link>
                   <Link 
@@ -260,7 +257,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     }}
                   >
                     <Text size={15} color={"#FBFBFD"}>
-                      Video Games
+                      Video Game Studios
                     </Text>
                   </Link>
                 </Box>

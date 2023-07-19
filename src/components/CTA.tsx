@@ -262,7 +262,7 @@ const CTA: React.FC<{
       <Text mb={25} ta="center" sx={{ maxWidth: "525px", zIndex: 2 }}>
         For larger teams, we tailor plans and pricing to your team size,
         production order, and feature needs.{" "}
-        <Link href="mailto:hello@scripto.live" style={{ color: "#000" }}>
+        <Link href="mailto:hello@scripto.live" style={{ color: text }}>
           Get in touch
         </Link>
         {" "}for a customized demo
