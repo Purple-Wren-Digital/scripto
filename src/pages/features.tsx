@@ -1,6 +1,6 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
-import { Text, Box, Space, Image, MediaQuery, Title, List } from "@mantine/core";
+import { Text, Box, Space, Image, MediaQuery, Title, List, getDefaultZIndex } from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const AlternatingFeature = ({
@@ -37,7 +37,7 @@ const AlternatingFeature = ({
   return (
     <MediaQuery query="(max-width: 1024px)" styles={{ minHeight: "550px" }}>
       <MediaQuery
-        query="(max-width: 768px)"
+        query="(max-width: 1024px)"
         styles={
           orderIndex % 2 != 0
             ? { flexDirection: "column-reverse" }
@@ -47,194 +47,202 @@ const AlternatingFeature = ({
         <Box sx={{ display: "flex", minHeight: "682px", background: bgColor }}>
           {isImgAlignLeft ? (
             <MediaQuery
-              query="(max-width: 1024px) and (min-width: 768px)"
-              styles={{ width: "55%" }}
+              query="(max-width: 1024px)"
+              styles={{ width: "100%" }}
             >
-              <MediaQuery
-                query="(max-width: 768px)"
-                styles={{ width: "100%", marginTop: "80px" }}
+
+              <Box
+                sx={{
+                  width: "50%",
+                  position: "relative",
+
+                  display: "grid",
+                  gridTemplateColumns: "repeat(10, 1fr)",
+                  alignItems: "center",
+                }}
               >
-                <Box
+                <Image
+                  src={imgPath}
+                  width={"90%"}
+                  radius={10}
+                  ml="auto"
+                  alt={altText}
                   sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "50%",
-                    position: "relative",
+                    gridColumn: "1 / 11",
+                    gridRow: "1 / 2",
+                    zIndex: 2,
                   }}
-                >
-                  <MediaQuery
-                    query="(max-width: 768px)"
-                    styles={
-                      bgImgPath == "/images/features-page/prompter-bg.png"
-                        ? { right: 0, top: -120 }
-                        : { right: 0, top: -100 }
-                    }
-                  >
-                    <Image
-                      src={bgImgPath}
-                      width={
-                        bgImgPath == "/images/features-page/rundowns-bg.png"
-                          ? "98%"
-                          : "110%"
-                      }
-                      alt="bg image"
-                      sx={{
-                        position: "absolute",
-                        right:
-                          bgImgPath == "/images/features-page/rundowns-bg.png"
-                            ? -30
-                            : 0,
-                        top:
-                          bgImgPath == "/images/features-page/rundowns-bg.png"
-                            ? -50
-                            : -20,
-                      }}
-                    />
-                  </MediaQuery>
-                  <Image
-                    src={imgPath}
-                    width={"90%"}
-                    radius={10}
-                    ml="auto"
-                    alt={altText}
+                />
+                <Image
+                    src={bgImgPath}
+                    width={"100%"}
+                    alt="bg image"
+                    sx={{
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 2",
+                      // transform: "scale(1.3)"
+                      transform: bgImgPath == "/images/features-page/rundowns-bg.png" ? "scale(1.15)" : "scale(1.3)",
+                      zIndex: 1,
+                    }}
                   />
-                </Box>
-              </MediaQuery>
+              </Box>
+
             </MediaQuery>
           ) : (
             <MediaQuery
-              query="(max-width: 1024px) and (min-width: 768px)"
-              styles={{ width: "45%" }}
+              query="(max-width: 1024px)"
+              styles={{
+                width: "100%",
+                marginTop: "40px",
+                marginBottom: "40px",
+              }}
             >
-              <MediaQuery
-                query="(max-width: 768px)"
-                styles={{
-                  width: "100%",
-                  marginTop: "40px",
-                  marginBottom: "40px",
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  width: "50%",
+                  zIndex: 1,
+                  padding: "40px",
                 }}
               >
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                    width: "50%",
-                    zIndex: 1,
-                    padding: "40px",
-                  }}
-                >
-                  <Box ta="left" sx={{ maxWidth: "450px", color: "#FBFBFD" }}>
-                    <Text size={24} fw={700} mb={24}>
-                      {mainTitle}
-                    </Text>
-                    <Text mb={10}>{mainCopy}</Text>
-                    <List listStyleType="disc" sx={{ color: "#FBFBFD" }}>
-                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleOne}</span> - {subCopyOne}</List.Item>
-                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleTwo}</span> - {subCopyTwo}</List.Item>
-                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleThree}</span> - {subCopyThree}</List.Item>
-                    </List>
-                  </Box>
+                <Box ta="left" sx={{ maxWidth: "90%", color: "#FBFBFD" }}>
+                  <Text size={24} fw={700} mb={24}>
+                    {mainTitle}
+                  </Text>
+                  <Text mb={10}>{mainCopy}</Text>
+                  <List listStyleType="disc" sx={{ color: "#FBFBFD" }}>
+                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleOne}</span> - {subCopyOne}</List.Item>
+                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleTwo}</span> - {subCopyTwo}</List.Item>
+                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleThree}</span> - {subCopyThree}</List.Item>
+                  </List>
                 </Box>
-              </MediaQuery>
+              </Box>
             </MediaQuery>
           )}{" "}
           {isImgAlignLeft ? (
             <MediaQuery
-              query="(max-width: 1024px) and (min-width: 768px)"
-              styles={{ width: "45%" }}
+              query="(max-width: 1024px)"
+              styles={{
+                width: "100%",
+                marginTop: "40px",
+                marginBottom: "40px",
+              }}
             >
-              <MediaQuery
-                query="(max-width: 768px)"
-                styles={{
-                  width: "100%",
-                  marginTop: "40px",
-                  marginBottom: "40px",
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  width: "50%",
+                  zIndex: 1,
+                  padding: "40px",
                 }}
               >
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexDirection: "column",
-                    width: "50%",
-                    zIndex: 1,
-                    padding: "40px",
-                  }}
-                >
-                  <Box ta="left" sx={{ maxWidth: "450px", color: "#FBFBFD" }}>
-                    <Text size={24} fw={700} mb={24}>
-                      {mainTitle}
-                    </Text>
-                    <Text mb={10}>{mainCopy}</Text>
-                    <List listStyleType="disc" sx={{ color: "#FBFBFD" }}>
-                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleOne}</span> - {subCopyOne}</List.Item>
-                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleTwo}</span> - {subCopyTwo}</List.Item>
-                      <List.Item><span style={{ fontWeight: 700 }}>{subTitleThree}</span> - {subCopyThree}</List.Item>
-                    </List>
-                  </Box>
+                <Box ta="left" sx={{ maxWidth: "90%", color: "#FBFBFD" }}>
+                  <Text size={24} fw={700} mb={24}>
+                    {mainTitle}
+                  </Text>
+                  <Text mb={10}>{mainCopy}</Text>
+                  <List listStyleType="disc" sx={{ color: "#FBFBFD" }}>
+                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleOne}</span> - {subCopyOne}</List.Item>
+                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleTwo}</span> - {subCopyTwo}</List.Item>
+                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleThree}</span> - {subCopyThree}</List.Item>
+                  </List>
                 </Box>
-              </MediaQuery>
+              </Box>
             </MediaQuery>
           ) : (
             <MediaQuery
-              query="(max-width: 1024px) and (min-width: 768px)"
-              styles={{ width: "55%" }}
+              query="(max-width: 1024px)"
+              styles={{ width: "100%" }}
             >
-              <MediaQuery
-                query="(max-width: 768px)"
-                styles={{ width: "100%", marginTop: "40px" }}
+              {/* <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "50%",
+                  position: "relative",
+                }}
               >
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "50%",
-                    position: "relative",
-                  }}
+                <MediaQuery
+                  query="(max-width: 768px)"
+                  styles={
+                    bgImgPath == "/images/features-page/prompter-bg.png"
+                      ? { right: 0, top: -120 }
+                      : { right: 0, top: -100 }
+                  }
                 >
-                  <MediaQuery
-                    query="(max-width: 768px)"
-                    styles={
-                      bgImgPath == "/images/features-page/prompter-bg.png"
-                        ? { right: 0, top: -120 }
-                        : { right: 0, top: -100 }
-                    }
-                  >
-                    <Image
-                      src={bgImgPath}
-                      width={
-                        bgImgPath == "/images/features-page/rundowns-bg.png"
-                          ? "100%"
-                          : "110%"
-                      }
-                      alt="bg image"
-                      sx={{
-                        position: "absolute",
-                        right:
-                          bgImgPath == "/images/features-page/rundowns-bg.png"
-                            ? -30
-                            : 0,
-                        top:
-                          bgImgPath == "/images/features-page/rundowns-bg.png"
-                            ? -50
-                            : -20,
-                      }}
-                    />
-                  </MediaQuery>
                   <Image
-                    src={imgPath}
-                    width={"90%"}
-                    radius={10}
-                    ml="auto"
-                    alt={altText}
+                    src={bgImgPath}
+                    width={
+                      bgImgPath == "/images/features-page/rundowns-bg.png"
+                        ? "100%"
+                        : "110%"
+                    }
+                    alt="bg image"
+                    sx={{
+                      position: "absolute",
+                      right:
+                        bgImgPath == "/images/features-page/rundowns-bg.png"
+                          ? -30
+                          : 0,
+                      top:
+                        bgImgPath == "/images/features-page/rundowns-bg.png"
+                          ? -50
+                          : -20,
+                    }}
                   />
-                </Box>
-              </MediaQuery>
+                </MediaQuery>
+                <Image
+                  src={imgPath}
+                  width={"90%"}
+                  radius={10}
+                  ml="auto"
+                  alt={altText}
+                />
+              </Box> */}
+
+              <Box
+                sx={{
+                  width: "50%",
+                  position: "relative",
+
+                  display: "grid",
+                  gridTemplateColumns: "repeat(10, 1fr)",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  src={imgPath}
+                  width={"90%"}
+                  radius={10}
+                  ml="auto"
+                  alt={altText}
+                  sx={{
+                    gridColumn: "1 / 11",
+                    gridRow: "1 / 2",
+                    zIndex: 2,
+                  }}
+                />
+                <Image
+                    src={bgImgPath}
+                    width={"100%"}
+                    alt="bg image"
+                    sx={{
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 2",
+                      // transform: "scale(1.3)"
+                      transform: bgImgPath == "/images/features-page/rundowns-bg.png" ? "scale(1.15)" : "scale(1.3)",
+                      zIndex: 1,
+                    }}
+                  />
+              </Box>
+
             </MediaQuery>
           )}
         </Box>
