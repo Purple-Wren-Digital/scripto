@@ -98,13 +98,8 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       About Us
                     </Text>
                   </Link>
-                  <Link href="/features" style={{ textDecoration: "none" }}>
-                    <Text size={15} mr={20} color={"#FBFBFD"}>
-                      What Is Scripto?
-                    </Text>
-                  </Link>
                   <Menu
-                    trigger="click"
+                    trigger="hover"
                     position="bottom-start"
                     withArrow
                     arrowPosition="center"
@@ -115,9 +110,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     classNames={classes}
                   >
                     <Menu.Target>
-                      <Text size={15} mr={20} color={"#FBFBFD"}>
-                        Who Uses Scripto?
-                      </Text>
+                      <Link href="/features" style={{ textDecoration: "none" }}>
+                        <Text size={15} mr={20} color={"#FBFBFD"}>
+                          Features
+                        </Text>
+                      </Link>
                     </Menu.Target>
                     <Menu.Dropdown>
                       <Menu.Item>
@@ -203,16 +200,12 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     About Us
                   </Text>
                 </Link>
-                <Link href={"/features"} style={{ textDecoration: "none",  marginBottom: 20 }}>
-                  <Text size={15} color={"#FBFBFD"}>
-                    What is Scripto?
+                <Link href={isToggledOpen ? "/features" : "#0"} style={{ textDecoration: "none",  marginBottom: 20 }}>
+                  <Text size={15} color={"#FBFBFD"} onClick={() => setIsToggledOpen(!isToggledOpen)}>
+                    Features
                   </Text>
                 </Link>
-
                 {/* dropdown menu */}
-                <Text size={15} color={"#FBFBFD"} mb={15} onClick={() => setIsToggledOpen(!isToggledOpen)}>
-                  Who Uses Scripto?
-                </Text>
                 <Box 
                   sx={{ 
                     height: isToggledOpen ? 130 : 0,
