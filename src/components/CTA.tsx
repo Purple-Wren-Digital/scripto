@@ -238,7 +238,7 @@ const CTA: React.FC<{
         <Button
           mb={120}
           h={60}
-          w={200}
+          // w={200}
           sx={{
             borderRadius: 10,
             fontSize: 18,
@@ -247,7 +247,7 @@ const CTA: React.FC<{
             zIndex: 2,
           }}
         >
-          Start free trial
+          Get Started for Free
         </Button>
       </Link>
     </Box>

@@ -6,6 +6,7 @@ import { PageWithLayout } from "next";
 const AlternatingFeature = ({
   bgImgPath,
   imgPath,
+  img2Path,
   bgColor,
   altText,
   mainTitle,
@@ -21,6 +22,7 @@ const AlternatingFeature = ({
 }: {
   bgImgPath: string;
   imgPath: string;
+  img2Path: string;
   bgColor: string;
   altText: string;
   mainTitle: string;
@@ -51,6 +53,61 @@ const AlternatingFeature = ({
               styles={{ width: "100%" }}
             >
 
+            {img2Path ? (
+              <Box
+                sx={{
+                  width: "50%",
+                  position: "relative",
+
+                  display: "grid",
+                  gridTemplateColumns: "repeat(10, 1fr)",
+                  gridTemplateRows: "repeat(5, 1fr)",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  src={imgPath}
+                  width={"95%"}
+                  radius={10}
+                  ml="auto"
+                  alt="screen image"
+                  sx={{
+                    gridColumn: "1 / 8",
+                    gridRow: "1 / 5",
+                    zIndex: 2,
+                  }}
+                />
+                <Box
+                  mr="auto"
+                  sx={{
+                    gridColumn: "4 / 11",
+                    gridRow: "2 / 6",
+                    zIndex: 2,
+                    borderRadius: 10,
+                    boxShadow: "-15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                    width: "95%",
+                  }}
+                >
+                  <Image
+                    src={img2Path}
+                    width={"100%"}
+                    radius={10}
+                    alt="screen image"
+                  />
+                </Box>
+                <Image
+                    src="/images/features-page/video-games-bg.png"
+                    width={"100%"}
+                    alt="bg image"
+                    sx={{
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 6",
+                      transform: "scale(1.3)",
+                      zIndex: 1,
+                    }}
+                  />
+              </Box>
+            ) : (
               <Box
                 sx={{
                   width: "50%",
@@ -86,6 +143,7 @@ const AlternatingFeature = ({
                     }}
                   />
               </Box>
+            )}
 
             </MediaQuery>
           ) : (
@@ -160,53 +218,62 @@ const AlternatingFeature = ({
               query="(max-width: 1024px)"
               styles={{ width: "100%" }}
             >
-              {/* <Box
+
+            {img2Path ? (
+              <Box
                 sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                   width: "50%",
                   position: "relative",
+
+                  display: "grid",
+                  gridTemplateColumns: "repeat(10, 1fr)",
+                  gridTemplateRows: "repeat(5, 1fr)",
+                  alignItems: "center",
                 }}
               >
-                <MediaQuery
-                  query="(max-width: 768px)"
-                  styles={
-                    bgImgPath == "/images/features-page/prompter-bg.png"
-                      ? { right: 0, top: -120 }
-                      : { right: 0, top: -100 }
-                  }
-                >
-                  <Image
-                    src={bgImgPath}
-                    width={
-                      bgImgPath == "/images/features-page/rundowns-bg.png"
-                        ? "100%"
-                        : "110%"
-                    }
-                    alt="bg image"
-                    sx={{
-                      position: "absolute",
-                      right:
-                        bgImgPath == "/images/features-page/rundowns-bg.png"
-                          ? -30
-                          : 0,
-                      top:
-                        bgImgPath == "/images/features-page/rundowns-bg.png"
-                          ? -50
-                          : -20,
-                    }}
-                  />
-                </MediaQuery>
                 <Image
                   src={imgPath}
-                  width={"90%"}
+                  width={"95%"}
                   radius={10}
                   ml="auto"
-                  alt={altText}
+                  alt="screen image"
+                  sx={{
+                    gridColumn: "4 / 11",
+                    gridRow: "1 / 5",
+                    zIndex: 2,
+                  }}
                 />
-              </Box> */}
-
+                <Box
+                  ml="auto"
+                  sx={{
+                    gridColumn: "1 / 8",
+                    gridRow: "2 / 6",
+                    zIndex: 2,
+                    borderRadius: 10,
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                    width: "95%",
+                  }}
+                >
+                  <Image
+                    src={img2Path}
+                    width={"100%"}
+                    radius={10}
+                    alt="screen image"
+                  />
+                </Box>
+                <Image
+                    src="/images/features-page/video-games-bg.png"
+                    width={"100%"}
+                    alt="bg image"
+                    sx={{
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 6",
+                      transform: "scale(1.3)",
+                      zIndex: 1,
+                    }}
+                  />
+              </Box>
+            ) : (
               <Box
                 sx={{
                   width: "50%",
@@ -242,7 +309,7 @@ const AlternatingFeature = ({
                     }}
                   />
               </Box>
-
+            )}
             </MediaQuery>
           )}
         </Box>
@@ -260,6 +327,7 @@ const AlternatingLayout = ({ features }: any) => {
             key={index}
             bgImgPath={feature.bgImgPath}
             imgPath={feature.imgPath}
+            img2Path={feature.img2Path}
             bgColor={feature.bgColor}
             altText={feature.altText}
             mainTitle={feature.mainTitle}
@@ -395,7 +463,8 @@ FeaturesPage.getInitialProps = async () => {
   const features = [
     {
       bgImgPath: "/images/features-page/video-games-bg.png",
-      imgPath: "/images/features-page/change-tracking.gif",
+      imgPath: "/images/script-editor.png",
+      img2Path: "/images/features-page/side-by-side-comparison.png",
       bgColor: "#301F55",
       altText: "scripto editor",
       mainTitle: "Collaborative Scriptwriting.",
@@ -410,7 +479,8 @@ FeaturesPage.getInitialProps = async () => {
     },
     {
       bgImgPath: "/images/features-page/rundowns-bg.png",
-      imgPath: "/images/features-page/smart-rundowns.gif",
+      imgPath: "/images/features-page/rundowns.png",
+      img2Path: "/images/features-page/rundowns-2.png",
       bgColor: "#8252C6",
       altText: "scripto editor",
       mainTitle: "Smart Rundowns.",
@@ -426,6 +496,7 @@ FeaturesPage.getInitialProps = async () => {
     {
       bgImgPath: "/images/features-page/prompter-bg.png",
       imgPath: "/images/features-page/screenplay-format.gif",
+      img2Path: "",
       bgColor: "#B89ADE",
       altText: "scripto editor",
       mainTitle: "Organizational Hub.",

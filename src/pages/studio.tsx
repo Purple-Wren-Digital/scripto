@@ -132,8 +132,8 @@ const StudioPage: PageWithLayout = ({ features }: any) => {
                 }}
               >
                 <Image
-                  src="/images/features-page/rundowns.png"
-                  width={"90%"}
+                  src="/images/studiotv-page/side-comp.png"
+                  width={"95%"}
                   radius={10}
                   ml="auto"
                   alt="screen image"
@@ -238,33 +238,53 @@ const StudioPage: PageWithLayout = ({ features }: any) => {
 
                   display: "grid",
                   gridTemplateColumns: "repeat(10, 1fr)",
+                  gridTemplateRows: "repeat(6, 1fr)",
                   alignItems: "center",
                 }}
               >
                 <Image
-                  src="/images/features-page/rundowns.png"
-                  width={"90%"}
+                  src="/images/studiotv-page/show-timing.png"
+                  width={"95%"}
                   radius={10}
                   ml="auto"
                   alt="screen image"
                   sx={{
-                    gridColumn: "1 / 11",
-                    gridRow: "1 / 2",
+                    gridColumn: "3 / 10",
+                    gridRow: "1 / 6",
                     zIndex: 2,
                   }}
                 />
+                <Box
+                  ml="auto"
+                  sx={{
+                    gridColumn: "1 / 8",
+                    gridRow: "1 / 7",
+                    zIndex: 2,
+                    borderRadius: "10px",
+                    width: "95%",
+                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <Image
+                    src="/images/studiotv-page/timing2.png"
+                    width={"100%"}
+                    radius={10}
+                    alt="screen image"
+                  />
+                </Box>
                 <Image
                     src="/images/features-page/prompter-bg.png"
                     width={"100%"}
                     alt="bg image"
                     sx={{
                       gridColumn: "1 / 11",
-                      gridRow: "1 / 2",
+                      gridRow: "1 / 6",
                       transform: "scale(1.3)",
                       zIndex: 1,
                     }}
                   />
               </Box>
+              
             </MediaQuery>
 
           </Box>
@@ -405,7 +425,7 @@ const StudioPage: PageWithLayout = ({ features }: any) => {
                 }}
               >
                 <Image
-                  src="/images/features-page/rundowns.png"
+                  src="/images/studiotv-page/push-to-prompter.png"
                   width={"90%"}
                   radius={10}
                   ml="auto"
