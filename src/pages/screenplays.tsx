@@ -3,7 +3,7 @@ import CTA from "@/components/CTA";
 import { Text, Box, Space, Image, MediaQuery, Title } from "@mantine/core";
 import { PageWithLayout } from "next";
 
-const ScreenplaysPage: PageWithLayout = ({ features }: any) => {
+const ScreenplaysPage: PageWithLayout = () => {
   return (
     <AppLayout>
       <Box
@@ -100,183 +100,251 @@ const ScreenplaysPage: PageWithLayout = ({ features }: any) => {
             </MediaQuery>
           </MediaQuery>
           <Title ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
-            Screenplays
+            Writers Rooms
           </Title>
-          <Text ta="center" size={20} sx={{ zIndex: 1 }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, architecto!
+          <Text ta="center" size={20} sx={{ zIndex: 1,  maxWidth: "850px" }}>
+            Whether you’re writing a scripted comedy, a sketch show, or a podcast, Scripto brings true collaboration to the writers room.
           </Text>
         </Box>
 
-        <MediaQuery query="(max-width: 1024px)" styles={{ minHeight: "550px" }}>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ flexDirection: "column" }}
-          >
-            <Box sx={{ display: "flex", minHeight: "682px", background: "#B89ADE" }}>
-              <MediaQuery
-                query="(max-width: 1024px) and (min-width: 768px)"
-                styles={{ width: "55%" }}
+        <MediaQuery
+          query="(max-width: 1024px)"
+          styles={{ flexDirection: "column" }}
+        >
+          <Box sx={{ display: "flex", minHeight: "682px", background: "#B89ADE" }}>
+
+            <MediaQuery
+              query="(max-width: 1024px)"
+              styles={{ width: "100%" }}
+            >
+
+              <Box
+                sx={{
+                  width: "50%",
+                  position: "relative",
+
+                  display: "grid",
+                  gridTemplateColumns: "repeat(10, 1fr)",
+                  alignItems: "center",
+                }}
               >
-                <MediaQuery
-                  query="(max-width: 768px)"
-                  styles={{ width: "100%", marginTop: "80px" }}
-                >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      width: "50%",
-                      position: "relative",
-                    }}
-                  >
-                    <MediaQuery
-                      query="(max-width: 768px)"
-                      styles={{ right: 0, top: -120 }}
-                    >
-                      <Image
-                        src="/images/features-page/prompter-bg.png"
-                        width={"110%"}
-                        alt="bg image"
-                        sx={{
-                          position: "absolute",
-                          right: -30,
-                          top: -50,
-                        }}
-                      />
-                    </MediaQuery>
-                    <Image
-                      src="/images/features-page/rundowns.png"
-                      width={"90%"}
-                      radius={10}
-                      ml="auto"
-                      alt="screen image"
-                    />
-                  </Box>
-                </MediaQuery>
-              </MediaQuery>
-              <MediaQuery
-                query="(max-width: 1024px) and (min-width: 768px)"
-                styles={{ width: "45%" }}
-              >
-                <MediaQuery
-                  query="(max-width: 768px)"
-                  styles={{
-                    width: "100%",
-                    marginTop: "40px",
-                    marginBottom: "40px",
+                <Image
+                  src="/images/features-page/rundowns.png"
+                  width={"90%"}
+                  radius={10}
+                  ml="auto"
+                  alt="screen image"
+                  sx={{
+                    gridColumn: "1 / 11",
+                    gridRow: "1 / 2",
+                    zIndex: 2,
                   }}
-                >
-                  <Box
+                />
+                <Image
+                    src="/images/features-page/prompter-bg.png"
+                    width={"100%"}
+                    alt="bg image"
                     sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                      width: "50%",
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 2",
+                      transform: "scale(1.3)",
                       zIndex: 1,
-                      padding: "40px",
                     }}
-                  >
-                    <Box ta="left" sx={{ maxWidth: "420px" }}>
-                      <Text size={24} fw={700} mb={24}>
-                        Screenplays Use Case
-                      </Text>
-                      <Text size={20}>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, labore consequatur non asperiores deserunt cumque. Voluptatem dolor architecto autem repudiandae.
-                      </Text>
-                    </Box>
-                  </Box>
-                </MediaQuery>
-              </MediaQuery>
-            </Box>
-          </MediaQuery>
+                  />
+              </Box>
+
+            </MediaQuery>
+
+            <MediaQuery
+              query="(max-width: 1024px)"
+              styles={{
+                width: "100%",
+                marginTop: "40px",
+                marginBottom: "40px",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  width: "50%",
+                  zIndex: 1,
+                  padding: "40px",
+                }}
+              >
+                <Box ta="left" sx={{ maxWidth: "420px" }}>
+                  <Text size={24} fw={700} mb={24}>
+                    Real-Time Collaboration.
+                  </Text>
+                  <Text size={20}>
+                    Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Write with others in the same script at the same time.
+                  </Text>
+                </Box>
+              </Box>
+            </MediaQuery>
+          </Box>
         </MediaQuery>
 
-        <MediaQuery query="(max-width: 1024px)" styles={{ minHeight: "550px" }}>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{ flexDirection: "column-reverse" }}
-          >
-            <Box sx={{ display: "flex", minHeight: "682px", background: "#8252C6" }}>
+        <MediaQuery
+          query="(max-width: 1024px)"
+          styles={{ flexDirection: "column-reverse" }}
+        >
+          <Box sx={{ display: "flex", minHeight: "682px", background: "#8252C6" }}>
+
             <MediaQuery
-                query="(max-width: 1024px) and (min-width: 768px)"
-                styles={{ width: "45%" }}
+              query="(max-width: 1024px)"
+              styles={{
+                width: "100%",
+                marginTop: "40px",
+                marginBottom: "40px",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  width: "50%",
+                  zIndex: 1,
+                  padding: "40px",
+                }}
               >
-                <MediaQuery
-                  query="(max-width: 768px)"
-                  styles={{
-                    width: "100%",
-                    marginTop: "40px",
-                    marginBottom: "40px",
+                <Box ta="left" sx={{ maxWidth: "420px" }}>
+                  <Text size={24} fw={700} mb={24}>
+                    Any Format.
+                  </Text>
+                  <Text size={20}>
+                    Scripto’s customizable format engine lets us configure scripts and rundowns to fit your project’s unique workflow, so your team can focus on what really matters: The content itself.
+                  </Text>
+                </Box>
+              </Box>
+            </MediaQuery>
+
+            <MediaQuery
+              query="(max-width: 1024px)"
+              styles={{ width: "100%" }}
+            >
+
+              <Box
+                sx={{
+                  width: "50%",
+                  position: "relative",
+
+                  display: "grid",
+                  gridTemplateColumns: "repeat(10, 1fr)",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  src="/images/features-page/rundowns.png"
+                  width={"90%"}
+                  radius={10}
+                  ml="auto"
+                  alt="screen image"
+                  sx={{
+                    gridColumn: "1 / 11",
+                    gridRow: "1 / 2",
+                    zIndex: 2,
                   }}
-                >
-                  <Box
+                />
+                <Image
+                    src="/images/features-page/video-games-bg.png"
+                    width={"100%"}
+                    alt="bg image"
                     sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                      width: "50%",
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 2",
+                      transform: "scale(1.3)",
                       zIndex: 1,
-                      padding: "40px",
                     }}
-                  >
-                    <Box ta="left" sx={{ maxWidth: "420px" }}>
-                      <Text size={24} fw={700} mb={24}>
-                        Screenplays Use Case
-                      </Text>
-                      <Text size={20}>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, labore consequatur non asperiores deserunt cumque. Voluptatem dolor architecto autem repudiandae.
-                      </Text>
-                    </Box>
-                  </Box>
-                </MediaQuery>
-              </MediaQuery>
-              <MediaQuery
-                query="(max-width: 1024px) and (min-width: 768px)"
-                styles={{ width: "55%" }}
+                  />
+              </Box>
+            </MediaQuery>
+
+          </Box>
+        </MediaQuery>
+
+        <MediaQuery
+          query="(max-width: 1024px)"
+          styles={{ flexDirection: "column" }}
+        >
+          <Box sx={{ display: "flex", minHeight: "682px", background: "#301F55" }}>
+
+            <MediaQuery
+              query="(max-width: 1024px)"
+              styles={{ width: "100%" }}
+            >
+
+              <Box
+                sx={{
+                  width: "50%",
+                  position: "relative",
+
+                  display: "grid",
+                  gridTemplateColumns: "repeat(10, 1fr)",
+                  alignItems: "center",
+                }}
               >
-                <MediaQuery
-                  query="(max-width: 768px)"
-                  styles={{ width: "100%", marginTop: "80px" }}
-                >
-                  <Box
+                <Image
+                  src="/images/features-page/rundowns.png"
+                  width={"90%"}
+                  radius={10}
+                  ml="auto"
+                  alt="screen image"
+                  sx={{
+                    gridColumn: "1 / 11",
+                    gridRow: "1 / 2",
+                    zIndex: 2,
+                  }}
+                />
+                <Image
+                    src="/images/features-page/rundowns-bg.png"
+                    width={"100%"}
+                    alt="bg image"
                     sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      width: "50%",
-                      position: "relative",
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 2",
+                      transform: "scale(1.3)",
+                      zIndex: 1,
                     }}
-                  >
-                    <MediaQuery
-                      query="(max-width: 768px)"
-                      styles={{ right: 0, top: -120 }}
-                    >
-                      <Image
-                        src="/images/features-page/video-games-bg.png"
-                        width={"110%"}
-                        alt="bg image"
-                        sx={{
-                          position: "absolute",
-                          right: -30,
-                          top: -50,
-                        }}
-                      />
-                    </MediaQuery>
-                    <Image
-                      src="/images/features-page/push-to-prompter.png"
-                      width={"90%"}
-                      radius={10}
-                      ml="auto"
-                      alt="screen image"
-                    />
-                  </Box>
-                </MediaQuery>
-              </MediaQuery>
-            </Box>
-          </MediaQuery>
+                  />
+              </Box>
+
+            </MediaQuery>
+
+            <MediaQuery
+              query="(max-width: 1024px)"
+              styles={{
+                width: "100%",
+                marginTop: "40px",
+                marginBottom: "40px",
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  flexDirection: "column",
+                  width: "50%",
+                  zIndex: 1,
+                  padding: "40px",
+                }}
+              >
+                <Box ta="left" sx={{ maxWidth: "420px" }}>
+                  <Text size={24} fw={700} mb={24}>
+                    Faster, Better, Cheaper. 
+                  </Text>
+                  <Text size={20}>
+                    Transparency between writers and production means major departments have up-to-the-second visibility into script updates, so they can pivot when the plan inevitably changes.
+                  </Text>
+                </Box>
+              </Box>
+            </MediaQuery>
+          </Box>
         </MediaQuery>
 
         <CTA background="#FBFBFD" buttonColor="#8252C6" text="#000" />

@@ -139,43 +139,6 @@ const CTA: React.FC<{
             />
           </MediaQuery>
         </>
-      ) : pathname == "/screenplays" ? (
-        <>
-          <MediaQuery query="(max-width: 768px)" styles={{ display: "none" }}>
-            <Image
-              src="/images/cta-bg/cta-team1.png"
-              alt="cta bg ellipse"
-              width={400}
-              sx={{
-                position: "absolute",
-                left: 0,
-                top: -80,
-                zIndex: 0,
-              }}
-            />
-          </MediaQuery>
-          <MediaQuery
-            query="(max-width: 768px)"
-            styles={{
-              opacity: 0.3,
-              right: "50%",
-              transform: "translateX(50%)",
-              top: -20,
-            }}
-          >
-            <Image
-              src="/images/cta-bg/cta-team2.png"
-              alt="cta bg ellipse"
-              width={350}
-              sx={{
-                position: "absolute",
-                right: 30,
-                bottom: -20,
-                zIndex: 0,
-              }}
-            />
-          </MediaQuery>
-        </>
       ) : pathname == "/games" ? (
         <>
           <MediaQuery query="(max-width: 768px)" styles={{ display: "none" }}>
