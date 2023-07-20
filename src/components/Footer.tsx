@@ -71,7 +71,7 @@ export default function Footer() {
               style={{ textDecoration: "none", margin: "25px" }}
             >
               <Text size={14} fw={700} color={colors.text}>
-                What Is Scripto?
+                Features
               </Text>
             </Link>
             <Link href="/" style={{ margin: "25px" }}>
@@ -132,7 +132,7 @@ export default function Footer() {
                   style={{ textDecoration: "none", marginLeft: "50px" }}
                 >
                   <Text size={14} fw={700} color={colors.text}>
-                    What is Scripto?
+                    Features
                   </Text>
                 </Link>
               </Box>
