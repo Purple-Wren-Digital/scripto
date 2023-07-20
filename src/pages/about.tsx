@@ -76,10 +76,10 @@ const AboutPage: PageWithLayout = () => {
               }}
             />
           </MediaQuery>
-          <Title size={48} fw={700} mb={25} sx={{ zIndex: 1 }}>
+          <Title size={48} fw={700} mb={25} mt={40} sx={{ zIndex: 1 }}>
             About Us
           </Title>
-          <Text ta="center" size={20} sx={{ maxWidth: 645, zIndex: 1 }}>
+          <Text ta="center" size={20} mb={40} sx={{ maxWidth: 645, zIndex: 1 }}>
             Stephen Colbert and Rob Dubbin co-founded Scripto to solve their own problem: In a highly collaborative TV environment with ambitious daily deadlines, their pre-cloud software couldn’t keep up. Now, Scripto combines the real-time flow of Google Docs with the professional writing and production formats used in TV, video games, and&nbsp;other&nbsp;media.
           </Text>
         </Box>

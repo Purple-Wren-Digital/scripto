@@ -218,7 +218,7 @@ const LandingPage: PageWithLayout = () => {
               }}
             >
               <Card
-                imgSrc="/images/collaboration.png"
+                imgSrc="/images/format.png"
                 title="Collaborative Scriptwriting."
                 text="Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page."
                 link="/features"
@@ -230,7 +230,7 @@ const LandingPage: PageWithLayout = () => {
                 link="/features"
               />
               <Card
-                imgSrc="/images/format.png"
+                imgSrc="/images/collaboration.png"
                 title="Organizational Hub."
                 text="Keep your docs in a secure central location, and manage who has access to them. Less email, we promise."
                 link="/features"
@@ -1483,7 +1483,7 @@ const LandingPage: PageWithLayout = () => {
                 alignItems: "center",
                 height: "500px",
                 width: "50%",
-                backgroundImage: "url(/images/studio.png)",
+                backgroundImage: "url(/images/studiotv.png)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
@@ -1599,10 +1599,10 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Title size={24} fw={700} mb={40}>
-                    Writers Rooms
+                    Video Game Studios
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Whether you’re writing a scripted comedy, a sketch show, or a podcast, Scripto brings true collaboration to the writers room.
+                    If your game prioritizes narrative design or features multiple content contributors, Scripto lets you run a professional writing process in a cozy editorial environment that integrates directly with your build pipeline. 
                   </Text>
                   <Link href="/screenplays">
                     <Button
@@ -1626,7 +1626,7 @@ const LandingPage: PageWithLayout = () => {
                 alignItems: "center",
                 height: "500px",
                 width: "50%",
-                backgroundImage: "url(/images/workspace.png)",
+                backgroundImage: "url(/images/games.png)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
@@ -1658,7 +1658,7 @@ const LandingPage: PageWithLayout = () => {
                 alignItems: "center",
                 height: "500px",
                 width: "50%",
-                backgroundImage: "url(/images/games.png)",
+                backgroundImage: "url(/images/workspace.png)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
@@ -1701,10 +1701,10 @@ const LandingPage: PageWithLayout = () => {
                   }}
                 >
                   <Title size={24} fw={700} mb={40}>
-                    Video Game Studios
+                    Writers Rooms
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    If your game prioritizes narrative design or features multiple content contributors, Scripto lets you run a professional writing process in a cozy editorial environment that integrates directly with your build pipeline. 
+                    Whether you’re writing a scripted comedy, a sketch show, or a podcast, Scripto brings true collaboration to the writers room.
                   </Text>
                   <Link href="/games">
                     <Button
@@ -1797,6 +1797,7 @@ const LandingPage: PageWithLayout = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
+                  height: "100%",
                 }}
               >
                 <Text mb={20} size={24}>
@@ -1809,12 +1810,19 @@ const LandingPage: PageWithLayout = () => {
                   punch up jokes, rewrite, export production-friendly
                   drafts,&nbsp;and&nbsp;more.”
                 </Text>
-                <Avatar
+                {/* <Avatar
                   mb={20}
-                  radius="xl"
-                  size={40}
+                  radius="sm"
+                  size={60}
                   variant="filled"
                   color="dark"
+                /> */}
+                <Image 
+                  alt="testimonial logo"
+                  src="/images/show-logos/tooning-out-the-news.png"
+                  height={40}
+                  fit="contain"
+                  mb={20}
                 />
                 <Text size={14} mb={50}>
                   RJ Fried, Executive Producer{" "}
@@ -1832,18 +1840,26 @@ const LandingPage: PageWithLayout = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   justifyContent: "center",
+                  height: "100%",
                 }}
               >
                 <Text mb={20} size={24}>
                   “It feels like this was made specifically for us, specifically
                   for this project.”
                 </Text>
-                <Avatar
+                {/* <Avatar
                   mb={20}
                   radius="xl"
                   size={40}
                   variant="filled"
                   color="dark"
+                /> */}
+                <Image 
+                  alt="testimonial logo"
+                  src="/images/show-logos/finji.png"
+                  height={40}
+                  fit="contain"
+                  mb={20}
                 />
                 <Text size={14} mb={50}>
                   Adam Saltsman, founder{" "}
