@@ -125,16 +125,16 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                         </Link>
                       </Menu.Item>
                       <Menu.Item>
-                        <Link href="/games" style={{ textDecoration: "none" }}>
+                        <Link href="/screenplays" style={{ textDecoration: "none" }}>
                           <Text size={15} mr={20} color={"#FBFBFD"}>
-                            Video Game Studios
+                            Writers Rooms
                           </Text>
                         </Link>
                       </Menu.Item>
                       <Menu.Item>
-                        <Link href="/screenplays" style={{ textDecoration: "none" }}>
+                        <Link href="/games" style={{ textDecoration: "none" }}>
                           <Text size={15} mr={20} color={"#FBFBFD"}>
-                            Writers Rooms
+                            Video Game Studios
                           </Text>
                         </Link>
                       </Menu.Item>
@@ -230,18 +230,6 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     </Text>
                   </Link>
                   <Link 
-                    href='/games' 
-                    style={{ 
-                      textDecoration: "none",
-                      opacity: isToggledOpen ? 1 : 0,
-                      transition: 'opacity 250ms ease-in', 
-                    }}
-                  >
-                    <Text size={15} color={"#FBFBFD"}>
-                      Video Game Studios
-                    </Text>
-                  </Link>
-                  <Link 
                     href='/screenplays' 
                     style={{ 
                       textDecoration: "none",
@@ -251,6 +239,18 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                   >
                     <Text size={15} color={"#FBFBFD"}>
                       Writers Rooms
+                    </Text>
+                  </Link>
+                  <Link 
+                    href='/games' 
+                    style={{ 
+                      textDecoration: "none",
+                      opacity: isToggledOpen ? 1 : 0,
+                      transition: 'opacity 250ms ease-in', 
+                    }}
+                  >
+                    <Text size={15} color={"#FBFBFD"}>
+                      Video Game Studios
                     </Text>
                   </Link>
                 </Box>

@@ -1870,7 +1870,7 @@ const LandingPage: PageWithLayout = () => {
           </Carousel>
         </Box>
       </Box>
-      <CTA background="#FBFBFD" buttonColor="#301F55" text="#000" />
+      <CTA background="#FBFBFD" buttonColor="#8252C6" text="#000" />
       {/* <Footer /> */}
     </AppLayout>
   );

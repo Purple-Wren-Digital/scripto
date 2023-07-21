@@ -641,7 +641,7 @@ const AboutPage: PageWithLayout = () => {
           </Box>
         </Box>
       </Box>
-      <CTA background="#252634" buttonColor="#8252C6" text="#FBFBFD" />
+      <CTA background="#FBFBFD" buttonColor="#8252C6" text="#000" />
     </AppLayout>
   );
 };
