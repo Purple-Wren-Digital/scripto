@@ -1557,7 +1557,7 @@ const LandingPage: PageWithLayout = () => {
                       w={200}
                       sx={{ borderRadius: "10px" }}
                     >
-                      Learn more
+                      Learn More
                     </Button>
                   </Link>
                 </Box>
@@ -1604,14 +1604,14 @@ const LandingPage: PageWithLayout = () => {
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
                     If your game prioritizes narrative design or features multiple content contributors, Scripto lets you run a professional writing process in a cozy editorial environment that integrates directly with your build pipeline. 
                   </Text>
-                  <Link href="/screenplays">
+                  <Link href="/games">
                     <Button
                       variant="outline"
                       h={60}
                       w={200}
                       sx={{ borderRadius: "10px" }}
                     >
-                      Learn more
+                      Learn More
                     </Button>
                   </Link>
                 </Box>
@@ -1706,14 +1706,14 @@ const LandingPage: PageWithLayout = () => {
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
                     Whether you’re writing a scripted comedy, a sketch show, or a podcast, Scripto brings true collaboration to the writers room.
                   </Text>
-                  <Link href="/games">
+                  <Link href="/screenplays">
                     <Button
                       variant="outline"
                       h={60}
                       w={200}
                       sx={{ borderRadius: "10px" }}
                     >
-                      Learn more
+                      Learn More
                     </Button>
                   </Link>
                 </Box>
