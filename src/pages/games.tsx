@@ -99,10 +99,10 @@ const VideogamesPage: PageWithLayout = ({ features }: any) => {
               </MediaQuery>
             </MediaQuery>
           </MediaQuery>
-          <Title ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
+          <Title ta="center" size={48} mt={40} fw={700} sx={{ zIndex: 1 }}>
             Video Game Studios
           </Title>
-          <Text ta="center" size={20} sx={{ zIndex: 1, maxWidth: "850px" }}>
+          <Text ta="center" size={20} mb={40} sx={{ zIndex: 1, maxWidth: "850px" }}>
             Scripto powers a collaborative writing environment tailored to the needs of narrative video games. Stop asking your writers to learn about version control, spend less time cutting and pasting, and playtest new work immediately.
           </Text>
         </Box>

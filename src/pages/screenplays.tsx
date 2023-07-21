@@ -99,10 +99,10 @@ const ScreenplaysPage: PageWithLayout = () => {
               </MediaQuery>
             </MediaQuery>
           </MediaQuery>
-          <Title ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
+          <Title ta="center" size={48} fw={700} mt={40} sx={{ zIndex: 1 }}>
             Writers Rooms
           </Title>
-          <Text ta="center" size={20} sx={{ zIndex: 1,  maxWidth: "850px" }}>
+          <Text ta="center" size={20} mb={40} sx={{ zIndex: 1,  maxWidth: "850px" }}>
             Whether you’re writing a scripted comedy, a sketch show, or a podcast, Scripto brings true collaboration to the writers room.
           </Text>
         </Box>

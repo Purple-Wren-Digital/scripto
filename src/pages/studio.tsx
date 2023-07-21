@@ -99,10 +99,10 @@ const StudioPage: PageWithLayout = ({ features }: any) => {
               </MediaQuery>
             </MediaQuery>
           </MediaQuery>
-          <Title ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
+          <Title ta="center" size={48} fw={700} mt={40} sx={{ zIndex: 1 }}>
             Studio TV
           </Title>
-          <Text ta="center" size={20} sx={{ zIndex: 1, maxWidth: "850px" }}>
+          <Text ta="center" size={20} mb={40} sx={{ zIndex: 1, maxWidth: "850px" }}>
             Scripto powers the world-class writing process at Emmy-winning shows like{" "} 
             <span style={{ fontStyle: "italic" }}>Last Week Tonight{" "}</span>
             and
@@ -244,12 +244,12 @@ const StudioPage: PageWithLayout = ({ features }: any) => {
               >
                 <Image
                   src="/images/studiotv-page/show-timing.png"
-                  width={"95%"}
+                  width={"90%"}
                   radius={10}
                   ml="auto"
                   alt="screen image"
                   sx={{
-                    gridColumn: "3 / 10",
+                    gridColumn: "3 / 11",
                     gridRow: "1 / 6",
                     zIndex: 2,
                   }}

@@ -445,10 +445,10 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
               </MediaQuery>
             </MediaQuery>
           </MediaQuery>
-          <Title ta="center" size={48} fw={700} sx={{ zIndex: 1 }}>
+          <Title ta="center" size={48} fw={700} mt={40} sx={{ zIndex: 1 }}>
             Key Features
           </Title>
-          <Text ta="center" size={20} sx={{ zIndex: 1 }}>
+          <Text ta="center" size={20} mb={40} sx={{ zIndex: 1 }}>
             Collaborative script writing and production software built for creative teams.
           </Text>
         </Box>
