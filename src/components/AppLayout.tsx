@@ -36,14 +36,6 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
   const label = opened ? "Close navigation" : "Open navigation";
   const { classes } = useStyles();
 
-  const [isToggledOpen, setIsToggledOpen] = useState(false);
-
-  const closeMenu = () => {
-    toggle();
-    setIsToggledOpen(false);
-  }
-  
-
   return (
     <AppShell
       padding={0}
@@ -78,7 +70,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
           {isMobileMenu ? (
             <Burger
               opened={opened}
-              onClick={() => closeMenu()}
+              onClick={toggle}
               aria-label={label}
               color="white"
               sx={{ marginLeft: "auto" }}
@@ -196,65 +188,30 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                 }}
               >
                 <Link href="/about" style={{ textDecoration: "none", marginBottom: 20 }}>
-                  <Text size={15} color={"#FBFBFD"}>
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
                     About Us
                   </Text>
                 </Link>
-                <Link href={isToggledOpen ? "/features" : "#0"} style={{ textDecoration: "none",  marginBottom: 20 }}>
-                  <Text size={15} color={"#FBFBFD"} onClick={() => setIsToggledOpen(!isToggledOpen)}>
+                <Link href={"/features"} style={{ textDecoration: "none",  marginBottom: 20 }}>
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
                     Features
                   </Text>
                 </Link>
-                {/* dropdown menu */}
-                <Box 
-                  sx={{ 
-                    height: isToggledOpen ? 130 : 0,
-                    overflow: 'hidden',
-                    transition: 'height 250ms ease-in-out',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    gap: 20,
-                  }}
-                >
-                  <Link 
-                    href='/studio' 
-                    style={{ 
-                      textDecoration: "none",
-                      opacity: isToggledOpen ? 1 : 0,
-                      transition: 'opacity 250ms ease-in', 
-                    }}
-                  >
-                    <Text size={15} color={"#FBFBFD"}>
-                      Studio TV
-                    </Text>
-                  </Link>
-                  <Link 
-                    href='/screenplays' 
-                    style={{ 
-                      textDecoration: "none",
-                      opacity: isToggledOpen ? 1 : 0,
-                      transition: 'opacity 250ms ease-in', 
-                    }}
-                  >
-                    <Text size={15} color={"#FBFBFD"}>
-                      Writers Rooms
-                    </Text>
-                  </Link>
-                  <Link 
-                    href='/games' 
-                    style={{ 
-                      textDecoration: "none",
-                      opacity: isToggledOpen ? 1 : 0,
-                      transition: 'opacity 250ms ease-in', 
-                    }}
-                  >
-                    <Text size={15} color={"#FBFBFD"}>
-                      Video Game Studios
-                    </Text>
-                  </Link>
-                </Box>
-
+                <Link href={"/studio"} style={{ textDecoration: "none",  marginBottom: 20 }}>
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
+                    Studio TV
+                  </Text>
+                </Link>
+                <Link href={"/screenplays"} style={{ textDecoration: "none",  marginBottom: 20 }}>
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
+                    Writers Rooms
+                  </Text>
+                </Link>
+                <Link href={"/games"} style={{ textDecoration: "none",  marginBottom: 20 }}>
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
+                    Video Game Studios
+                  </Text>
+                </Link>
                 <Link
                   href="https://app.scripto.live/login"
                   style={{ textDecoration: "none", marginBottom: 20 }}
