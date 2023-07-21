@@ -102,8 +102,14 @@ const ScreenplaysPage: PageWithLayout = () => {
           <Title ta="center" size={48} fw={700} mt={40} sx={{ zIndex: 1 }}>
             Writers Rooms
           </Title>
-          <Text ta="center" size={20} mb={40} sx={{ zIndex: 1,  maxWidth: "850px" }}>
-            Whether you’re writing a scripted comedy, a sketch show, or a podcast, Scripto brings true collaboration to the writers room.
+          <Text
+            ta="center"
+            size={20}
+            mb={40}
+            sx={{ zIndex: 1, maxWidth: "850px" }}
+          >
+            Whether you’re writing a scripted comedy, a sketch show, or a
+            podcast, Scripto brings true collaboration to the writers room.
           </Text>
         </Box>
 
@@ -111,13 +117,10 @@ const ScreenplaysPage: PageWithLayout = () => {
           query="(max-width: 1024px)"
           styles={{ flexDirection: "column" }}
         >
-          <Box sx={{ display: "flex", minHeight: "682px", background: "#B89ADE" }}>
-
-            <MediaQuery
-              query="(max-width: 1024px)"
-              styles={{ width: "100%" }}
-            >
-
+          <Box
+            sx={{ display: "flex", minHeight: "682px", background: "#B89ADE" }}
+          >
+            <MediaQuery query="(max-width: 1024px)" styles={{ width: "100%" }}>
               <Box
                 sx={{
                   width: "50%",
@@ -129,7 +132,7 @@ const ScreenplaysPage: PageWithLayout = () => {
                 }}
               >
                 <Image
-                  src="/images/features-page/rundowns.png"
+                  src="/images/features-page/collaborative-script-writing.png"
                   width={"90%"}
                   radius={10}
                   ml="auto"
@@ -141,18 +144,17 @@ const ScreenplaysPage: PageWithLayout = () => {
                   }}
                 />
                 <Image
-                    src="/images/features-page/prompter-bg.png"
-                    width={"100%"}
-                    alt="bg image"
-                    sx={{
-                      gridColumn: "1 / 11",
-                      gridRow: "1 / 2",
-                      transform: "scale(1.3)",
-                      zIndex: 1,
-                    }}
-                  />
+                  src="/images/features-page/prompter-bg.png"
+                  width={"100%"}
+                  alt="bg image"
+                  sx={{
+                    gridColumn: "1 / 11",
+                    gridRow: "1 / 2",
+                    transform: "scale(1.3)",
+                    zIndex: 1,
+                  }}
+                />
               </Box>
-
             </MediaQuery>
 
             <MediaQuery
@@ -179,7 +181,10 @@ const ScreenplaysPage: PageWithLayout = () => {
                     Real-Time Collaboration.
                   </Text>
                   <Text size={20}>
-                    Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Write with others in the same script at the same time.
+                    Whether you’re writing in the same room, in the same Zoom,
+                    or across different time zones, Scripto keeps everyone on
+                    the same page. Write with others in the same script at the
+                    same time.
                   </Text>
                 </Box>
               </Box>
@@ -191,8 +196,9 @@ const ScreenplaysPage: PageWithLayout = () => {
           query="(max-width: 1024px)"
           styles={{ flexDirection: "column-reverse" }}
         >
-          <Box sx={{ display: "flex", minHeight: "682px", background: "#8252C6" }}>
-
+          <Box
+            sx={{ display: "flex", minHeight: "682px", background: "#8252C6" }}
+          >
             <MediaQuery
               query="(max-width: 1024px)"
               styles={{
@@ -217,17 +223,16 @@ const ScreenplaysPage: PageWithLayout = () => {
                     Any Format.
                   </Text>
                   <Text size={20}>
-                    Scripto’s customizable format engine lets us configure scripts and rundowns to fit your project’s unique workflow, so your team can focus on what really matters: The content itself.
+                    Scripto’s customizable format engine lets us configure
+                    scripts and rundowns to fit your project’s unique workflow,
+                    so your team can focus on what really matters: The content
+                    itself.
                   </Text>
                 </Box>
               </Box>
             </MediaQuery>
 
-            <MediaQuery
-              query="(max-width: 1024px)"
-              styles={{ width: "100%" }}
-            >
-
+            <MediaQuery query="(max-width: 1024px)" styles={{ width: "100%" }}>
               <Box
                 sx={{
                   width: "50%",
@@ -270,19 +275,18 @@ const ScreenplaysPage: PageWithLayout = () => {
                   />
                 </Box>
                 <Image
-                    src="/images/features-page/video-games-bg.png"
-                    width={"100%"}
-                    alt="bg image"
-                    sx={{
-                      gridColumn: "1 / 11",
-                      gridRow: "1 / 6",
-                      transform: "scale(1.3)",
-                      zIndex: 1,
-                    }}
-                  />
+                  src="/images/features-page/video-games-bg.png"
+                  width={"100%"}
+                  alt="bg image"
+                  sx={{
+                    gridColumn: "1 / 11",
+                    gridRow: "1 / 6",
+                    transform: "scale(1.3)",
+                    zIndex: 1,
+                  }}
+                />
               </Box>
             </MediaQuery>
-
           </Box>
         </MediaQuery>
 
@@ -290,13 +294,10 @@ const ScreenplaysPage: PageWithLayout = () => {
           query="(max-width: 1024px)"
           styles={{ flexDirection: "column" }}
         >
-          <Box sx={{ display: "flex", minHeight: "682px", background: "#301F55" }}>
-
-            <MediaQuery
-              query="(max-width: 1024px)"
-              styles={{ width: "100%" }}
-            >
-
+          <Box
+            sx={{ display: "flex", minHeight: "682px", background: "#301F55" }}
+          >
+            <MediaQuery query="(max-width: 1024px)" styles={{ width: "100%" }}>
               <Box
                 sx={{
                   width: "50%",
@@ -320,18 +321,17 @@ const ScreenplaysPage: PageWithLayout = () => {
                   }}
                 />
                 <Image
-                    src="/images/features-page/rundowns-bg.png"
-                    width={"100%"}
-                    alt="bg image"
-                    sx={{
-                      gridColumn: "1 / 11",
-                      gridRow: "1 / 2",
-                      transform: "scale(1.15)",
-                      zIndex: 1,
-                    }}
-                  />
+                  src="/images/features-page/rundowns-bg.png"
+                  width={"100%"}
+                  alt="bg image"
+                  sx={{
+                    gridColumn: "1 / 11",
+                    gridRow: "1 / 2",
+                    transform: "scale(1.15)",
+                    zIndex: 1,
+                  }}
+                />
               </Box>
-
             </MediaQuery>
 
             <MediaQuery
@@ -355,10 +355,12 @@ const ScreenplaysPage: PageWithLayout = () => {
               >
                 <Box ta="left" sx={{ maxWidth: "420px" }}>
                   <Text size={24} fw={700} mb={24}>
-                    Faster, Better, Cheaper. 
+                    Faster, Better, Cheaper.
                   </Text>
                   <Text size={20}>
-                    Transparency between writers and production means major departments have up-to-the-second visibility into script updates, so they can pivot when the plan inevitably changes.
+                    Transparency between writers and production means major
+                    departments have up-to-the-second visibility into script
+                    updates, so they can pivot when the plan inevitably changes.
                   </Text>
                 </Box>
               </Box>

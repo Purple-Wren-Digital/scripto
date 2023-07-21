@@ -1,6 +1,15 @@
 import { AppLayout } from "@/components/AppLayout";
 import CTA from "@/components/CTA";
-import { Text, Box, Space, Image, MediaQuery, Title, List, getDefaultZIndex } from "@mantine/core";
+import {
+  Text,
+  Box,
+  Space,
+  Image,
+  MediaQuery,
+  Title,
+  List,
+  getDefaultZIndex,
+} from "@mantine/core";
 import { PageWithLayout } from "next";
 
 const AlternatingFeature = ({
@@ -48,54 +57,50 @@ const AlternatingFeature = ({
       >
         <Box sx={{ display: "flex", minHeight: "682px", background: bgColor }}>
           {isImgAlignLeft ? (
-            <MediaQuery
-              query="(max-width: 1024px)"
-              styles={{ width: "100%" }}
-            >
-
-            {img2Path ? (
-              <Box
-                sx={{
-                  width: "50%",
-                  position: "relative",
-
-                  display: "grid",
-                  gridTemplateColumns: "repeat(10, 1fr)",
-                  gridTemplateRows: "repeat(5, 1fr)",
-                  alignItems: "center",
-                }}
-              >
-                <Image
-                  src={imgPath}
-                  width={"95%"}
-                  radius={10}
-                  ml="auto"
-                  alt="screen image"
-                  sx={{
-                    gridColumn: "1 / 8",
-                    gridRow: "1 / 5",
-                    zIndex: 2,
-                  }}
-                />
+            <MediaQuery query="(max-width: 1024px)" styles={{ width: "100%" }}>
+              {img2Path ? (
                 <Box
-                  mr="auto"
                   sx={{
-                    gridColumn: "4 / 11",
-                    gridRow: "2 / 6",
-                    zIndex: 2,
-                    borderRadius: 10,
-                    boxShadow: "-15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-                    width: "95%",
+                    width: "50%",
+                    position: "relative",
+
+                    display: "grid",
+                    gridTemplateColumns: "repeat(10, 1fr)",
+                    gridTemplateRows: "repeat(5, 1fr)",
+                    alignItems: "center",
                   }}
                 >
                   <Image
-                    src={img2Path}
-                    width={"100%"}
+                    src={imgPath}
+                    width={"95%"}
                     radius={10}
+                    ml="auto"
                     alt="screen image"
+                    sx={{
+                      gridColumn: "1 / 8",
+                      gridRow: "1 / 5",
+                      zIndex: 2,
+                    }}
                   />
-                </Box>
-                <Image
+                  <Box
+                    mr="auto"
+                    sx={{
+                      gridColumn: "4 / 11",
+                      gridRow: "2 / 6",
+                      zIndex: 2,
+                      borderRadius: 10,
+                      boxShadow: "-15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      width: "95%",
+                    }}
+                  >
+                    <Image
+                      src={img2Path}
+                      width={"100%"}
+                      radius={10}
+                      alt="screen image"
+                    />
+                  </Box>
+                  <Image
                     src="/images/features-page/video-games-bg.png"
                     width={"100%"}
                     alt="bg image"
@@ -106,31 +111,31 @@ const AlternatingFeature = ({
                       zIndex: 1,
                     }}
                   />
-              </Box>
-            ) : (
-              <Box
-                sx={{
-                  width: "50%",
-                  position: "relative",
-
-                  display: "grid",
-                  gridTemplateColumns: "repeat(10, 1fr)",
-                  alignItems: "center",
-                }}
-              >
-                <Image
-                  src={imgPath}
-                  width={"90%"}
-                  radius={10}
-                  ml="auto"
-                  alt={altText}
+                </Box>
+              ) : (
+                <Box
                   sx={{
-                    gridColumn: "1 / 11",
-                    gridRow: "1 / 2",
-                    zIndex: 2,
+                    width: "50%",
+                    position: "relative",
+
+                    display: "grid",
+                    gridTemplateColumns: "repeat(10, 1fr)",
+                    alignItems: "center",
                   }}
-                />
-                <Image
+                >
+                  <Image
+                    src={imgPath}
+                    width={"90%"}
+                    radius={10}
+                    ml="auto"
+                    alt={altText}
+                    sx={{
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 2",
+                      zIndex: 2,
+                    }}
+                  />
+                  <Image
                     src={bgImgPath}
                     width={"100%"}
                     alt="bg image"
@@ -138,13 +143,15 @@ const AlternatingFeature = ({
                       gridColumn: "1 / 11",
                       gridRow: "1 / 2",
                       // transform: "scale(1.3)"
-                      transform: bgImgPath == "/images/features-page/rundowns-bg.png" ? "scale(1.15)" : "scale(1.3)",
+                      transform:
+                        bgImgPath == "/images/features-page/rundowns-bg.png"
+                          ? "scale(1.15)"
+                          : "scale(1.3)",
                       zIndex: 1,
                     }}
                   />
-              </Box>
-            )}
-
+                </Box>
+              )}
             </MediaQuery>
           ) : (
             <MediaQuery
@@ -172,9 +179,18 @@ const AlternatingFeature = ({
                   </Text>
                   <Text mb={10}>{mainCopy}</Text>
                   <List listStyleType="disc" sx={{ color: "#FBFBFD" }}>
-                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleOne}</span> - {subCopyOne}</List.Item>
-                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleTwo}</span> - {subCopyTwo}</List.Item>
-                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleThree}</span> - {subCopyThree}</List.Item>
+                    <List.Item>
+                      <span style={{ fontWeight: 700 }}>{subTitleOne}</span> -{" "}
+                      {subCopyOne}
+                    </List.Item>
+                    <List.Item>
+                      <span style={{ fontWeight: 700 }}>{subTitleTwo}</span> -{" "}
+                      {subCopyTwo}
+                    </List.Item>
+                    <List.Item>
+                      <span style={{ fontWeight: 700 }}>{subTitleThree}</span> -{" "}
+                      {subCopyThree}
+                    </List.Item>
                   </List>
                 </Box>
               </Box>
@@ -206,62 +222,67 @@ const AlternatingFeature = ({
                   </Text>
                   <Text mb={10}>{mainCopy}</Text>
                   <List listStyleType="disc" sx={{ color: "#FBFBFD" }}>
-                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleOne}</span> - {subCopyOne}</List.Item>
-                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleTwo}</span> - {subCopyTwo}</List.Item>
-                    <List.Item><span style={{ fontWeight: 700 }}>{subTitleThree}</span> - {subCopyThree}</List.Item>
+                    <List.Item>
+                      <span style={{ fontWeight: 700 }}>{subTitleOne}</span> -{" "}
+                      {subCopyOne}
+                    </List.Item>
+                    <List.Item>
+                      <span style={{ fontWeight: 700 }}>{subTitleTwo}</span> -{" "}
+                      {subCopyTwo}
+                    </List.Item>
+                    <List.Item>
+                      <span style={{ fontWeight: 700 }}>{subTitleThree}</span> -{" "}
+                      {subCopyThree}
+                    </List.Item>
                   </List>
                 </Box>
               </Box>
             </MediaQuery>
           ) : (
-            <MediaQuery
-              query="(max-width: 1024px)"
-              styles={{ width: "100%" }}
-            >
-
-            {img2Path ? (
-              <Box
-                sx={{
-                  width: "50%",
-                  position: "relative",
-
-                  display: "grid",
-                  gridTemplateColumns: "repeat(10, 1fr)",
-                  gridTemplateRows: "repeat(5, 1fr)",
-                  alignItems: "center",
-                }}
-              >
-                <Image
-                  src={imgPath}
-                  width={"95%"}
-                  radius={10}
-                  ml="auto"
-                  alt="screen image"
-                  sx={{
-                    gridColumn: "4 / 11",
-                    gridRow: "1 / 5",
-                    zIndex: 2,
-                  }}
-                />
+            <MediaQuery query="(max-width: 1024px)" styles={{ width: "100%" }}>
+              {img2Path ? (
                 <Box
-                  ml="auto"
                   sx={{
-                    gridColumn: "1 / 8",
-                    gridRow: "2 / 6",
-                    zIndex: 2,
-                    borderRadius: 10,
-                    boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
-                    width: "95%",
+                    width: "50%",
+                    position: "relative",
+
+                    display: "grid",
+                    gridTemplateColumns: "repeat(10, 1fr)",
+                    gridTemplateRows: "repeat(5, 1fr)",
+                    alignItems: "center",
                   }}
                 >
                   <Image
-                    src={img2Path}
-                    width={"100%"}
+                    src={imgPath}
+                    width={"95%"}
                     radius={10}
+                    ml="auto"
                     alt="screen image"
+                    sx={{
+                      gridColumn: "4 / 11",
+                      gridRow: "1 / 5",
+                      zIndex: 2,
+                    }}
                   />
-                </Box>
-                <Image
+                  <Box
+                    ml="auto"
+                    sx={{
+                      gridColumn: "1 / 8",
+                      gridRow: "2 / 6",
+                      zIndex: 2,
+                      borderRadius: 10,
+                      boxShadow: "15px 20px 35px 5px rgba(0, 0, 0, 0.25)",
+                      width: "95%",
+                    }}
+                  >
+                    <Image
+                      src={img2Path}
+                      width={"100%"}
+                      radius={10}
+                      alt="screen image"
+                    />
+                  </Box>
+                  <Image
                     src="/images/features-page/video-games-bg.png"
                     width={"100%"}
                     alt="bg image"
@@ -272,31 +293,31 @@ const AlternatingFeature = ({
                       zIndex: 1,
                     }}
                   />
-              </Box>
-            ) : (
-              <Box
-                sx={{
-                  width: "50%",
-                  position: "relative",
-
-                  display: "grid",
-                  gridTemplateColumns: "repeat(10, 1fr)",
-                  alignItems: "center",
-                }}
-              >
-                <Image
-                  src={imgPath}
-                  width={"90%"}
-                  radius={10}
-                  ml="auto"
-                  alt={altText}
+                </Box>
+              ) : (
+                <Box
                   sx={{
-                    gridColumn: "1 / 11",
-                    gridRow: "1 / 2",
-                    zIndex: 2,
+                    width: "50%",
+                    position: "relative",
+
+                    display: "grid",
+                    gridTemplateColumns: "repeat(10, 1fr)",
+                    alignItems: "center",
                   }}
-                />
-                <Image
+                >
+                  <Image
+                    src={imgPath}
+                    width={"90%"}
+                    radius={10}
+                    ml="auto"
+                    alt={altText}
+                    sx={{
+                      gridColumn: "1 / 11",
+                      gridRow: "1 / 2",
+                      zIndex: 2,
+                    }}
+                  />
+                  <Image
                     src={bgImgPath}
                     width={"100%"}
                     alt="bg image"
@@ -304,12 +325,15 @@ const AlternatingFeature = ({
                       gridColumn: "1 / 11",
                       gridRow: "1 / 2",
                       // transform: "scale(1.3)"
-                      transform: bgImgPath == "/images/features-page/rundowns-bg.png" ? "scale(1.15)" : "scale(1.3)",
+                      transform:
+                        bgImgPath == "/images/features-page/rundowns-bg.png"
+                          ? "scale(1.15)"
+                          : "scale(1.3)",
                       zIndex: 1,
                     }}
                   />
-              </Box>
-            )}
+                </Box>
+              )}
             </MediaQuery>
           )}
         </Box>
@@ -449,7 +473,8 @@ const FeaturesPage: PageWithLayout = ({ features }: any) => {
             Key Features
           </Title>
           <Text ta="center" size={20} mb={40} sx={{ zIndex: 1 }}>
-            Collaborative script writing and production software built for creative teams.
+            Collaborative script writing and production software built for
+            creative teams.
           </Text>
         </Box>
         <AlternatingLayout features={features && features} />
@@ -468,13 +493,16 @@ FeaturesPage.getInitialProps = async () => {
       bgColor: "#301F55",
       altText: "scripto editor",
       mainTitle: "Collaborative Scriptwriting.",
-      mainCopy: "Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Every document in Scripto is fully collaborative by nature — no more trading PDFs or getting “locked out” because someone left a file open on their computer.",
+      mainCopy:
+        "Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page. Every document in Scripto is fully collaborative by nature — no more trading PDFs or getting “locked out” because someone left a file open on their computer.",
       subTitleOne: "Real-time collaboration",
       subCopyOne: "Write with others in the same script at the same time.",
       subTitleTwo: "Any format",
-      subCopyTwo: "Industry-standard screenplay and studio/variety formats come for free, but script formats can be customized to the requirements of your project.",
+      subCopyTwo:
+        "Industry-standard screenplay and studio/variety formats come for free, but script formats can be customized to the requirements of your project.",
       subTitleThree: "Change Tracking",
-      subCopyThree: "No matter what you're writing, planning, or producing, the only constant is change. Scripto tracks changes and saves backups as you work, providing detailed views of what’s been added and removed with every revision.",
+      subCopyThree:
+        "No matter what you're writing, planning, or producing, the only constant is change. Scripto tracks changes and saves backups as you work, providing detailed views of what’s been added and removed with every revision.",
       isImgAlignLeft: true,
     },
     {
@@ -484,29 +512,36 @@ FeaturesPage.getInitialProps = async () => {
       bgColor: "#8252C6",
       altText: "scripto editor",
       mainTitle: "Smart Rundowns.",
-      mainCopy: "Practically every line of a professional script contains instructions for someone else working on the team. You can use Scripto’s rundowns to organize and communicate about that work, crafting templates for shows, events, localization, and more. If it looks like a spreadsheet, Scripto can generate it for you with the click of a button.",
+      mainCopy:
+        "Practically every line of a professional script contains instructions for someone else working on the team. You can use Scripto’s rundowns to organize and communicate about that work, crafting templates for shows, events, localization, and more. If it looks like a spreadsheet, Scripto can generate it for you with the click of a button.",
       subTitleOne: "Real-time collaboration",
       subCopyOne: "Works with others in the same rundown at the same time.",
       subTitleTwo: "Flexible formats",
-      subCopyTwo: "Rundowns are highly customizable. They can be used for anything from a run-of-show for live events to a localization tracker for video game translations.",
+      subCopyTwo:
+        "Rundowns are highly customizable. They can be used for anything from a run-of-show for live events to a localization tracker for video game translations.",
       subTitleThree: "Auto-import",
-      subCopyThree: "Import lines from a script into rows in a spreadsheet with the click of a button.",
+      subCopyThree:
+        "Import lines from a script into rows in a spreadsheet with the click of a button.",
       isImgAlignLeft: true,
     },
     {
       bgImgPath: "/images/features-page/prompter-bg.png",
-      imgPath: "/images/features-page/screenplay-format.gif",
+      imgPath: "/images/features-page/organizational-hub.png",
       img2Path: "",
       bgColor: "#B89ADE",
       altText: "scripto editor",
       mainTitle: "Organizational Hub.",
-      mainCopy: "Scripto is your project’s shared brain. Everyone on the team knows where to go to find what they need, and everything’s linkable. Keep your docs in a secure central location, and manage who has access to them. Less email, we promise.",
+      mainCopy:
+        "Scripto is your project’s shared brain. Everyone on the team knows where to go to find what they need, and everything’s linkable. Keep your docs in a secure central location, and manage who has access to them. Less email, we promise.",
       subTitleOne: "Flexible folders",
-      subCopyOne: "Organize folders to suit your project’s workflow, and use Favorites and Recently Edited views to keep an eye on where the work is happening.",
+      subCopyOne:
+        "Organize folders to suit your project’s workflow, and use Favorites and Recently Edited views to keep an eye on where the work is happening.",
       subTitleTwo: "Search",
-      subCopyTwo: "No more combing through folders or email for the files you need – search your whole project archive at once.",
+      subCopyTwo:
+        "No more combing through folders or email for the files you need – search your whole project archive at once.",
       subTitleThree: "Manage your workspace",
-      subCopyThree: "Invite collaborators to work on your project, and manage their roles and permissions.",
+      subCopyThree:
+        "Invite collaborators to work on your project, and manage their roles and permissions.",
       isImgAlignLeft: true,
     },
   ];
