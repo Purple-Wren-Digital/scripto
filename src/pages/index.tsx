@@ -220,13 +220,13 @@ const LandingPage: PageWithLayout = () => {
               <Card
                 imgSrc="/images/format.png"
                 title="Collaborative Scriptwriting."
-                text="Whether you’re writing in the same room, in the same Zoom, or across different time zones, Scripto keeps everyone on the same page."
+                text="Whether you’re writing in the same room, in the same Zoom, or across time zones, Scripto keeps everyone on the same page."
                 link="/features"
               />
               <Card
                 imgSrc="/images/edit.png"
-                title="Smart Rundowns."
-                text="Script-aware rundowns let production teams turn a script into a spreadsheet fast."
+                title="Intelligent Rundowns."
+                text="Rundowns are customizable and script-aware, letting production teams turn a script into a spreadsheet fast."
                 link="/features"
               />
               <Card
