@@ -49,6 +49,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
             justifyContent: "space-between",
             background: "#252634",
             zIndex: 10,
+            border: 'none',
           }}
         >
           <Box
