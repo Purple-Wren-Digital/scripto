@@ -544,7 +544,7 @@ const AboutPage: PageWithLayout = () => {
               />
             </Box>
             <Text ta="center" size={20} fw={700} mt={20}>
-              John Gravoisn
+              John Gravois
             </Text>
             <Text size={18} ta="center">
               Engineering
