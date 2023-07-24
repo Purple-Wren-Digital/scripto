@@ -26,11 +26,11 @@ Before you can run this project locally, make sure you have Node.js and npm inst
 
 3. Install the dependencies
 
-  `npm install` or `yarn`
+  `yarn`
 
 4. Start the server
 
-  `npm run dev` or `yarn run dev`
+  `yarn run dev`
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
