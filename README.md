@@ -18,19 +18,19 @@ Before you can run this project locally, make sure you have Node.js and npm inst
 
 1. Clone the repository to your local machine:
 
-`git clone https://github.com/calebmcquaid/scripto.git`
+  `git clone https://github.com/calebmcquaid/scripto.git`
 
 2. CD into the project
 
-`cd scripto`
+  `cd scripto`
 
 3. Install the dependencies
 
-`npm install` or `yarn`
+  `npm install` or `yarn`
 
 4. Start the server
 
-`npm run dev` or `yarn run dev`
+  `npm run dev` or `yarn run dev`
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
