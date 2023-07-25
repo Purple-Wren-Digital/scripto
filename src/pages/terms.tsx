@@ -1,5 +1,4 @@
 import { AppLayout } from "@/components/AppLayout";
-import CTA from "@/components/CTA";
 import { Box, MediaQuery, Image, Text, List, Space } from "@mantine/core";
 import { PageWithLayout } from "next";
 import Link from "next/link";
@@ -112,8 +111,8 @@ const TermsPage: PageWithLayout = () => {
           styles={{ flexDirection: "column" }}
         >
           <Box
-            mt={120}
-            mb={80}
+            pt={60}
+            pb={80}
             sx={{
               display: "flex",
               minHeight: "682px",
@@ -266,7 +265,6 @@ const TermsPage: PageWithLayout = () => {
             ></MediaQuery> */}
           </Box>
         </MediaQuery>
-        <CTA background="#FBFBFD" buttonColor="#8252C6" text="#000" />
       </Box>
     </AppLayout>
   );

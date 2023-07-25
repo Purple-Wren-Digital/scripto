@@ -74,6 +74,30 @@ export default function Footer() {
                 Features
               </Text>
             </Link>
+            <Link
+              href="/studio"
+              style={{ textDecoration: "none", margin: "25px" }}
+            >
+              <Text size={14} fw={700} color={colors.text}>
+                Studio TV
+              </Text>
+            </Link>
+            <Link
+              href="/screenplays"
+              style={{ textDecoration: "none", margin: "25px" }}
+            >
+              <Text size={14} fw={700} color={colors.text}>
+                Writers Rooms
+              </Text>
+            </Link>
+            <Link
+              href="/games"
+              style={{ textDecoration: "none", margin: "25px" }}
+            >
+              <Text size={14} fw={700} color={colors.text}>
+                Video Game Studios
+              </Text>
+            </Link>
             <Link href="/" style={{ margin: "25px" }}>
               <Image
                 src="/images/logo-light-400w.png"
@@ -81,13 +105,47 @@ export default function Footer() {
                 alt="scripto logo"
               />
             </Link>
-            <Box
-              mt={50}
-              mb={25}
-              sx={{ display: "flex", alignSelf: "center", gap: "20px" }}
-            >
-              <Text>©️ 2010-{year}</Text>
-              <Text sx={{ cursor: "pointer" }}>Privacy-Terms</Text>
+            <Text mt={50} mb={10}>
+              ©️ 2010-{year}
+            </Text>
+            <Box mb={25} sx={{ display: "flex", alignSelf: "center" }}>
+              <Link href="/privacy">
+                <Text
+                  size={14}
+                  color={colors.text}
+                  sx={{
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Privacy
+                </Text>
+              </Link>
+              <Text>-</Text>
+              <Link href="/terms">
+                <Text
+                  size={14}
+                  color={colors.text}
+                  sx={{
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Terms
+                </Text>
+              </Link>
+              <Link href="/cookies" style={{ marginLeft: 5 }}>
+                <Text
+                  size={14}
+                  color={colors.text}
+                  sx={{
+                    cursor: "pointer",
+                    "&:hover": { textDecoration: "underline" },
+                  }}
+                >
+                  Cookies
+                </Text>
+              </Link>
             </Box>
           </Box>
         </Box>
@@ -155,17 +213,46 @@ export default function Footer() {
                 <Text size={14} fw={700} color={colors.text} mr={10}>
                   ©️ 2010-{year}
                 </Text>
-                <Text
-                  size={14}
-                  fw={700}
-                  color={colors.text}
-                  sx={{
-                    cursor: "pointer",
-                    "&:hover": { textDecoration: "underline" },
-                  }}
-                >
-                  Privacy-Terms
-                </Text>
+                <Link href="/privacy">
+                  <Text
+                    size={14}
+                    fw={700}
+                    color={colors.text}
+                    sx={{
+                      cursor: "pointer",
+                      "&:hover": { textDecoration: "underline" },
+                    }}
+                  >
+                    Privacy
+                  </Text>
+                </Link>
+                <Text>-</Text>
+                <Link href="/terms">
+                  <Text
+                    size={14}
+                    fw={700}
+                    color={colors.text}
+                    sx={{
+                      cursor: "pointer",
+                      "&:hover": { textDecoration: "underline" },
+                    }}
+                  >
+                    Terms
+                  </Text>
+                </Link>
+                <Link href="/cookies" style={{ marginLeft: 10 }}>
+                  <Text
+                    size={14}
+                    fw={700}
+                    color={colors.text}
+                    sx={{
+                      cursor: "pointer",
+                      "&:hover": { textDecoration: "underline" },
+                    }}
+                  >
+                    Cookies
+                  </Text>
+                </Link>
               </Box>
             </Box>
           </Box>
