@@ -1667,7 +1667,7 @@ const LandingPage: PageWithLayout = () => {
                 alignItems: "center",
                 height: "500px",
                 width: "50%",
-                backgroundImage: "url(/images/writers-room-6.png)",
+                backgroundImage: "url(/images/writers-room-1.jpeg)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
