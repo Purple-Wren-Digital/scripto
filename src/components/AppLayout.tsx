@@ -11,6 +11,7 @@ import {
   createStyles,
   Accordion,
 } from "@mantine/core";
+import { ChevronDown } from "tabler-icons-react";
 import {
   JSXElementConstructor,
   ReactElement,
@@ -127,16 +128,24 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       classNames={classes}
                     >
                       <Menu.Target>
-                        <Link
-                          href="/features"
-                          style={{ textDecoration: "none" }}
-                        >
-                          <Text size={15} mr={20} color={"#FBFBFD"}>
+                        <Box sx={{ display: "flex", alignItems: "center" }}>
+                          <Text size={15} mr={5} color={"#FBFBFD"}>
                             Features
                           </Text>
-                        </Link>
+                          <ChevronDown size={15} color={"#FBFBFD"} />
+                        </Box>
                       </Menu.Target>
                       <Menu.Dropdown>
+                        <Menu.Item>
+                          <Link
+                            href="/features"
+                            style={{ textDecoration: "none" }}
+                          >
+                            <Text size={15} mr={20} color={"#FBFBFD"}>
+                              Key Features
+                            </Text>
+                          </Link>
+                        </Menu.Item>
                         <Menu.Item>
                           <Link
                             href="/studio"
@@ -236,7 +245,7 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     style={{ textDecoration: "none", marginBottom: 20 }}
                   >
                     <Text size={15} color={"#FBFBFD"} onClick={toggle}>
-                      Features
+                      Key Features
                     </Text>
                   </Link>
                   <Link
