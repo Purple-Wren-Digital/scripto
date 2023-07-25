@@ -546,11 +546,7 @@ FeaturesPage.getInitialProps = async () => {
     },
   ];
 
-  const shuffledFeatures = features
-    .map((value) => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
-  return { features: shuffledFeatures };
+  return { features };
 };
 
 export default FeaturesPage;
