@@ -62,124 +62,118 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
   }, []);
   const buttonConfigs = getButtonConfigs(isAppUser);
   return (
-    <NonSSRWrapper>
-      <AppShell
-        padding={0}
-        header={
-          <Header
-            height={60}
-            p="xs"
-            display="flex"
+    <AppShell
+      padding={0}
+      header={
+        <Header
+          height={60}
+          p="xs"
+          display="flex"
+          sx={{
+            alignItems: "center",
+            justifyContent: "space-between",
+            background: "#252634",
+            zIndex: 10,
+            border: "none",
+          }}
+        >
+          <Box
             sx={{
-              alignItems: "center",
-              justifyContent: "space-between",
-              background: "#252634",
-              zIndex: 10,
-              border: "none",
+              position: "absolute",
+              right: "50%",
+              transform: "translateX(50%)",
             }}
           >
-            <Box
-              sx={{
-                position: "absolute",
-                right: "50%",
-                transform: "translateX(50%)",
-              }}
-            >
-              <Link href="/" style={{ textDecoration: "none" }}>
-                <Image
-                  src="/images/logo-light-400w.png"
-                  width={100}
-                  alt="scripto logo"
-                />
-              </Link>
-            </Box>
-            {isMobileMenu ? (
-              <Burger
-                opened={opened}
-                onClick={toggle}
-                aria-label={label}
-                color="white"
-                sx={{ marginLeft: "auto" }}
+            <Link href="/" style={{ textDecoration: "none" }}>
+              <Image
+                src="/images/logo-light-400w.png"
+                width={100}
+                alt="scripto logo"
               />
-            ) : (
-              <>
-                <MediaQuery
-                  query="(max-width: 1024px)"
-                  styles={{ marginLeft: "25px" }}
+            </Link>
+          </Box>
+          {isMobileMenu ? (
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              aria-label={label}
+              color="white"
+              sx={{ marginLeft: "auto" }}
+            />
+          ) : (
+            <>
+              <MediaQuery
+                query="(max-width: 1024px)"
+                styles={{ marginLeft: "25px" }}
+              >
+                <Box
+                  ml={50}
+                  sx={{ display: "flex", justifyContent: "space-around" }}
                 >
-                  <Box
-                    ml={50}
-                    sx={{ display: "flex", justifyContent: "space-around" }}
+                  <Link href="/about" style={{ textDecoration: "none" }}>
+                    <Text size={15} mr={20} color={"#FBFBFD"}>
+                      About Us
+                    </Text>
+                  </Link>
+                  <Menu
+                    trigger="hover"
+                    position="bottom-start"
+                    withArrow
+                    arrowPosition="center"
+                    transitionProps={{
+                      transition: "fade",
+                      duration: 200,
+                    }}
+                    classNames={classes}
                   >
-                    <Link href="/about" style={{ textDecoration: "none" }}>
-                      <Text size={15} mr={20} color={"#FBFBFD"}>
-                        About Us
-                      </Text>
-                    </Link>
-                    <Menu
-                      trigger="hover"
-                      position="bottom-start"
-                      withArrow
-                      arrowPosition="center"
-                      transitionProps={{
-                        transition: "fade",
-                        duration: 200,
-                      }}
-                      classNames={classes}
-                    >
-                      <Menu.Target>
-                        <Box sx={{ display: "flex", alignItems: "center" }}>
-                          <Text size={15} mr={5} color={"#FBFBFD"}>
-                            Features
+                    <Menu.Target>
+                      <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <Text size={15} mr={5} color={"#FBFBFD"}>
+                          Features
+                        </Text>
+                        <ChevronDown size={15} color={"#FBFBFD"} />
+                      </Box>
+                    </Menu.Target>
+                    <Menu.Dropdown>
+                      <Menu.Item>
+                        <Link
+                          href="/features"
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Text size={15} mr={20} color={"#FBFBFD"}>
+                            Key Features
                           </Text>
-                          <ChevronDown size={15} color={"#FBFBFD"} />
-                        </Box>
-                      </Menu.Target>
-                      <Menu.Dropdown>
-                        <Menu.Item>
-                          <Link
-                            href="/features"
-                            style={{ textDecoration: "none" }}
-                          >
-                            <Text size={15} mr={20} color={"#FBFBFD"}>
-                              Key Features
-                            </Text>
-                          </Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <Link
-                            href="/studio"
-                            style={{ textDecoration: "none" }}
-                          >
-                            <Text size={15} mr={20} color={"#FBFBFD"}>
-                              Studio TV
-                            </Text>
-                          </Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <Link
-                            href="/screenplays"
-                            style={{ textDecoration: "none" }}
-                          >
-                            <Text size={15} mr={20} color={"#FBFBFD"}>
-                              Writers Rooms
-                            </Text>
-                          </Link>
-                        </Menu.Item>
-                        <Menu.Item>
-                          <Link
-                            href="/games"
-                            style={{ textDecoration: "none" }}
-                          >
-                            <Text size={15} mr={20} color={"#FBFBFD"}>
-                              Video Game Studios
-                            </Text>
-                          </Link>
-                        </Menu.Item>
-                      </Menu.Dropdown>
-                    </Menu>
-                  </Box>
-                </MediaQuery>
+                        </Link>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <Link href="/studio" style={{ textDecoration: "none" }}>
+                          <Text size={15} mr={20} color={"#FBFBFD"}>
+                            Studio TV
+                          </Text>
+                        </Link>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <Link
+                          href="/screenplays"
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Text size={15} mr={20} color={"#FBFBFD"}>
+                            Writers Rooms
+                          </Text>
+                        </Link>
+                      </Menu.Item>
+                      <Menu.Item>
+                        <Link href="/games" style={{ textDecoration: "none" }}>
+                          <Text size={15} mr={20} color={"#FBFBFD"}>
+                            Video Game Studios
+                          </Text>
+                        </Link>
+                      </Menu.Item>
+                    </Menu.Dropdown>
+                  </Menu>
+                </Box>
+              </MediaQuery>
+              <NonSSRWrapper>
                 <MediaQuery
                   query="(max-width: 1024px)"
                   styles={{ marginRight: "25px" }}
@@ -208,70 +202,72 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                     </Link>
                   </Box>
                 </MediaQuery>
-              </>
-            )}
-            {isMobileMenu && (
+              </NonSSRWrapper>
+            </>
+          )}
+          {isMobileMenu && (
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                height: "100vh",
+                zIndex: -1,
+                background: "#252634",
+                transform: opened ? "translateX(0)" : "translateX(100%)",
+                transition: "transform 250ms ease-in-out",
+              }}
+            >
               <Box
+                mt={100}
                 sx={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: "100vh",
-                  zIndex: -1,
-                  background: "#252634",
-                  transform: opened ? "translateX(0)" : "translateX(100%)",
-                  transition: "transform 250ms ease-in-out",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}
               >
-                <Box
-                  mt={100}
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
+                <Link
+                  href="/about"
+                  style={{ textDecoration: "none", marginBottom: 20 }}
                 >
-                  <Link
-                    href="/about"
-                    style={{ textDecoration: "none", marginBottom: 20 }}
-                  >
-                    <Text size={15} color={"#FBFBFD"} onClick={toggle}>
-                      About Us
-                    </Text>
-                  </Link>
-                  <Link
-                    href={"/features"}
-                    style={{ textDecoration: "none", marginBottom: 20 }}
-                  >
-                    <Text size={15} color={"#FBFBFD"} onClick={toggle}>
-                      Key Features
-                    </Text>
-                  </Link>
-                  <Link
-                    href={"/studio"}
-                    style={{ textDecoration: "none", marginBottom: 20 }}
-                  >
-                    <Text size={15} color={"#FBFBFD"} onClick={toggle}>
-                      Studio TV
-                    </Text>
-                  </Link>
-                  <Link
-                    href={"/screenplays"}
-                    style={{ textDecoration: "none", marginBottom: 20 }}
-                  >
-                    <Text size={15} color={"#FBFBFD"} onClick={toggle}>
-                      Writers Rooms
-                    </Text>
-                  </Link>
-                  <Link
-                    href={"/games"}
-                    style={{ textDecoration: "none", marginBottom: 20 }}
-                  >
-                    <Text size={15} color={"#FBFBFD"} onClick={toggle}>
-                      Video Game Studios
-                    </Text>
-                  </Link>
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
+                    About Us
+                  </Text>
+                </Link>
+                <Link
+                  href={"/features"}
+                  style={{ textDecoration: "none", marginBottom: 20 }}
+                >
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
+                    Key Features
+                  </Text>
+                </Link>
+                <Link
+                  href={"/studio"}
+                  style={{ textDecoration: "none", marginBottom: 20 }}
+                >
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
+                    Studio TV
+                  </Text>
+                </Link>
+                <Link
+                  href={"/screenplays"}
+                  style={{ textDecoration: "none", marginBottom: 20 }}
+                >
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
+                    Writers Rooms
+                  </Text>
+                </Link>
+                <Link
+                  href={"/games"}
+                  style={{ textDecoration: "none", marginBottom: 20 }}
+                >
+                  <Text size={15} color={"#FBFBFD"} onClick={toggle}>
+                    Video Game Studios
+                  </Text>
+                </Link>
+                <NonSSRWrapper>
                   <Link
                     href={buttonConfigs.secondary.href}
                     style={{ textDecoration: "none", marginBottom: 20 }}
@@ -280,6 +276,8 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       {buttonConfigs.secondary.label}
                     </Text>
                   </Link>
+                </NonSSRWrapper>
+                <NonSSRWrapper>
                   <Link
                     href={buttonConfigs.main.href}
                     style={{ textDecoration: "none" }}
@@ -293,24 +291,24 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       {buttonConfigs.main.label}
                     </Button>
                   </Link>
-                </Box>
+                </NonSSRWrapper>
               </Box>
-            )}
-          </Header>
-        }
-        footer={<Footer />}
-        styles={(theme) => ({
-          main: {
-            backgroundColor:
-              theme.colorScheme === "dark"
-                ? theme.colors.dark[8]
-                : theme.colors.gray[0],
-          },
-        })}
-      >
-        <AppContents children={children} />
-      </AppShell>
-    </NonSSRWrapper>
+            </Box>
+          )}
+        </Header>
+      }
+      footer={<Footer />}
+      styles={(theme) => ({
+        main: {
+          backgroundColor:
+            theme.colorScheme === "dark"
+              ? theme.colors.dark[8]
+              : theme.colors.gray[0],
+        },
+      })}
+    >
+      <AppContents children={children} />
+    </AppShell>
   );
 };
 const AppContents: React.FC<{ children: ReactNode }> = ({ children }) => {
