@@ -133,7 +133,7 @@ const LandingPage: PageWithLayout = () => {
             >
               <Image
                 src="/images/script-editor.png"
-                width={"85%"}
+                width={isMobile || isTablet ? "100%" : "85%"}
                 radius={10}
                 ml="auto"
                 alt="script editor"
@@ -919,9 +919,9 @@ const LandingPage: PageWithLayout = () => {
                   control: {
                     border: "none",
 
-                    '&[data-inactive]': {
+                    "&[data-inactive]": {
                       opacity: 0,
-                      cursor: 'default',
+                      cursor: "default",
                     },
                   },
                 }}
@@ -1545,10 +1545,16 @@ const LandingPage: PageWithLayout = () => {
                     Studio TV
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Scripto powers the world-class writing process at Emmy-winning shows like{" "}
-                    <span style={{ fontStyle: "italic" }}>Last Week Tonight{" "}</span>and
-                    <span style={{ fontStyle: "italic" }}>{" "}The Late Show</span>.{" "}
-                    If you’re taping a variety or talk show in studio, use the same specialized workflows that help our clients stay on time and on point.
+                    Scripto powers the world-class writing process at
+                    Emmy-winning shows like{" "}
+                    <span style={{ fontStyle: "italic" }}>
+                      Last Week Tonight{" "}
+                    </span>
+                    and
+                    <span style={{ fontStyle: "italic" }}> The Late Show</span>.
+                    If you’re taping a variety or talk show in studio, use the
+                    same specialized workflows that help our clients stay on
+                    time and on point.
                   </Text>
                   <Link href="/studio">
                     <Button
@@ -1602,7 +1608,10 @@ const LandingPage: PageWithLayout = () => {
                     Video Game Studios
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    If your game prioritizes narrative design or features multiple content contributors, Scripto lets you run a professional writing process in a cozy editorial environment that integrates directly with your build pipeline. 
+                    If your game prioritizes narrative design or features
+                    multiple content contributors, Scripto lets you run a
+                    professional writing process in a cozy editorial environment
+                    that integrates directly with your build pipeline.
                   </Text>
                   <Link href="/games">
                     <Button
@@ -1658,7 +1667,7 @@ const LandingPage: PageWithLayout = () => {
                 alignItems: "center",
                 height: "500px",
                 width: "50%",
-                backgroundImage: "url(/images/workspace.png)",
+                backgroundImage: "url(/images/writers-room-6.png)",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundSize: "cover",
@@ -1704,7 +1713,9 @@ const LandingPage: PageWithLayout = () => {
                     Writers Rooms
                   </Title>
                   <Text mb={40} sx={{ maxWidth: "420px" }}>
-                    Whether you’re writing a scripted comedy, a sketch show, or a podcast, Scripto brings true collaboration to the writers room.
+                    Whether you’re writing a scripted comedy, a sketch show, or
+                    a podcast, Scripto brings true collaboration to the writers
+                    room.
                   </Text>
                   <Link href="/screenplays">
                     <Button
@@ -1777,14 +1788,14 @@ const LandingPage: PageWithLayout = () => {
 
                 "&[data-active]": {
                   background: "#000",
-                }
                 },
+              },
               control: {
                 border: "none",
 
-                '&[data-inactive]': {
+                "&[data-inactive]": {
                   opacity: 0,
-                  cursor: 'default',
+                  cursor: "default",
                 },
               },
             }}
@@ -1817,7 +1828,7 @@ const LandingPage: PageWithLayout = () => {
                   variant="filled"
                   color="dark"
                 /> */}
-                <Image 
+                <Image
                   alt="testimonial logo"
                   src="/images/show-logos/tooning-out-the-news.png"
                   height={40}
@@ -1854,7 +1865,7 @@ const LandingPage: PageWithLayout = () => {
                   variant="filled"
                   color="dark"
                 /> */}
-                <Image 
+                <Image
                   alt="testimonial logo"
                   src="/images/show-logos/finji.png"
                   height={40}
