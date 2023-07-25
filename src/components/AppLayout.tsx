@@ -110,11 +110,6 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                   ml={50}
                   sx={{ display: "flex", justifyContent: "space-around" }}
                 >
-                  <Link href="/about" style={{ textDecoration: "none" }}>
-                    <Text size={15} mr={20} color={"#FBFBFD"}>
-                      About Us
-                    </Text>
-                  </Link>
                   <Menu
                     trigger="hover"
                     position="bottom-start"
@@ -131,7 +126,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                         <Text size={15} mr={5} color={"#FBFBFD"}>
                           Features
                         </Text>
-                        <ChevronDown size={15} color={"#FBFBFD"} />
+                        <ChevronDown
+                          size={15}
+                          color={"#FBFBFD"}
+                          style={{ marginRight: 15 }}
+                        />
                       </Box>
                     </Menu.Target>
                     <Menu.Dropdown>
@@ -171,6 +170,11 @@ export const AppLayout = ({ children }: { children: ReactNode }) => {
                       </Menu.Item>
                     </Menu.Dropdown>
                   </Menu>
+                  <Link href="/about" style={{ textDecoration: "none" }}>
+                    <Text size={15} color={"#FBFBFD"}>
+                      About Us
+                    </Text>
+                  </Link>
                 </Box>
               </MediaQuery>
               <NonSSRWrapper>
